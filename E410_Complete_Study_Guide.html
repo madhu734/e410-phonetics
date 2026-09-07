@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>E410 Complete Viva Study Guide — All Topics Combined</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4;
+      margin: 16mm 14mm 18mm 14mm;
+      @bottom-center {
+        content: "E410 Complete Viva Study Guide — Page " counter(page);
+        font-family: 'Inter', sans-serif;
+        font-size: 8pt;
+        color: #94a3b8;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 9.5pt;
+      line-height: 1.55;
+      color: #1e293b;
+      background: #fff;
+    }
+    .container { max-width: 780px; margin: 0 auto; padding: 16px; }
+
+    /* Cover */
+    .cover { text-align: center; padding: 40px 0 30px; border-bottom: 3px solid #4f46e5; margin-bottom: 20px; }
+    .cover h1 { font-size: 22pt; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
+    .cover .subtitle { font-size: 11pt; color: #475569; font-weight: 500; }
+    .cover .meta { font-size: 8.5pt; color: #64748b; margin-top: 10px; }
+    .badge { display: inline-block; background: #ede9fe; color: #4338ca; font-size: 8pt; font-weight: 700; padding: 3px 10px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+
+    /* Headings */
+    h2 { font-size: 14pt; font-weight: 700; color: #1e1b4b; margin-top: 22px; margin-bottom: 8px; padding-bottom: 3px; border-bottom: 1.5px solid #e2e8f0; page-break-after: avoid; }
+    h3 { font-size: 11pt; font-weight: 700; color: #312e81; margin-top: 14px; margin-bottom: 5px; page-break-after: avoid; }
+    h4 { font-size: 10pt; font-weight: 600; color: #475569; margin-top: 10px; margin-bottom: 4px; }
+
+    p { margin-bottom: 6px; }
+    ul, ol { margin-left: 18px; margin-bottom: 8px; }
+    li { margin-bottom: 3px; }
+    code { font-family: 'Fira Code', monospace; font-size: 8.5pt; background: #f1f5f9; padding: 1px 4px; border-radius: 3px; }
+
+    /* Tables */
+    table { width: 100%; border-collapse: collapse; margin: 8px 0 12px; font-size: 8.5pt; page-break-inside: avoid; }
+    th, td { border: 1px solid #cbd5e1; padding: 5px 7px; text-align: left; vertical-align: top; }
+    th { background: #f1f5f9; font-weight: 700; color: #334155; }
+    tr:nth-child(even) { background: #f8fafc; }
+
+    /* Definition boxes */
+    .def { background: #f0f9ff; border-left: 3px solid #0ea5e9; padding: 8px 10px; margin: 8px 0; border-radius: 4px; page-break-inside: avoid; }
+    .def-label { font-weight: 700; color: #0369a1; font-size: 9pt; margin-bottom: 2px; }
+    .def p { margin-bottom: 3px; }
+
+    /* Viva Q&A */
+    .qa { background: #fefce8; border-left: 3px solid #eab308; padding: 8px 10px; margin: 8px 0; border-radius: 4px; page-break-inside: avoid; }
+    .qa-q { font-weight: 700; color: #854d0e; margin-bottom: 3px; }
+    .qa-a { color: #1e293b; }
+    .qa-tip { font-size: 8pt; color: #64748b; margin-top: 3px; font-style: italic; }
+
+    /* Rule box */
+    .rule { background: #fefce8; border: 1px solid #fef08a; border-radius: 5px; padding: 8px; text-align: center; font-family: 'Fira Code', monospace; font-size: 10pt; font-weight: 600; color: #854d0e; margin: 8px 0; }
+
+    /* Topic divider */
+    .topic-divider { page-break-before: always; border-top: 3px solid #4f46e5; padding-top: 10px; margin-top: 20px; }
+    .topic-number { display: inline-block; background: #4f46e5; color: #fff; font-weight: 800; padding: 2px 10px; border-radius: 4px; font-size: 9pt; margin-bottom: 4px; }
+
+    /* Print */
+    @media print {
+      body { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+      .container { padding: 0; max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+<!-- ==================== COVER ==================== -->
+<div class="cover">
+  <div class="badge">E410 • Final Year Linguistics • Jahangirnagar University</div>
+  <h1>Complete Viva Study Guide</h1>
+  <div class="subtitle">All 6 Topics Combined in Simple English</div>
+  <div class="meta">
+    <strong>Topics:</strong> Phonetics & Phonology • Phonemes & Phones • Syllable & Phonotactics • Connected Speech • Strong/Weak Forms • IPA Transcription
+  </div>
+</div>
+
+<!-- ==================== TABLE OF CONTENTS ==================== -->
+<h2>Table of Contents</h2>
+<ol>
+  <li><strong>Phonetics and Phonology</strong> — Definitions, Differences, Classification & Correlation</li>
+  <li><strong>Phonemes, Phones & Allophones</strong> — Definitions, Differences & Theories</li>
+  <li><strong>Syllable</strong> — Phonetic vs. Phonological Definitions & Phonotactics</li>
+  <li><strong>Connected Speech</strong> — Rules and Processes</li>
+  <li><strong>Strong vs. Weak Forms</strong> — Contractions, Elision & Assimilation</li>
+  <li><strong>IPA Transcription of Connected Speech</strong></li>
+  <li><strong>Combined Viva Question Bank</strong> — All Topics</li>
+</ol>
+
+<!-- ============================================================ -->
+<!-- TOPIC 1: PHONETICS AND PHONOLOGY -->
+<!-- ============================================================ -->
+<div class="topic-divider">
+  <div class="topic-number">TOPIC 1</div>
+  <h2>Phonetics and Phonology: Definitions, Differences, Classification & Correlation</h2>
+</div>
+
+<h3>1.1 What is Phonetics?</h3>
+<div class="def">
+  <div class="def-label">Definition</div>
+  <p><strong>Phonetics</strong> is the scientific study of how humans physically produce, transmit, and hear speech sounds. It does not depend on any specific language — it is universal.</p>
+</div>
+<p>Think of phonetics as the "hardware" of speech. It looks at what your mouth, tongue, lips, and vocal cords actually do when you make sounds.</p>
+
+<h4>Three Branches of Phonetics</h4>
+<ol>
+  <li><strong>Articulatory Phonetics</strong> — How we physically produce sounds using our mouth, tongue, lips, etc. This is the most important branch for ELT teachers because we need to show students where to put their tongue.</li>
+  <li><strong>Acoustic Phonetics</strong> — How sound waves travel through the air (frequency, pitch, loudness). Studied with spectrograms in labs.</li>
+  <li><strong>Auditory Phonetics</strong> — How our ears and brain receive and decode speech sounds.</li>
+</ol>
+
+<h3>1.2 What is Phonology?</h3>
+<div class="def">
+  <div class="def-label">Definition</div>
+  <p><strong>Phonology</strong> is the study of how sounds work within a specific language's mental system. It looks at which sounds can change meaning and what rules govern their combination.</p>
+</div>
+<p>Think of phonology as the "software" — the mental rules in your brain. For example, English treats /p/ and /b/ as different sounds because swapping them changes meaning (<em>pin</em> vs <em>bin</em>). But in Arabic, [p] is just a variant of /b/.</p>
+
+<h3>1.3 Key Differences: Phonetics vs Phonology</h3>
+<table>
+  <tr><th>Feature</th><th>Phonetics</th><th>Phonology</th></tr>
+  <tr><td>Nature</td><td>Physical, concrete, measurable</td><td>Abstract, mental, cognitive</td></tr>
+  <tr><td>Core Question</td><td>"How is this sound physically made?"</td><td>"How does this sound function in the language?"</td></tr>
+  <tr><td>Scope</td><td>Universal (all languages)</td><td>Language-specific</td></tr>
+  <tr><td>Basic Unit</td><td><strong>Phone</strong> — a physical sound</td><td><strong>Phoneme</strong> — a mental sound unit</td></tr>
+  <tr><td>Notation</td><td>Square brackets: <code>[ ]</code></td><td>Slash brackets: <code>/ /</code></td></tr>
+  <tr><td>Branches</td><td>Articulatory, Acoustic, Auditory</td><td>Segmental, Suprasegmental</td></tr>
+</table>
+
+<h3>1.4 How are Phonetics and Phonology Related?</h3>
+<p>They need each other. Phonetics gives the raw physical data; Phonology gives the mental rules that organize those sounds into a meaningful system. Without Phonetics, Phonology has no physical basis. Without Phonology, Phonetics is just meaningless noise data.</p>
+
+<h3>1.5 Graphemes vs Phonemes: Why English Spelling is Tricky</h3>
+<p>A <strong>grapheme</strong> is a written letter (<code>&lt;c&gt;</code>, <code>&lt;ph&gt;</code>). A <strong>phoneme</strong> is a spoken sound (<code>/k/</code>, <code>/f/</code>). In English, there is <strong>no one-to-one match</strong> between letters and sounds:</p>
+<ul>
+  <li>The letter <code>&lt;c&gt;</code> can be /k/ (<em>cut</em>), /s/ (<em>nice</em>), or /ʃ/ (<em>ocean</em>)</li>
+  <li>The sound /iː/ has 7+ spellings: <em>he, believe, Caesar, see, people, seize, seas</em></li>
+  <li>The <code>-ough</code> spelling has 7 different sounds: <em>tough</em> /ʌf/, <em>cough</em> /ɒf/, <em>bough</em> /aʊ/, <em>though</em> /əʊ/, <em>through</em> /uː/, <em>borough</em> /ə/, <em>hiccough</em> /ʌp/</li>
+</ul>
+<p><strong>George Bernard Shaw's joke:</strong> "GHOTI" = "FISH" (gh from <em>tough</em> = /f/, o from <em>women</em> = /ɪ/, ti from <em>nation</em> = /ʃ/).</p>
+
+<h4>Homophones vs Homographs</h4>
+<ul>
+  <li><strong>Homophones:</strong> Same sound, different spelling — <em>sea</em> /siː/ vs <em>see</em> /siː/</li>
+  <li><strong>Homographs:</strong> Same spelling, different sound — <em>lead</em> /liːd/ (guide) vs <em>lead</em> /led/ (metal)</li>
+</ul>
+
+<h3>1.6 The IPA (International Phonetic Alphabet)</h3>
+<p>Founded in <strong>1886</strong> by <strong>Paul Passy</strong>. Golden Rule: <em>"One symbol for one sound, and one sound for one symbol."</em></p>
+<h4>Why ELT Teachers Need the IPA</h4>
+<ol>
+  <li><strong>Look-up:</strong> Find correct pronunciation in dictionaries</li>
+  <li><strong>Diagnosis:</strong> Identify exactly which sound a student gets wrong</li>
+  <li><strong>Explanation:</strong> Teach stress, weak forms, and connected speech clearly</li>
+  <li><strong>Materials:</strong> Create pronunciation drills and worksheets</li>
+</ol>
+
+<h4>Broad vs Narrow Transcription</h4>
+<table>
+  <tr><th>Feature</th><th>Broad (Phonemic) <code>/ /</code></th><th>Narrow (Phonetic) <code>[ ]</code></th></tr>
+  <tr><td>Purpose</td><td>Shows only meaning-changing sounds</td><td>Shows fine articulatory details</td></tr>
+  <tr><td>Diacritics</td><td>None</td><td>Uses marks for aspiration, dental, etc.</td></tr>
+  <tr><td>Example</td><td><em>cat</em> → <code>/kæt/</code></td><td><em>cat</em> → <code>[kʰæt̚]</code></td></tr>
+</table>
+
+<h4>Key Transcription Symbols</h4>
+<ul>
+  <li><code>ˈ</code> = Primary stress (before the stressed syllable): <code>/ˈɪmpɔːtənt/</code></li>
+  <li><code>ˌ</code> = Secondary stress: <code>/ˌɪntəˈnæʃnəl/</code></li>
+  <li><code>ː</code> = Long vowel: <code>/iː/</code>, <code>/uː/</code></li>
+  <li><code>n̩</code>, <code>l̩</code> = Syllabic consonants: <em>button</em> <code>/ˈbʌtn̩/</code>, <em>little</em> <code>/ˈlɪtl̩/</code></li>
+</ul>
+
+<h3>1.7 Organs of Speech</h3>
+<p>Humans don't have special "speech organs." We use breathing and eating organs to produce speech:</p>
+<ul>
+  <li><strong>Lungs</strong> — Air source (all English sounds use pulmonic egressive airstream)</li>
+  <li><strong>Larynx & Vocal Cords</strong> — Voicing (vibrating = voiced, open = voiceless)</li>
+  <li><strong>Tongue</strong> — Most flexible organ (Tip, Blade, Front, Back, Root)</li>
+  <li><strong>Lips</strong> — Spread, neutral, or rounded</li>
+  <li><strong>Palate</strong> — Hard palate (fixed) and Soft palate/Velum (moves up/down)</li>
+  <li><strong>Alveolar Ridge</strong> — The bumpy ridge behind upper front teeth</li>
+  <li><strong>Teeth</strong> — Upper and lower front teeth</li>
+</ul>
+<p><strong>Active articulators</strong> (move): tongue, lower lip. <strong>Passive articulators</strong> (stay still): upper teeth, alveolar ridge, hard palate.</p>
+<p><strong>Velum up</strong> = oral sound (most sounds). <strong>Velum down</strong> = nasal sound (/m, n, ŋ/).</p>
+
+<h3>1.8 Classification of English Consonants (24 sounds)</h3>
+<p>Every consonant is described using <strong>3 parameters</strong>:</p>
+<ol>
+  <li><strong>Voicing:</strong> Voiced (vocal cords vibrate) or Voiceless (no vibration)</li>
+  <li><strong>Place:</strong> WHERE the blockage happens in the mouth</li>
+  <li><strong>Manner:</strong> HOW the air is blocked or released</li>
+</ol>
+
+<h4>8 Places of Articulation</h4>
+<table>
+  <tr><th>Place</th><th>What Touches What</th><th>Sounds</th></tr>
+  <tr><td>Bilabial</td><td>Both lips together</td><td>/p, b, m, w/</td></tr>
+  <tr><td>Labiodental</td><td>Lower lip + upper teeth</td><td>/f, v/</td></tr>
+  <tr><td>Dental</td><td>Tongue tip + upper teeth</td><td>/θ, ð/</td></tr>
+  <tr><td>Alveolar</td><td>Tongue tip/blade + alveolar ridge</td><td>/t, d, s, z, n, l/</td></tr>
+  <tr><td>Post-alveolar</td><td>Tongue behind alveolar ridge</td><td>/ʃ, ʒ, tʃ, dʒ, r/</td></tr>
+  <tr><td>Palatal</td><td>Front of tongue + hard palate</td><td>/j/</td></tr>
+  <tr><td>Velar</td><td>Back of tongue + soft palate</td><td>/k, ɡ, ŋ, w/</td></tr>
+  <tr><td>Glottal</td><td>Vocal cords in the larynx</td><td>/h/</td></tr>
+</table>
+
+<h4>6 Manners of Articulation</h4>
+<table>
+  <tr><th>Manner</th><th>How Air Comes Out</th><th>Sounds</th></tr>
+  <tr><td>Plosive (Stop)</td><td>Complete blockage then sudden burst</td><td>/p, b, t, d, k, ɡ/</td></tr>
+  <tr><td>Affricate</td><td>Blockage then slow friction release</td><td>/tʃ, dʒ/</td></tr>
+  <tr><td>Fricative</td><td>Narrow gap causes continuous hissing</td><td>/f, v, θ, ð, s, z, ʃ, ʒ, h/</td></tr>
+  <tr><td>Nasal</td><td>Mouth blocked, air exits through nose</td><td>/m, n, ŋ/</td></tr>
+  <tr><td>Lateral</td><td>Tongue blocks center, air flows around sides</td><td>/l/</td></tr>
+  <tr><td>Approximant</td><td>Organs close but no friction</td><td>/w, r, j/</td></tr>
+</table>
+
+<h4>Full 24-Consonant Chart</h4>
+<table>
+  <tr><th>Manner ↓ \ Place →</th><th>Bilabial</th><th>Labio-dental</th><th>Dental</th><th>Alveolar</th><th>Post-alveolar</th><th>Palatal</th><th>Velar</th><th>Glottal</th></tr>
+  <tr><td><strong>Plosive</strong></td><td>p  b</td><td></td><td></td><td>t  d</td><td></td><td></td><td>k  ɡ</td><td></td></tr>
+  <tr><td><strong>Affricate</strong></td><td></td><td></td><td></td><td></td><td>tʃ  dʒ</td><td></td><td></td><td></td></tr>
+  <tr><td><strong>Fricative</strong></td><td></td><td>f  v</td><td>θ  ð</td><td>s  z</td><td>ʃ  ʒ</td><td></td><td></td><td>h</td></tr>
+  <tr><td><strong>Nasal</strong></td><td>m</td><td></td><td></td><td>n</td><td></td><td></td><td>ŋ</td><td></td></tr>
+  <tr><td><strong>Lateral</strong></td><td></td><td></td><td></td><td>l</td><td></td><td></td><td></td><td></td></tr>
+  <tr><td><strong>Approximant</strong></td><td>(w)</td><td></td><td></td><td></td><td>r</td><td>j</td><td>(w)</td><td></td></tr>
+</table>
+<p><em>(Left of each cell = voiceless, Right = voiced. /w/ is labio-velar — both bilabial and velar at the same time.)</em></p>
+
+<h3>1.9 Classification of English Vowels (20 sounds)</h3>
+<p>Vowels are produced with <strong>no blockage</strong> of airflow. All vowels are <strong>voiced</strong>. They are described by 4 features:</p>
+<ol>
+  <li><strong>Tongue Height:</strong> Close (high), Mid, Open (low)</li>
+  <li><strong>Tongue Position:</strong> Front, Central, Back</li>
+  <li><strong>Lip Shape:</strong> Spread, Neutral, Rounded</li>
+  <li><strong>Length:</strong> Long (tense) or Short (lax)</li>
+</ol>
+
+<h4>12 Monophthongs (Pure Vowels)</h4>
+<table>
+  <tr><th>IPA</th><th>Type</th><th>Description</th><th>Example Words</th></tr>
+  <tr><td>/iː/</td><td>Long</td><td>Close front spread</td><td>tea, see, sheep</td></tr>
+  <tr><td>/ɪ/</td><td>Short</td><td>Near-close near-front lax</td><td>ship, bit, fill</td></tr>
+  <tr><td>/e/</td><td>Short</td><td>Close-mid front spread (no long pair)</td><td>ten, wet, left</td></tr>
+  <tr><td>/æ/</td><td>Short</td><td>Open front spread (no long pair)</td><td>cat, man, apple</td></tr>
+  <tr><td>/ʌ/</td><td>Short</td><td>Open-mid central neutral</td><td>sun, up, cut</td></tr>
+  <tr><td>/ɑː/</td><td>Long</td><td>Open back neutral</td><td>car, fast, dark</td></tr>
+  <tr><td>/ɒ/</td><td>Short</td><td>Open back rounded</td><td>hot, clock, dog</td></tr>
+  <tr><td>/ɔː/</td><td>Long</td><td>Open-mid back rounded</td><td>door, four, saw</td></tr>
+  <tr><td>/ʊ/</td><td>Short</td><td>Near-close near-back rounded</td><td>put, good, wool</td></tr>
+  <tr><td>/uː/</td><td>Long</td><td>Close back rounded</td><td>you, too, blue</td></tr>
+  <tr><td>/ɜː/</td><td>Long</td><td>Mid central neutral (long schwa)</td><td>bird, girl, learn</td></tr>
+  <tr><td>/ə/</td><td>Short</td><td>Mid central neutral (<strong>Schwa</strong> — most common English sound)</td><td>about, paper, over</td></tr>
+</table>
+
+<h4>The Schwa /ə/ — The King of English Sounds</h4>
+<p>The schwa is the <strong>most frequent vowel</strong> in English. It appears in every unstressed syllable. Your mouth is completely relaxed — neutral lips, neutral tongue. Words like <em>to, of, a, the, and</em> all use schwa in normal speech.</p>
+
+<h4>8 Diphthongs (Gliding Vowels)</h4>
+<p>A diphthong starts at one vowel position and glides to another within a single syllable.</p>
+<table>
+  <tr><th>Type</th><th>IPA</th><th>Example</th></tr>
+  <tr><td rowspan="3">Centring (→ /ə/)</td><td>/ɪə/</td><td>hear, dear</td></tr>
+  <tr><td>/eə/</td><td>hair, chair</td></tr>
+  <tr><td>/ʊə/</td><td>pure, tour</td></tr>
+  <tr><td rowspan="3">Closing (→ /ɪ/)</td><td>/eɪ/</td><td>face, day</td></tr>
+  <tr><td>/aɪ/</td><td>price, my</td></tr>
+  <tr><td>/ɔɪ/</td><td>boy, choice</td></tr>
+  <tr><td rowspan="2">Closing (→ /ʊ/)</td><td>/əʊ/</td><td>goat, home</td></tr>
+  <tr><td>/aʊ/</td><td>mouth, now</td></tr>
+</table>
+
+<h4>5 Triphthongs</h4>
+<p>A closing diphthong + schwa: /eɪə/ (<em>player</em>), /aɪə/ (<em>fire</em>), /ɔɪə/ (<em>royal</em>), /əʊə/ (<em>slower</em>), /aʊə/ (<em>power</em>).</p>
+
+<h3>1.10 RP vs General American</h3>
+<table>
+  <tr><th>Feature</th><th>RP (British)</th><th>General American</th></tr>
+  <tr><td>Post-vocalic /r/</td><td>Silent: <em>car</em> /kɑː/</td><td>Pronounced: <em>car</em> /kɑːr/</td></tr>
+  <tr><td>/ɒ/ vowel</td><td>Exists: <em>pot</em> /pɒt/</td><td>Merged with /ɑː/: <em>pot</em> /pɑːt/</td></tr>
+  <tr><td>BATH vowel</td><td>/ɑː/: <em>bath</em> /bɑːθ/</td><td>/æ/: <em>bath</em> /bæθ/</td></tr>
+  <tr><td>Intervocalic /t/</td><td>Clear [t]: <em>water</em> [ˈwɔːtə]</td><td>Flapped [ɾ]: <em>water</em> [ˈwɑːɾər]</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<!-- TOPIC 2: PHONEMES AND PHONES -->
+<!-- ============================================================ -->
+<div class="topic-divider">
+  <div class="topic-number">TOPIC 2</div>
+  <h2>Phonemes, Phones & Allophones: Definitions, Differences & Theories</h2>
+</div>
+
+<h3>2.1 Three Core Concepts</h3>
+
+<div class="def">
+  <div class="def-label">Phone — Notation: [ ]</div>
+  <p>Any speech sound as a physical, acoustic event. It can be measured with instruments. Example: aspirated <code>[pʰ]</code> and unaspirated <code>[p]</code> are two different phones.</p>
+</div>
+
+<div class="def">
+  <div class="def-label">Phoneme — Notation: / /</div>
+  <p>The smallest abstract sound unit in a language that can change meaning. It lives in the speaker's mind. Example: <code>/p/</code> vs <code>/b/</code> — swapping them changes <em>pat</em> to <em>bat</em>. So /p/ and /b/ are separate phonemes.</p>
+</div>
+
+<div class="def">
+  <div class="def-label">Allophone — Notation: [ ]</div>
+  <p>A predictable variant of a phoneme that depends on context. It <strong>never</strong> changes meaning. Example: <code>[pʰ]</code> (in <em>pin</em>) and <code>[p]</code> (in <em>spin</em>) are allophones of the phoneme <code>/p/</code>.</p>
+</div>
+
+<h4>Quick Comparison</h4>
+<table>
+  <tr><th>Feature</th><th>Phone</th><th>Phoneme</th><th>Allophone</th></tr>
+  <tr><td>Nature</td><td>Concrete, physical</td><td>Abstract, mental</td><td>Contextual variant</td></tr>
+  <tr><td>Notation</td><td>[ ]</td><td>/ /</td><td>[ ]</td></tr>
+  <tr><td>Changes meaning?</td><td>N/A</td><td><strong>Yes</strong></td><td><strong>No</strong></td></tr>
+  <tr><td>How to identify</td><td>Acoustic observation</td><td>Minimal pairs / Commutation test</td><td>Distributional analysis</td></tr>
+</table>
+
+<h3>2.2 Key Tests</h3>
+<p><strong>Minimal Pair Test:</strong> Two words that differ by only one sound in the same position and have different meanings (e.g., <em>cat</em> vs <em>bat</em>) → the differing sounds are separate phonemes.</p>
+<p><strong>Commutation Test (Trubetzkoy):</strong> Swap one sound for another. If meaning changes → phonemes. If only pronunciation style changes → allophones.</p>
+<p><strong>Complementary Distribution:</strong> Two allophones never appear in the same environment. [pʰ] only appears syllable-initially, [p] only appears after /s/. They are in complementary distribution.</p>
+
+<h3>2.3 Five Major Theories (Covered in Class)</h3>
+
+<h4>1. Daniel Jones (1881–1967) — Foundations of Phonetics</h4>
+<p>British phonetician at UCL. Helped build the IPA. Created the <strong>Cardinal Vowels</strong> system — 8 universal reference points for describing vowels based on extreme tongue positions. These don't belong to any specific language.</p>
+
+<h4>2. Nikolai Trubetzkoy (1890–1938) — Birth of Phonology</h4>
+<p>Founder of the Prague Linguistic Circle (1926). Published <em>Grundzüge der Phonologie</em> (Principles of Phonology, 1939). Key contributions:</p>
+<ul>
+  <li>Separated Phonetics (physical sounds) from Phonology (mental sound system)</li>
+  <li><strong>Neutralization:</strong> When two phonemes lose their contrast in a specific position (e.g., German <em>Rad</em> /d/ and <em>Rat</em> /t/ both become [t] at the end of a word)</li>
+  <li><strong>Archiphoneme:</strong> Written with a capital letter (e.g., /T/) to represent the neutralized pair</li>
+</ul>
+
+<h4>3. Roman Jakobson (1896–1982) — Distinctive Features</h4>
+<p>Proved that sounds are not invisible atoms but <strong>bundles of binary features</strong>. Each feature is either present [+] or absent [-]:</p>
+<ul>
+  <li><code>[±voiced]</code>: /b/ [+voiced] vs /p/ [-voiced]</li>
+  <li><code>[±nasal]</code>: /m/ [+nasal] vs /b/ [-nasal]</li>
+  <li><code>[±continuant]</code>: /f/ [+continuant] vs /p/ [-continuant]</li>
+</ul>
+
+<h4>4. Noam Chomsky (1928–) — Generative Phonology</h4>
+<p>Saw language as a mental system. Phonology = mental grammar rules that derive what we actually say:</p>
+<div class="rule">Underlying Form (UR) → [Phonological Rules] → Surface Form (SR)</div>
+
+<h4>5. Morris Halle (1923–2018) — SPE (1968)</h4>
+<p>Co-authored <em>The Sound Pattern of English</em> with Chomsky (1968). Added an extensive articulatory feature system (<code>[±coronal]</code>, <code>[±anterior]</code>, etc.) and established <strong>strictly ordered rules</strong>.</p>
+
+<h3>2.4 Phonological Rule Notation</h3>
+<div class="rule">A → B / C __ D</div>
+<p>"Sound A becomes B when it occurs between C and D"</p>
+
+<h4>Four Main Sound Change Processes</h4>
+<ol>
+  <li><strong>Assimilation:</strong> A sound becomes more like its neighbor. <code>/ɪn + pʊt/</code> → <code>[ɪmpʊt]</code></li>
+  <li><strong>Dissimilation:</strong> Two similar sounds become different. Latin <em>peregrinus</em> → English <em>pilgrim</em></li>
+  <li><strong>Deletion/Elision:</strong> A sound disappears. <em>postman</em> <code>/ˈpəʊstmən/</code> → <code>[ˈpəʊsmən]</code></li>
+  <li><strong>Insertion/Epenthesis:</strong> An extra sound is added. <em>warmth</em> → <code>[wɔːmpθ]</code></li>
+</ol>
+
+<h4>Case Study: English /n/ Assimilation</h4>
+<table>
+  <tr><th>Word</th><th>Underlying</th><th>Following Sound</th><th>Surface</th><th>Why</th></tr>
+  <tr><td>input</td><td>/ɪn + pʊt/</td><td>/p/ (bilabial)</td><td>[ɪmpʊt]</td><td>/n/ becomes bilabial [m]</td></tr>
+  <tr><td>intake</td><td>/ɪn + teɪk/</td><td>/t/ (alveolar)</td><td>[ɪnteɪk]</td><td>No change — /n/ is already alveolar</td></tr>
+  <tr><td>incomplete</td><td>/ɪn + kəmpliːt/</td><td>/k/ (velar)</td><td>[ɪŋkəmpliːt]</td><td>/n/ becomes velar [ŋ]</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<!-- TOPIC 3: SYLLABLE -->
+<!-- ============================================================ -->
+<div class="topic-divider">
+  <div class="topic-number">TOPIC 3</div>
+  <h2>Syllable: Phonetic vs. Phonological Definitions & Phonotactic Possibilities</h2>
+</div>
+
+<h3>3.1 What is a Syllable?</h3>
+<p>A syllable is a single beat or pulse in speech. It has one vowel sound (or vowel-like sound) at its center, with optional consonants around it.</p>
+<ul>
+  <li><em>Cat</em> = 1 syllable [kæt]</li>
+  <li><em>Paper</em> = 2 syllables [peɪ.pər]</li>
+  <li><em>Banana</em> = 3 syllables [bə.næn.ə]</li>
+</ul>
+<p><strong>How to count syllables:</strong> Place your hand under your chin. Each time your jaw drops for a vowel sound = 1 syllable.</p>
+
+<h3>3.2 Phonetic vs Phonological Syllable</h3>
+<table>
+  <tr><th>Feature</th><th>Phonetic Syllable</th><th>Phonological Syllable</th></tr>
+  <tr><td>Nature</td><td>Physical, acoustic (peaks of loudness)</td><td>Abstract, mental (grammar rules)</td></tr>
+  <tr><td>Defined by</td><td><strong>Sonority</strong> peaks and chest pulses</td><td>Structure: <strong>Onset + Nucleus + Coda</strong></td></tr>
+  <tr><td>Language-specific?</td><td>Mostly universal</td><td>Strictly language-specific rules</td></tr>
+  <tr><td>Boundaries</td><td>Fuzzy/continuous</td><td>Clear and categorical</td></tr>
+</table>
+
+<h4>Sonority</h4>
+<p>Sonority = how loud/resonant a sound is. The Sonority Hierarchy from most to least: Vowels > Glides (/j, w/) > Liquids (/r, l/) > Nasals (/m, n, ŋ/) > Fricatives > Stops.</p>
+<p><strong>Sonority Sequencing Principle (SSP):</strong> In a well-formed syllable, sonority rises from the onset to the nucleus and falls toward the coda.</p>
+
+<h3>3.3 Internal Structure of a Syllable</h3>
+<div class="rule">σ = Onset (optional consonants) + Rhyme [Nucleus (obligatory vowel) + Coda (optional consonants)]</div>
+<ul>
+  <li><strong>Onset:</strong> Consonant(s) before the vowel. Example: /tr/ in <em>train</em></li>
+  <li><strong>Nucleus:</strong> The vowel — the core of every syllable. Can also be a syllabic consonant (/l̩/ in <em>bottle</em>)</li>
+  <li><strong>Coda:</strong> Consonant(s) after the vowel. Example: /ts/ in <em>cats</em></li>
+</ul>
+
+<h3>3.4 Open vs Closed Syllables</h3>
+<ul>
+  <li><strong>Open:</strong> Ends with a vowel (no coda) — <em>go</em>, <em>me</em>, <em>pa</em>-per. Vowel tends to be long.</li>
+  <li><strong>Closed:</strong> Ends with consonant(s) (has coda) — <em>cat</em>, <em>dog</em>, <em>help</em>. Vowel tends to be short.</li>
+</ul>
+
+<h3>3.5 Phonotactics</h3>
+<p><strong>Phonotactics</strong> = the rules about which sound combinations are allowed in a language.</p>
+<p><strong>English Syllable Template:</strong> (C)(C)(C) V (C)(C)(C)(C) — up to 3 consonants in onset, up to 4 in coda.</p>
+
+<h4>3-Consonant Onset Rule</h4>
+<p>If an English syllable starts with 3 consonants: C₁ must be /s/, C₂ must be a voiceless stop (/p, t, k/), C₃ must be an approximant (/l, r, w, j/).</p>
+<p>Examples: <em>spring</em> /spr-/, <em>street</em> /str-/, <em>split</em> /spl-/, <em>scream</em> /skr-/, <em>squeak</em> /skw-/</p>
+
+<h4>Maximum Coda (up to 4 consonants)</h4>
+<p>Examples: <em>texts</em> /teksts/, <em>sixths</em> /sɪksθs/, <em>glimpsed</em> /ɡlɪmpst/</p>
+
+<h4>SSP Violation: /s/ + Stop</h4>
+<p>In <em>stop</em> /stɒp/, sonority drops from /s/ to /t/ before rising to the vowel. This breaks the SSP. Solution: /s/ is treated as an "appendix" outside the core syllable.</p>
+
+<h4>Maximal Onset Principle (MOP)</h4>
+<p>When splitting multisyllabic words, assign as many consonants as possible to the onset of the next syllable (if the resulting cluster is legal). Example: <em>diploma</em> → /dɪ.ˈpləʊ.mə/ (because /pl/ is a valid onset).</p>
+
+<h3>3.6 Bangla vs English Syllable Structure</h3>
+<table>
+  <tr><th>Feature</th><th>Bangla</th><th>English</th></tr>
+  <tr><td>Complexity</td><td>Moderate (CV, CVC preferred)</td><td>Complex (up to CCCVCCCC)</td></tr>
+  <tr><td>Clusters</td><td>Very few in native words</td><td>Many clusters allowed</td></tr>
+  <tr><td>Loanword repair</td><td><em>school</em> → <em>is-kul</em> (prothesis)</td><td>N/A</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<!-- TOPIC 4: CONNECTED SPEECH -->
+<!-- ============================================================ -->
+<div class="topic-divider">
+  <div class="topic-number">TOPIC 4</div>
+  <h2>Connected Speech and Rules</h2>
+</div>
+
+<h3>4.1 What is Connected Speech?</h3>
+<div class="def">
+  <div class="def-label">Definition</div>
+  <p>Connected speech is natural, continuous spoken language where words blend together and sounds get modified. It is the opposite of saying each word separately (citation form).</p>
+</div>
+<p><strong>Why does it happen?</strong> Not laziness — it is natural speech efficiency:</p>
+<ol>
+  <li><strong>Principle of Least Effort:</strong> Our mouth saves energy by taking shortcuts</li>
+  <li><strong>Coarticulation:</strong> The tongue prepares for the next sound before finishing the current one</li>
+  <li><strong>Stress-Timing:</strong> English squeezes unstressed syllables to keep rhythm even</li>
+</ol>
+
+<h3>4.2 Linking (Catenation)</h3>
+<p>When the final consonant of one word joins smoothly to the initial vowel of the next word:</p>
+<ul>
+  <li><em>"Turn it on"</em> → [tɜː.nɪ.tɒn] (sounds like "tur-ni-ton")</li>
+  <li><em>"Pick it up"</em> → [pɪ.kɪ.tʌp] (sounds like "pi-ki-tup")</li>
+  <li><em>"An apple"</em> → [ə.næpl]</li>
+</ul>
+
+<h4>Vowel-to-Vowel Linking (Glide Insertion)</h4>
+<ul>
+  <li><strong>Linking /r/:</strong> When spelling has an 'r' that's normally silent (in RP), it's pronounced before a vowel: <em>"far away"</em> → /fɑːr əˈweɪ/</li>
+  <li><strong>Linking /w/:</strong> After rounded vowels (/uː, əʊ, aʊ/): <em>"go on"</em> → /ɡəʊ w ɒn/</li>
+  <li><strong>Linking /j/:</strong> After front vowels (/iː, eɪ, aɪ/): <em>"I am"</em> → /aɪ j æm/</li>
+</ul>
+
+<h3>4.3 Intrusion</h3>
+<p>Like linking, but the inserted sound has <strong>no letter in the spelling</strong>:</p>
+<ul>
+  <li><strong>Intrusive /r/:</strong> <em>"law and order"</em> → /lɔː <strong>r</strong> ənd ɔːdə/ (no 'r' in "law"!)</li>
+  <li><strong>Intrusive /w/:</strong> <em>"do it"</em> → /duː <strong>w</strong> ɪt/</li>
+  <li><strong>Intrusive /j/:</strong> <em>"see it"</em> → /siː <strong>j</strong> ɪt/</li>
+</ul>
+
+<h3>4.4 Assimilation</h3>
+<div class="def">
+  <div class="def-label">Definition</div>
+  <p>A sound changes to become more like its neighbor in Place, Manner, or Voicing.</p>
+</div>
+
+<h4>Three Directions</h4>
+<ol>
+  <li><strong>Regressive (Anticipatory):</strong> The following sound changes the preceding one (most common in English). <em>"ten boys"</em> → [tem bɔɪz]</li>
+  <li><strong>Progressive:</strong> The preceding sound changes the following one. Plural -s: <em>"cats"</em> /kæts/ (voiceless after /t/), <em>"dogs"</em> /dɒɡz/ (voiced after /ɡ/)</li>
+  <li><strong>Coalescent:</strong> Two sounds merge into a completely new sound. /t/ + /j/ → /tʃ/: <em>"don't you"</em> → /ˈdəʊntʃu/</li>
+</ol>
+
+<h4>Place Assimilation (Alveolars change before Bilabials and Velars)</h4>
+<table>
+  <tr><th>Before Bilabial (/p, b, m/)</th><th>Before Velar (/k, ɡ/)</th></tr>
+  <tr><td><em>"good boy"</em> → [ɡʊb bɔɪ]</td><td><em>"good girl"</em> → [ɡʊɡ ɡɜːl]</td></tr>
+  <tr><td><em>"ten pounds"</em> → [tem paʊndz]</td><td><em>"ten cups"</em> → [teŋ kʌps]</td></tr>
+  <tr><td><em>"that pen"</em> → [ðæp pen]</td><td><em>"not quite"</em> → [nɒk kwaɪt]</td></tr>
+</table>
+
+<h4>Coalescent Assimilation (Palatalization)</h4>
+<table>
+  <tr><th>Combination</th><th>Result</th><th>Example</th></tr>
+  <tr><td>/t/ + /j/</td><td>/tʃ/</td><td><em>"don't you"</em> → /ˈdəʊntʃu/; <em>"meet you"</em> → /ˈmiːtʃu/</td></tr>
+  <tr><td>/d/ + /j/</td><td>/dʒ/</td><td><em>"did you"</em> → /ˈdɪdʒu/; <em>"would you"</em> → /ˈwʊdʒu/</td></tr>
+  <tr><td>/s/ + /j/</td><td>/ʃ/</td><td><em>"bless you"</em> → /ˈbleʃu/</td></tr>
+  <tr><td>/z/ + /j/</td><td>/ʒ/</td><td><em>"as you know"</em> → /əʒ juː nəʊ/</td></tr>
+</table>
+
+<h3>4.5 Elision (Sound Deletion)</h3>
+<div class="def">
+  <div class="def-label">Definition</div>
+  <p>A sound that exists in careful speech is completely dropped in fast, natural speech.</p>
+</div>
+
+<h4>/t/ and /d/ Deletion Rule</h4>
+<p>When /t/ or /d/ is between two other consonants (C + /t,d/ + C), it disappears:</p>
+<ul>
+  <li><em>"next week"</em> → [neks wiːk]</li>
+  <li><em>"friendship"</em> → [ˈfrenʃɪp]</li>
+  <li><em>"I can't swim"</em> → [aɪ kɑːn swɪm]</li>
+</ul>
+<p><strong>Exception:</strong> If the next word starts with a vowel, /t/ and /d/ stay.</p>
+
+<h4>Schwa/Vowel Deletion (Syncope)</h4>
+<ul>
+  <li><em>"camera"</em> → /ˈkæmrə/ (3 → 2 syllables)</li>
+  <li><em>"history"</em> → /ˈhɪstri/</li>
+  <li><em>"interesting"</em> → /ˈɪntrəstɪŋ/</li>
+  <li><em>"chocolate"</em> → /ˈtʃɒklət/</li>
+</ul>
+
+<h4>/h/ Dropping in Weak Forms</h4>
+<p>Unstressed pronouns/auxiliaries lose their /h/: <em>"tell him"</em> → /ˈtel ɪm/, <em>"ask her"</em> → /ˈɑːsk ɜː/</p>
+
+<h3>4.6 Glottalization</h3>
+<p>Replacing /t/ with a <strong>glottal stop [ʔ]</strong> — a brief closure of the vocal cords. Common in Cockney and Estuary English:</p>
+<ul>
+  <li><em>"bottle"</em> → [ˈbɒʔl], <em>"little"</em> → [ˈlɪʔl], <em>"football"</em> → [ˈfʊʔbɔːl]</li>
+</ul>
+<h4>Three Theories of Glottalization</h4>
+<ol>
+  <li><strong>Autosegmental Phonology:</strong> The glottal feature [constricted glottis] spreads to the /t/ slot while the tongue-tip closure is delinked</li>
+  <li><strong>Articulatory Phonology:</strong> The tongue-tip closure gesture is reduced/omitted; the glottal closure gesture takes over</li>
+  <li><strong>Usage-Based Theory:</strong> High-frequency words like <em>bottle</em> store [ʔ] variants directly in the mental lexicon</li>
+</ol>
+
+<h3>4.7 Flapping (American English)</h3>
+<p>In General American, /t/ and /d/ between vowels (before an unstressed syllable) become a quick tap [ɾ]:</p>
+<ul>
+  <li><em>"butter"</em> → [ˈbʌɾər], <em>"water"</em> → [ˈwɑːɾər], <em>"city"</em> → [ˈsɪɾi]</li>
+</ul>
+
+<h3>4.8 Juncture</h3>
+<p>The acoustic clues that tell listeners where word boundaries are. Classic example:</p>
+<table>
+  <tr><th>"I scream" /aɪ + skriːm/</th><th>"Ice cream" /ˈaɪs + kriːm/</th></tr>
+  <tr><td>Full /aɪ/ diphthong; /k/ is unaspirated (after /s/)</td><td>Short /aɪ/ (pre-fortis clipping); /k/ is aspirated [kʰ] (word-initial)</td></tr>
+</table>
+
+<h3>4.9 Stress-Timing & Rhythm</h3>
+<p>English is a <strong>stress-timed</strong> language: stressed syllables come at roughly equal intervals, regardless of how many unstressed syllables are in between. Unstressed syllables get squeezed. Bangla is <strong>syllable-timed</strong>: every syllable gets equal time.</p>
+
+<h3>4.10 Intonation</h3>
+<ul>
+  <li><strong>Rising ↗:</strong> Yes/No questions, politeness, uncertainty — <em>"Are you coming? ↗"</em></li>
+  <li><strong>Falling ↘:</strong> Statements, Wh-questions, finality — <em>"I am ready. ↘"</em></li>
+</ul>
+
+<h3>4.11 Contractions & Reductions</h3>
+<ul>
+  <li><strong>Standard contractions:</strong> I'm, you'll, she's, they'll</li>
+  <li><strong>Fast speech reductions:</strong> "going to" → <em>gonna</em>, "want to" → <em>wanna</em>, "got to" → <em>gotta</em>, "what are you" → <em>whatcha</em></li>
+</ul>
+
+<!-- ============================================================ -->
+<!-- TOPIC 5: STRONG vs WEAK FORMS -->
+<!-- ============================================================ -->
+<div class="topic-divider">
+  <div class="topic-number">TOPIC 5</div>
+  <h2>Strong vs Weak Form Words: Contractions, Elision & Assimilation</h2>
+</div>
+
+<h3>5.1 What are Weak Forms?</h3>
+<div class="def">
+  <div class="def-label">Definition</div>
+  <p>Weak forms are the reduced, unstressed pronunciations of function words (articles, prepositions, pronouns, auxiliaries, conjunctions). Vowels get reduced to schwa /ə/ or dropped entirely.</p>
+</div>
+<p><strong>Why?</strong> English is stress-timed. Content words (nouns, main verbs, adjectives) get stress. Function words get squeezed into weak forms to keep the rhythm.</p>
+
+<h3>5.2 Master Weak Form Chart</h3>
+<table>
+  <tr><th>Word</th><th>Strong Form</th><th>Weak Form</th><th>Example</th></tr>
+  <tr><td>to</td><td>/tuː/</td><td>/tə/ (before C), /tu/ (before V)</td><td><em>"Go to bed"</em> /ɡəʊ tə ˈbed/</td></tr>
+  <tr><td>and</td><td>/ænd/</td><td>/ənd/, /ən/, /n/</td><td><em>"Rock and roll"</em> /ˈrɒk ən ˈrəʊl/</td></tr>
+  <tr><td>of</td><td>/ɒv/</td><td>/əv/, /ə/</td><td><em>"Cup of tea"</em> /ˌkʌp əv ˈtiː/</td></tr>
+  <tr><td>from</td><td>/frɒm/</td><td>/frəm/</td><td><em>"Home from work"</em></td></tr>
+  <tr><td>that</td><td>/ðæt/</td><td>/ðət/</td><td><em>"I said that he could"</em></td></tr>
+  <tr><td>can</td><td>/kæn/</td><td>/kən/</td><td><em>"I can do it"</em></td></tr>
+  <tr><td>was</td><td>/wɒz/</td><td>/wəz/</td><td><em>"He was late"</em></td></tr>
+  <tr><td>for</td><td>/fɔː/</td><td>/fə/</td><td><em>"Wait for me"</em></td></tr>
+  <tr><td>as</td><td>/æz/</td><td>/əz/</td><td><em>"As good as gold"</em></td></tr>
+  <tr><td>them</td><td>/ðem/</td><td>/ðəm/, /əm/</td><td><em>"Leave them alone"</em></td></tr>
+  <tr><td>have</td><td>/hæv/</td><td>/həv/, /əv/</td><td><em>"I should have gone"</em></td></tr>
+  <tr><td>a/an</td><td>/eɪ/, /æn/</td><td>/ə/, /ən/</td><td><em>"I need a pen"</em></td></tr>
+  <tr><td>the</td><td>/ðiː/</td><td>/ðə/ (before C), /ði/ (before V)</td><td><em>"The book" /ðə bʊk/</em></td></tr>
+</table>
+
+<h3>5.3 When Must You Use the Strong Form?</h3>
+<ol>
+  <li><strong>End of a sentence:</strong> <em>"What are you looking for?"</em> → <em>for</em> = /fɔː/</li>
+  <li><strong>Contrastive stress:</strong> <em>"I said AND, not OR!"</em> → <em>and</em> = /ænd/</li>
+  <li><strong>Coordinated prepositions:</strong> <em>"to and from London"</em> → /tuː/, /frɒm/</li>
+  <li><strong>Quoting the word itself:</strong> <em>"The word 'that' has four letters."</em> → /ðæt/</li>
+</ol>
+
+<h3>5.4 Connection to Other Topics</h3>
+<p>Weak forms involve <strong>elision</strong> (dropping /h/ from <em>him, her, have</em>), <strong>assimilation</strong> (sounds changing to match neighbors), and <strong>vowel reduction</strong> (full vowels → schwa). These are all connected speech processes that work together.</p>
+
+<!-- ============================================================ -->
+<!-- TOPIC 6: IPA TRANSCRIPTION OF CONNECTED SPEECH -->
+<!-- ============================================================ -->
+<div class="topic-divider">
+  <div class="topic-number">TOPIC 6</div>
+  <h2>IPA Transcription of Connected Speech</h2>
+</div>
+
+<h3>6.1 Putting It All Together</h3>
+<p>When transcribing connected speech, you must apply all the rules from Topics 1–5 simultaneously: weak forms, linking, assimilation, elision, and stress marking.</p>
+
+<h4>Step-by-Step Method</h4>
+<ol>
+  <li>Identify <strong>content words</strong> (nouns, verbs, adjectives, adverbs) — these keep their full (strong) pronunciation</li>
+  <li>Identify <strong>function words</strong> (to, and, of, the, can, was, etc.) — reduce them to <strong>weak forms</strong></li>
+  <li>Mark <strong>primary stress</strong> (<code>ˈ</code>) on the main stressed syllable of content words</li>
+  <li>Apply <strong>linking</strong> — connect final consonants to following initial vowels</li>
+  <li>Apply <strong>assimilation</strong> — change alveolars before bilabials/velars</li>
+  <li>Apply <strong>elision</strong> — drop /t/, /d/ in consonant clusters; drop /h/ in weak forms</li>
+  <li>Apply <strong>contractions</strong> if appropriate</li>
+</ol>
+
+<h3>6.2 Worked Examples</h3>
+
+<h4>Example 1: "I want to go to the shop and buy some bread and butter."</h4>
+<table>
+  <tr><th>Word</th><th>Citation Form</th><th>Connected Speech</th><th>Process Applied</th></tr>
+  <tr><td>I</td><td>/aɪ/</td><td>/aɪ/</td><td>Content word — stays</td></tr>
+  <tr><td>want to</td><td>/wɒnt tuː/</td><td>/ˈwɒnə/</td><td>Reduction: "wanna"</td></tr>
+  <tr><td>go</td><td>/ɡəʊ/</td><td>/ˈɡəʊ/</td><td>Content word</td></tr>
+  <tr><td>to the</td><td>/tuː ðiː/</td><td>/tə ðə/</td><td>Both weak forms</td></tr>
+  <tr><td>shop</td><td>/ʃɒp/</td><td>/ˈʃɒp/</td><td>Content word</td></tr>
+  <tr><td>and</td><td>/ænd/</td><td>/ən/</td><td>Weak form + elision of /d/</td></tr>
+  <tr><td>buy</td><td>/baɪ/</td><td>/ˈbaɪ/</td><td>Content word</td></tr>
+  <tr><td>some</td><td>/sʌm/</td><td>/səm/</td><td>Weak form</td></tr>
+  <tr><td>bread and</td><td>/bred ænd/</td><td>/ˈbred ən/</td><td>/d/ elision + weak "and"</td></tr>
+  <tr><td>butter</td><td>/ˈbʌtə/</td><td>/ˈbʌtə/</td><td>Content word</td></tr>
+</table>
+<p><strong>Full transcription:</strong> <code>/aɪ ˈwɒnə ˈɡəʊ tə ðə ˈʃɒp ən ˈbaɪ səm ˈbred ən ˈbʌtə/</code></p>
+
+<h4>Example 2: "Can you give me a cup of tea?"</h4>
+<p>Citation: /kæn juː ɡɪv miː eɪ kʌp ɒv tiː/<br>
+Connected: <code>/kən jə ˈɡɪv mi ə ˌkʌp əv ˈtiː/</code></p>
+<p>Processes: <em>can</em> → weak /kən/; <em>you</em> → weak /jə/; <em>me</em> → unstressed /mi/; <em>a</em> → /ə/; <em>of</em> → /əv/</p>
+
+<h4>Example 3: "Don't you think he should have told her?"</h4>
+<p>Connected: <code>/ˈdəʊntʃə ˈθɪŋk i ˈʃʊd əv ˈtəʊld ə/</code></p>
+<p>Processes: /t/+/j/ coalescence → /tʃ/; <em>you</em> → /ə/; <em>he</em> → /i/ (h-dropping); <em>have</em> → /əv/; <em>her</em> → /ə/ (h-dropping)</p>
+
+<h4>Example 4: "She must have been at the office."</h4>
+<p>Connected: <code>/ʃi ˈmʌs əv bɪn ət ði ˈɒfɪs/</code></p>
+<p>Processes: <em>must</em> → /t/ elision before /h/; <em>have</em> → /əv/; <em>been</em> → weak /bɪn/; <em>at</em> → weak /ət/; <em>the</em> → /ði/ (before vowel)</p>
+
+<h3>6.3 Common Patterns to Remember</h3>
+<table>
+  <tr><th>Pattern</th><th>Rule</th><th>Example</th></tr>
+  <tr><td>C + V across words</td><td>Link them</td><td><em>"turn it"</em> → [tɜː.nɪt]</td></tr>
+  <tr><td>Alveolar + Bilabial</td><td>/t/→[p], /d/→[b], /n/→[m]</td><td><em>"good boy"</em> → [ɡʊb bɔɪ]</td></tr>
+  <tr><td>Alveolar + Velar</td><td>/t/→[k], /d/→[ɡ], /n/→[ŋ]</td><td><em>"good girl"</em> → [ɡʊɡ ɡɜːl]</td></tr>
+  <tr><td>/t,d/ + /j/</td><td>Coalescence</td><td><em>"did you"</em> → /ˈdɪdʒu/</td></tr>
+  <tr><td>C + /t,d/ + C</td><td>/t,d/ deleted</td><td><em>"next day"</em> → [neks deɪ]</td></tr>
+  <tr><td>Function word</td><td>Reduce to weak form</td><td><em>"and"</em> → /ən/</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<!-- TOPIC 7: COMBINED VIVA QUESTION BANK -->
+<!-- ============================================================ -->
+<div class="topic-divider">
+  <div class="topic-number">VIVA Q&A</div>
+  <h2>Combined High-Yield Viva Question Bank</h2>
+</div>
+
+<p><em>Below are key questions covering all 6 topics. Model answers are written in simple, clear English suitable for viva delivery.</em></p>
+
+<h3>Phonetics & Phonology</h3>
+
+<div class="qa">
+  <div class="qa-q">Q1. What is the difference between Phonetics and Phonology?</div>
+  <div class="qa-a">Phonetics studies the physical production and acoustic properties of speech sounds across all languages. Phonology studies how sounds function and form meaningful contrasts within a specific language's mental grammar.</div>
+</div>
+
+<div class="qa">
+  <div class="qa-q">Q2. What are the three branches of Phonetics? Which matters most for ELT?</div>
+  <div class="qa-a">Articulatory, Acoustic, and Auditory. Articulatory phonetics is most relevant to ELT because teachers need to show students where to place their tongue, lips, and teeth.</div>
+</div>
+
+<div class="qa">
+  <div class="qa-q">Q3. How are Phonetics and Phonology related?</div>
+  <div class="qa-a">They are complementary. Phonetics gives the physical raw material; Phonology gives the organizational rules. Neither is complete without the other.</div>
+</div>
+
+<div class="qa">
+  <div class="qa-q">Q4. What is the IPA and its golden rule?</div>
+  <div class="qa-a">The International Phonetic Alphabet, founded in 1886 by Paul Passy. Its golden rule: "One symbol for one sound, and one sound for one symbol."</div>
+</div>
+
+<div class="qa">
+  <div class="qa-q">Q5. What is the Schwa? Why is it the most common English sound?</div>
+  <div class="qa-a">The schwa /ə/ is a short, mid-central, neutral vowel made with a completely relaxed mouth. It's the most common because English is stress-timed, so all unstressed vowels tend to reduce to schwa.</div>
+</div>
+
+<div class="qa">
+  <div class="qa-q">Q6. Name the 3 parameters for describing consonants.</div>
+  <div class="qa-a">1. Voicing (voiced or voiceless), 2. Place of articulation (where the blockage is), 3. Manner of articulation (how air is released).</div>
+</div>
+
+<div class="qa">
+  <div class="qa-q">Q7. What is the difference between a Plosive and an Affricate?</div>
+  <div class="qa-a">Both start with complete blockage. In a plosive, the blockage is released suddenly with a burst. In an affricate, it is released slowly, creating friction.</div>
+</div>
+
+<h3>Phonemes & Phones</h3>
+
+<div class="qa">
+  <div class="qa-q">Q8. What is the difference between a Phone and a Phoneme?</div>
+  <div class="qa-a">A phone is any physical speech sound, written in square brackets [ ]. A phoneme is an abstract mental sound unit that can change meaning, written in slashes / /.</div>
+</div>
+
+<div class="qa">
+  <div class="qa-q">Q9. What is an Allophone? Give an example.</div>
+  <div class="qa-a">An allophone is a predictable variant of a phoneme that never changes meaning. Example: aspirated [pʰ] in "pin" and unaspirated [p] in "spin" are both allophones of /p/.</div>
+</div>
+
+<div class="qa">
+  <div class="qa-q">Q10. What is Trubetzkoy's Commutation Test?</div>
+  <div class="qa-a">Swap one sound for another in a word. If meaning changes, the sounds are separate phonemes. If meaning stays the same, they are allophones.</div>
+</div>
+
+<div class="qa">
+  <div class="qa-q">Q11. What is Neutralization? Give an example.</div>
+  <div class="qa-a">Neutralization is when two phonemes lose their contrast in a specific position. In German, /d/ and /t/ both become [t] at the end of a word — "Rad" and "Rat" sound identical.</div>
+</div>
+
+<div class="qa">
+  <div class="qa-q">Q12. What is Jakobson's Distinctive Feature Theory?</div>
+  <div class="qa-a">Sounds are bundles of binary features, each marked as present [+] or absent [-]. For example, /b/ is [+voiced] and /p/ is [-voiced].</div>
+</div>
+
+<div class="qa">
+  <div class="qa-q">Q13. What is the SPE formula?</div>
+  <div class="qa-a">Underlying Representation → [Phonological Rules] → Surface Representation. Published by Chomsky and Halle in 1968.</div>
+</div>
+
+<h3>Syllable & Phonotactics</h3>
+
+<div class="qa">
+  <div class="qa-q">Q14. How do phonetic and phonological syllables differ?</div>
+  <div class="qa-a">A phonetic syllable is a physical peak of sonority. A phonological syllable is an abstract mental unit with structural positions: onset, nucleus, and coda.</div>
+</div>
+
+<div class="qa">
+  <div class="qa-q">Q15. What is the English syllable template?</div>
+  <div class="qa-a">(C)(C)(C) V (C)(C)(C)(C) — up to 3 consonants in the onset and up to 4 in the coda. Example: "spring" (CCCVC), "texts" (CVCCCC).</div>
+</div>
+
+<div class="qa">
+  <div class="qa-q">Q16. What are the rules for a 3-consonant onset?</div>
+  <div class="qa-a">C₁ must be /s/, C₂ must be a voiceless stop (/p, t, k/), C₃ must be an approximant (/l, r, w, j/). Example: "spring" /spr-/, "street" /str-/.</div>
+</div>
+
+<div class="qa">
+  <div class="qa-q">Q17. Why do Bangla speakers say "is-kul" for "school"?</div>
+  <div class="qa-a">Bangla phonotactics doesn't allow initial /sk-/ clusters. Speakers apply prothesis — inserting a vowel /i/ before the cluster — to create two legal syllables: is + kul.</div>
+</div>
+
+<h3>Connected Speech</h3>
+
+<div class="qa">
+  <div class="qa-q">Q18. What is connected speech? Is it lazy speech?</div>
+  <div class="qa-a">Connected speech is continuous, natural spoken language where words blend and sounds change. It is NOT laziness — it is governed by the Principle of Least Effort and natural coarticulation.</div>
+</div>
+
+<div class="qa">
+  <div class="qa-q">Q19. What is the difference between Linking /r/ and Intrusive /r/?</div>
+  <div class="qa-a">Linking /r/ has an 'r' in the spelling that becomes audible before a vowel ("far away"). Intrusive /r/ has NO 'r' in the spelling — it is inserted purely as a glide ("law and order").</div>
+</div>
+
+<div class="qa">
+  <div class="qa-q">Q20. Explain Coalescent Assimilation with examples.</div>
+  <div class="qa-a">Two adjacent sounds merge into a new third sound. /t/ + /j/ → /tʃ/ ("don't you" → /ˈdəʊntʃu/). /d/ + /j/ → /dʒ/ ("did you" → /ˈdɪdʒu/).</div>
+</div>
+
+<div class="qa">
+  <div class="qa-q">Q21. What is the rule for /t, d/ elision?</div>
+  <div class="qa-a">When /t/ or /d/ sits between two other consonants (C + /t,d/ + C), it is deleted: "next week" → [neks wiːk]. But if a vowel follows, the /t,d/ stays.</div>
+</div>
+
+<div class="qa">
+  <div class="qa-q">Q22. How do "I scream" and "Ice cream" differ acoustically?</div>
+  <div class="qa-a">In "I scream," the /aɪ/ is long and /k/ is unaspirated (after /s/). In "Ice cream," /aɪ/ is shortened (pre-fortis clipping) and /k/ is aspirated [kʰ] (word-initial).</div>
+</div>
+
+<div class="qa">
+  <div class="qa-q">Q23. What is the difference between Stress-Timed and Syllable-Timed languages?</div>
+  <div class="qa-a">In stress-timed languages (English), stressed syllables occur at equal intervals — unstressed syllables get compressed. In syllable-timed languages (Bangla), every syllable gets roughly equal time.</div>
+</div>
+
+<h3>Strong vs Weak Forms</h3>
+
+<div class="qa">
+  <div class="qa-q">Q24. What are Weak Forms?</div>
+  <div class="qa-a">Reduced, unstressed pronunciations of function words where vowels become schwa /ə/ or get dropped. Example: "and" /ænd/ → /ən/.</div>
+</div>
+
+<div class="qa">
+  <div class="qa-q">Q25. When must you use the Strong Form?</div>
+  <div class="qa-a">1. At the end of a sentence. 2. For emphasis or contrast. 3. In coordinated prepositions. 4. When quoting the word itself.</div>
+</div>
+
+<h3>IPA Transcription</h3>
+
+<div class="qa">
+  <div class="qa-q">Q26. How do you transcribe connected speech step by step?</div>
+  <div class="qa-a">1. Identify content words (full pronunciation). 2. Reduce function words to weak forms. 3. Mark stress. 4. Apply linking. 5. Apply assimilation. 6. Apply elision. 7. Apply contractions.</div>
+</div>
+
+<div class="qa">
+  <div class="qa-q">Q27. Transcribe "He should have told them."</div>
+  <div class="qa-a">/hi ˈʃʊd əv ˈtəʊld əm/ — "he" keeps /h/ (sentence-initial), "should" → weak /ʃʊd/, "have" → /əv/ (h-drop), "them" → /əm/ (weak form).</div>
+</div>
+
+<div class="qa">
+  <div class="qa-q">Q28. What is Pre-fortis Clipping?</div>
+  <div class="qa-a">A vowel is shortened when followed by a voiceless consonant in the same syllable. Compare: "bead" [biːd] (long) vs "beat" [biˑt] (shortened before voiceless /t/).</div>
+</div>
+
+<div class="qa">
+  <div class="qa-q">Q29. What is a Syllabic Consonant?</div>
+  <div class="qa-a">A consonant that acts as the core (nucleus) of a syllable instead of a vowel. English /n/ and /l/ often do this: "button" /ˈbʌtn̩/, "little" /ˈlɪtl̩/.</div>
+</div>
+
+<div class="qa">
+  <div class="qa-q">Q30. What is a Minimal Pair and why is it useful in ELT?</div>
+  <div class="qa-a">Two words differing by one sound in the same position with different meanings (e.g., "ship" vs "sheep"). In ELT, minimal pairs help students identify and practice difficult sound contrasts.</div>
+</div>
+
+<!-- Footer -->
+<div style="text-align: center; margin-top: 30px; padding-top: 15px; border-top: 2px solid #4f46e5; font-size: 8pt; color: #94a3b8;">
+  <strong>E410 Complete Viva Study Guide</strong> — All 6 Topics Combined<br>
+  Jahangirnagar University, Department of English • Final Year<br>
+  <em>Print this page to PDF: Ctrl+P → Save as PDF</em>
+</div>
+
+</div>
+</body>
+</html>
