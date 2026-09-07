@@ -1,1928 +1,894 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#0a0a1a">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="description" content="E 410 Phonetics and Phonology – Interactive Study Guide for Viva Preparation. Jahangirnagar University.">
-<title>E 410: Phonetics & Phonology – Interactive Study Guide</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-/* ========== CSS CUSTOM PROPERTIES ========== */
-:root {
-  --bg-primary: #0a0a1a;
-  --bg-secondary: #111127;
-  --bg-card: rgba(255,255,255,0.04);
-  --bg-card-hover: rgba(255,255,255,0.07);
-  --bg-glass: rgba(255,255,255,0.06);
-  --border-color: rgba(255,255,255,0.08);
-  --border-glow: rgba(99,102,241,0.3);
-  --text-primary: #e2e8f0;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --accent-1: #6366f1;
-  --accent-2: #06b6d4;
-  --accent-3: #8b5cf6;
-  --accent-4: #10b981;
-  --accent-5: #f59e0b;
-  --accent-gradient: linear-gradient(135deg, #6366f1, #06b6d4);
-  --accent-gradient-2: linear-gradient(135deg, #8b5cf6, #ec4899);
-  --sidebar-width: 280px;
-  --header-height: 64px;
-  --radius: 12px;
-  --radius-sm: 8px;
-  --shadow: 0 4px 20px rgba(0,0,0,0.3);
-  --transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
-  --font-main: 'Inter', -apple-system, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E410 Complete Viva Study Guide — Interactive</title>
+  <meta name="description" content="All 6 viva topics for E410 Phonetics & Phonology combined into one interactive study guide.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f1a;
+      --surface: #111827;
+      --surface2: #1e293b;
+      --surface3: #283548;
+      --border: #334155;
+      --text: #e2e8f0;
+      --text2: #94a3b8;
+      --text3: #64748b;
+      --accent: #818cf8;
+      --accent2: #a78bfa;
+      --accent-bg: rgba(129,140,248,0.1);
+      --green: #34d399;
+      --green-bg: rgba(52,211,153,0.1);
+      --yellow: #fbbf24;
+      --yellow-bg: rgba(251,191,36,0.08);
+      --blue: #38bdf8;
+      --blue-bg: rgba(56,189,248,0.08);
+      --red: #f87171;
+      --radius: 10px;
+      --shadow: 0 4px 24px rgba(0,0,0,0.3);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 15px;
+    }
 
-[data-theme="light"] {
-  --bg-primary: #f8fafc;
-  --bg-secondary: #ffffff;
-  --bg-card: rgba(0,0,0,0.03);
-  --bg-card-hover: rgba(0,0,0,0.06);
-  --bg-glass: rgba(255,255,255,0.8);
-  --border-color: rgba(0,0,0,0.1);
-  --border-glow: rgba(99,102,241,0.2);
-  --text-primary: #1e293b;
-  --text-secondary: #475569;
-  --text-muted: #94a3b8;
-  --shadow: 0 4px 20px rgba(0,0,0,0.08);
-}
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      position: fixed; top: 0; left: 0; width: 280px; height: 100vh;
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      overflow-y: auto; z-index: 100;
+      padding: 20px 0;
+      transition: transform 0.3s;
+    }
+    .sidebar-logo {
+      padding: 0 20px 16px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 12px;
+    }
+    .sidebar-logo h2 {
+      font-size: 16px; font-weight: 800; color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+    .sidebar-logo span { font-size: 11px; color: var(--text3); display: block; margin-top: 2px; }
+    .sidebar nav { padding: 0 12px; }
+    .sidebar nav a {
+      display: block; padding: 8px 12px; margin: 2px 0;
+      color: var(--text2); text-decoration: none; font-size: 13px;
+      border-radius: 6px; transition: all 0.2s;
+      font-weight: 500;
+    }
+    .sidebar nav a:hover, .sidebar nav a.active {
+      background: var(--accent-bg); color: var(--accent);
+    }
+    .sidebar nav .nav-topic {
+      font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--text3); padding: 12px 12px 4px; font-weight: 700;
+    }
 
-/* ========== RESET & BASE ========== */
-*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-body {
-  font-family: var(--font-main);
-  background: var(--bg-primary);
-  color: var(--text-primary);
-  line-height: 1.75;
-  font-size: 15px;
-  overflow-x: hidden;
-  transition: background 0.4s, color 0.4s;
-}
+    /* ===== MAIN ===== */
+    .main {
+      margin-left: 280px;
+      max-width: 900px;
+      padding: 32px 40px 80px;
+    }
 
-/* Background Glow Effects */
-body::before {
-  content: '';
-  position: fixed;
-  top: -50%; left: -50%;
-  width: 200%; height: 200%;
-  background: radial-gradient(circle at 20% 50%, rgba(99,102,241,0.08) 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(6,182,212,0.06) 0%, transparent 50%),
-              radial-gradient(circle at 40% 80%, rgba(139,92,246,0.05) 0%, transparent 50%);
-  pointer-events: none;
-  z-index: 0;
-}
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(135deg, rgba(99,102,241,0.15), rgba(139,92,246,0.1));
+      border: 1px solid rgba(129,140,248,0.2);
+      border-radius: 16px;
+      padding: 40px;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-block; background: var(--accent); color: #0f172a;
+      font-size: 11px; font-weight: 700; padding: 4px 14px; border-radius: 20px;
+      text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px;
+    }
+    .hero h1 { font-size: 32px; font-weight: 900; color: #fff; line-height: 1.2; margin-bottom: 8px; }
+    .hero p { color: var(--text2); font-size: 15px; max-width: 600px; margin: 0 auto; }
 
-/* ========== HEADER ========== */
-.header {
-  position: fixed; top: 0; left: 0; right: 0;
-  height: var(--header-height);
-  background: rgba(10,10,26,0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-color);
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 24px;
-  z-index: 1000;
-  transition: var(--transition);
-}
-[data-theme="light"] .header { background: rgba(248,250,252,0.9); }
+    /* ===== SECTION ===== */
+    .section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+    }
+    h2.section-title {
+      font-size: 22px; font-weight: 800; color: #fff;
+      margin-bottom: 16px; padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent);
+      display: flex; align-items: center; gap: 10px;
+    }
+    h2 .topic-badge {
+      display: inline-block; background: var(--accent); color: #0f172a;
+      font-size: 10px; font-weight: 800; padding: 3px 10px; border-radius: 4px;
+      flex-shrink: 0;
+    }
+    h3 { font-size: 17px; font-weight: 700; color: var(--accent2); margin: 20px 0 8px; }
+    h4 { font-size: 14px; font-weight: 600; color: var(--text); margin: 14px 0 6px; }
+    p { margin-bottom: 8px; }
+    ul, ol { margin-left: 20px; margin-bottom: 10px; }
+    li { margin-bottom: 4px; }
+    code {
+      font-family: 'Fira Code', monospace; font-size: 13px;
+      background: rgba(129,140,248,0.12); color: var(--accent);
+      padding: 2px 6px; border-radius: 4px;
+    }
+    strong { color: #fff; }
 
-.header-left { display: flex; align-items: center; gap: 16px; }
-.menu-btn {
-  display: none;
-  background: none; border: none; color: var(--text-primary);
-  font-size: 24px; cursor: pointer; padding: 4px;
-}
-.logo {
-  font-size: 18px; font-weight: 700;
-  background: var(--accent-gradient);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.logo span { font-weight: 400; opacity: 0.7; }
-.header-right { display: flex; align-items: center; gap: 12px; }
+    /* ===== CARDS ===== */
+    .def-card {
+      background: var(--blue-bg); border-left: 3px solid var(--blue);
+      padding: 14px 18px; margin: 10px 0; border-radius: 0 8px 8px 0;
+    }
+    .def-card .label { font-size: 12px; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
+    .green-card {
+      background: var(--green-bg); border-left: 3px solid var(--green);
+      padding: 14px 18px; margin: 10px 0; border-radius: 0 8px 8px 0;
+    }
+    .green-card .label { font-size: 12px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
 
-.search-box {
-  position: relative;
-  width: 240px;
-}
-.search-box input {
-  width: 100%; padding: 8px 12px 8px 36px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-sm);
-  color: var(--text-primary);
-  font-family: var(--font-main);
-  font-size: 13px;
-  outline: none;
-  transition: var(--transition);
-}
-.search-box input:focus { border-color: var(--accent-1); box-shadow: 0 0 0 3px rgba(99,102,241,0.15); }
-.search-box .search-icon {
-  position: absolute; left: 10px; top: 50%; transform: translateY(-50%);
-  color: var(--text-muted); font-size: 14px; pointer-events: none;
-}
-.search-clear-btn {
-  position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
-  background: none; border: none; color: var(--text-muted);
-  cursor: pointer; font-size: 12px; padding: 4px; display: none;
-}
-.search-clear-btn.visible { display: block; }
+    /* ===== QA ===== */
+    .qa-card {
+      background: var(--yellow-bg); border-left: 3px solid var(--yellow);
+      padding: 14px 18px; margin: 10px 0; border-radius: 0 8px 8px 0;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .qa-card:hover { background: rgba(251,191,36,0.14); }
+    .qa-card .q { font-weight: 700; color: var(--yellow); margin-bottom: 4px; }
+    .qa-card .a { display: none; color: var(--text); margin-top: 6px; padding-top: 6px; border-top: 1px solid rgba(251,191,36,0.2); }
+    .qa-card.open .a { display: block; }
+    .qa-card .toggle-hint { font-size: 11px; color: var(--text3); font-style: italic; }
 
-.mobile-search-toggle {
-  display: none;
-  width: 40px; height: 40px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: 50%;
-  align-items: center; justify-content: center;
-  cursor: pointer;
-  font-size: 16px;
-  color: var(--text-primary);
-  transition: var(--transition);
-  -webkit-tap-highlight-color: transparent;
-}
-.mobile-search-toggle:hover { background: var(--bg-card-hover); border-color: var(--accent-1); }
+    /* ===== RULE BOX ===== */
+    .rule-box {
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 8px; padding: 12px 16px; margin: 10px 0;
+      text-align: center; font-family: 'Fira Code', monospace;
+      font-size: 15px; font-weight: 600; color: var(--accent);
+    }
 
-.theme-toggle {
-  width: 40px; height: 40px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  cursor: pointer;
-  font-size: 18px;
-  transition: var(--transition);
-  color: var(--text-primary);
-  -webkit-tap-highlight-color: transparent;
-}
-.theme-toggle:hover { background: var(--bg-card-hover); border-color: var(--accent-1); transform: rotate(30deg); }
+    /* ===== TABLES ===== */
+    table {
+      width: 100%; border-collapse: collapse; margin: 10px 0 14px;
+      font-size: 13px;
+    }
+    th, td {
+      border: 1px solid var(--border); padding: 8px 10px;
+      text-align: left; vertical-align: top;
+    }
+    th { background: var(--surface2); color: var(--accent); font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.03em; }
+    td { color: var(--text); }
+    tr:nth-child(even) td { background: rgba(30,41,59,0.5); }
 
-.sidebar-header-mobile {
-  display: none;
-  align-items: center; justify-content: space-between;
-  padding: 12px 16px;
-  border-bottom: 1px solid var(--border-color);
-  margin-bottom: 8px;
-}
-.sidebar-header-mobile span { font-weight: 700; font-size: 14px; color: var(--text-primary); }
-.sidebar-close-btn {
-  background: none; border: none; font-size: 18px; color: var(--text-muted); cursor: pointer; padding: 6px 10px; border-radius: 6px;
-}
-.sidebar-search-box {
-  padding: 0 16px 12px;
-}
-.sidebar-search-box input {
-  width: 100%; padding: 8px 12px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-sm);
-  color: var(--text-primary);
-  font-family: var(--font-main);
-  font-size: 13px;
-  outline: none;
-}
+    /* ===== SEARCH ===== */
+    .search-wrap {
+      position: sticky; top: 0; z-index: 50;
+      background: var(--bg); padding: 12px 0; margin-bottom: 20px;
+    }
+    .search-wrap input {
+      width: 100%; padding: 12px 16px; border-radius: 10px;
+      border: 1px solid var(--border); background: var(--surface);
+      color: var(--text); font-size: 14px; font-family: 'Inter', sans-serif;
+      outline: none; transition: border 0.2s;
+    }
+    .search-wrap input:focus { border-color: var(--accent); }
+    .search-wrap input::placeholder { color: var(--text3); }
 
-/* ========== SIDEBAR ========== */
-.sidebar {
-  position: fixed; top: var(--header-height); left: 0;
-  width: var(--sidebar-width);
-  height: calc(100vh - var(--header-height));
-  background: var(--bg-secondary);
-  border-right: 1px solid var(--border-color);
-  overflow-y: auto;
-  padding: 20px 0;
-  z-index: 900;
-  transition: var(--transition);
-}
-.sidebar::-webkit-scrollbar { width: 4px; }
-.sidebar::-webkit-scrollbar-thumb { background: var(--text-muted); border-radius: 4px; }
+    /* ===== MOBILE ===== */
+    .menu-toggle {
+      display: none; position: fixed; top: 12px; left: 12px; z-index: 200;
+      background: var(--accent); color: #0f172a; border: none;
+      width: 40px; height: 40px; border-radius: 8px; font-size: 20px;
+      cursor: pointer; font-weight: 800;
+    }
+    @media (max-width: 768px) {
+      .sidebar { transform: translateX(-100%); }
+      .sidebar.open { transform: translateX(0); }
+      .main { margin-left: 0; padding: 20px 16px 60px; }
+      .menu-toggle { display: flex; align-items: center; justify-content: center; }
+      .hero h1 { font-size: 24px; }
+      .hero { padding: 24px 16px; }
+      .section { padding: 20px 16px; }
+    }
 
-.nav-section { padding: 0 16px; margin-bottom: 8px; }
-.nav-section-title {
-  font-size: 10px; font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: var(--text-muted);
-  padding: 8px 12px;
-}
-.nav-link {
-  display: flex; align-items: center; gap: 10px;
-  padding: 10px 12px;
-  border-radius: var(--radius-sm);
-  color: var(--text-secondary);
-  text-decoration: none;
-  font-size: 13.5px;
-  font-weight: 500;
-  transition: var(--transition);
-  cursor: pointer;
-  position: relative;
-}
-.nav-link:hover { background: var(--bg-card-hover); color: var(--text-primary); }
-.nav-link.active {
-  background: rgba(99,102,241,0.12);
-  color: var(--accent-1);
-}
-.nav-link.active::before {
-  content: '';
-  position: absolute; left: -16px; top: 50%; transform: translateY(-50%);
-  width: 3px; height: 20px;
-  background: var(--accent-gradient);
-  border-radius: 0 3px 3px 0;
-}
-.nav-badge {
-  display: inline-flex; align-items: center; justify-content: center;
-  min-width: 22px; height: 22px;
-  background: var(--accent-gradient);
-  border-radius: 6px;
-  font-size: 10px; font-weight: 700;
-  color: white;
-  padding: 0 5px;
-}
-.nav-progress {
-  margin: 16px 16px 0; padding: 16px;
-  background: var(--bg-card);
-  border-radius: var(--radius);
-  border: 1px solid var(--border-color);
-}
-.nav-progress-label { font-size: 11px; color: var(--text-muted); margin-bottom: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
-.progress-bar { width: 100%; height: 6px; background: var(--bg-card); border-radius: 3px; overflow: hidden; }
-.progress-fill { height: 100%; background: var(--accent-gradient); border-radius: 3px; transition: width 0.5s ease; width: 0%; }
-.progress-text { font-size: 12px; color: var(--text-secondary); margin-top: 6px; text-align: right; }
-
-/* ========== MAIN CONTENT ========== */
-.main {
-  margin-left: var(--sidebar-width);
-  margin-top: var(--header-height);
-  padding: 40px 48px 80px;
-  max-width: 900px;
-  position: relative;
-  z-index: 1;
-}
-
-/* ========== HERO ========== */
-.hero {
-  text-align: center;
-  padding: 60px 0 50px;
-  position: relative;
-}
-.hero-badge {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 16px;
-  background: rgba(99,102,241,0.12);
-  border: 1px solid rgba(99,102,241,0.2);
-  border-radius: 100px;
-  font-size: 12px; font-weight: 600;
-  color: var(--accent-1);
-  margin-bottom: 20px;
-}
-.hero h1 {
-  font-size: 42px; font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 16px;
-  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-2) 50%, var(--accent-1) 100%);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.hero p {
-  font-size: 17px; color: var(--text-secondary);
-  max-width: 540px; margin: 0 auto 24px;
-  line-height: 1.7;
-}
-.hero-stats {
-  display: flex; justify-content: center; gap: 32px;
-  flex-wrap: wrap;
-}
-.hero-stat {
-  text-align: center;
-}
-.hero-stat .num {
-  font-size: 28px; font-weight: 800;
-  background: var(--accent-gradient);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.hero-stat .label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
-
-/* ========== SECTIONS ========== */
-.section {
-  margin-bottom: 48px;
-  animation: fadeInUp 0.5s ease both;
-}
-.section-header {
-  display: flex; align-items: center; gap: 14px;
-  margin-bottom: 24px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid var(--border-color);
-  cursor: pointer;
-  user-select: none;
-}
-.section-icon {
-  width: 44px; height: 44px;
-  border-radius: var(--radius);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 20px;
-  flex-shrink: 0;
-}
-.section-header h2 {
-  font-size: 24px; font-weight: 700;
-  flex: 1;
-}
-.section-toggle {
-  font-size: 20px; color: var(--text-muted);
-  transition: transform 0.3s;
-}
-.section.collapsed .section-toggle { transform: rotate(-90deg); }
-.section.collapsed .section-content { display: none; }
-
-.section-content {
-  animation: fadeIn 0.3s ease;
-}
-
-/* Section color coding */
-.sec-a .section-icon { background: rgba(99,102,241,0.15); color: #818cf8; }
-.sec-b .section-icon { background: rgba(6,182,212,0.15); color: #22d3ee; }
-.sec-c .section-icon { background: rgba(16,185,129,0.15); color: #34d399; }
-.sec-d .section-icon { background: rgba(245,158,11,0.15); color: #fbbf24; }
-.sec-e .section-icon { background: rgba(239,68,68,0.15); color: #f87171; }
-.sec-f .section-icon { background: rgba(139,92,246,0.15); color: #a78bfa; }
-.sec-g .section-icon { background: rgba(236,72,153,0.15); color: #f472b6; }
-.sec-h .section-icon { background: rgba(34,211,238,0.15); color: #22d3ee; }
-.sec-i .section-icon { background: rgba(251,146,60,0.15); color: #fb923c; }
-.sec-j .section-icon { background: rgba(52,211,153,0.15); color: #34d399; }
-.sec-rev .section-icon { background: rgba(99,102,241,0.15); color: #818cf8; }
-
-/* ========== CONTENT STYLING ========== */
-h3 {
-  font-size: 19px; font-weight: 700;
-  margin: 28px 0 12px;
-  color: var(--text-primary);
-}
-h4 {
-  font-size: 16px; font-weight: 600;
-  margin: 20px 0 8px;
-  color: var(--text-primary);
-}
-p { margin-bottom: 12px; color: var(--text-secondary); line-height: 1.8; }
-ul, ol { margin-bottom: 14px; padding-left: 24px; color: var(--text-secondary); }
-li { margin-bottom: 6px; line-height: 1.7; }
-strong, b { color: var(--text-primary); font-weight: 600; }
-
-/* IPA styling */
-.ipa-bracket {
-  font-family: var(--font-mono);
-  background: rgba(255,255,255,0.05);
-  color: var(--text-muted);
-  padding: 1px 5px;
-  border-radius: 4px;
-  font-size: 13px;
-  border: 1px solid var(--border-color);
-  display: inline-block;
-}
-.ipa {
-  font-family: var(--font-mono);
-  background: rgba(99,102,241,0.1);
-  color: var(--accent-2);
-  padding: 1px 6px;
-  border-radius: 4px;
-  font-size: 14px;
-  border: 1px solid rgba(99,102,241,0.15);
-  cursor: pointer;
-  transition: var(--transition);
-  display: inline-block;
-  position: relative;
-}
-.ipa:hover {
-  background: rgba(99,102,241,0.2);
-  border-color: var(--accent-1);
-  transform: translateY(-1px);
-}
-.ipa.playing {
-  background: rgba(99,102,241,0.3);
-  box-shadow: 0 0 12px rgba(99,102,241,0.3);
-  animation: pulse 0.5s ease;
-}
-.ipa::after {
-  content: '🔊';
-  font-size: 10px;
-  margin-left: 2px;
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-.ipa:hover::after { opacity: 1; }
-
-/* ========== TABLES ========== */
-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  margin: 16px 0 20px;
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: 1px solid var(--border-color);
-  font-size: 14px;
-}
-th {
-  background: rgba(99,102,241,0.1);
-  color: var(--text-primary);
-  font-weight: 600;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  padding: 12px 14px;
-  text-align: left;
-  border-bottom: 1px solid var(--border-color);
-}
-td {
-  padding: 10px 14px;
-  border-bottom: 1px solid var(--border-color);
-  color: var(--text-secondary);
-  transition: var(--transition);
-}
-tr:last-child td { border-bottom: none; }
-tr:hover td { background: var(--bg-card-hover); }
-
-/* ========== SPECIAL BOXES ========== */
-.info-box {
-  padding: 18px 22px;
-  border-radius: var(--radius);
-  margin: 18px 0;
-  border: 1px solid;
-  position: relative;
-  overflow: hidden;
-}
-.info-box::before {
-  content: '';
-  position: absolute; left: 0; top: 0; bottom: 0;
-  width: 4px;
-}
-.example-box {
-  background: rgba(6,182,212,0.06);
-  border-color: rgba(6,182,212,0.15);
-}
-.example-box::before { background: var(--accent-2); }
-.example-box .box-title { color: var(--accent-2); }
-
-.viva-box {
-  background: rgba(99,102,241,0.06);
-  border-color: rgba(99,102,241,0.15);
-}
-.viva-box::before { background: var(--accent-1); }
-.viva-box .box-title { color: var(--accent-1); }
-
-.confusion-box {
-  background: rgba(245,158,11,0.06);
-  border-color: rgba(245,158,11,0.15);
-}
-.confusion-box::before { background: var(--accent-5); }
-.confusion-box .box-title { color: var(--accent-5); }
-
-.box-title {
-  font-size: 14px; font-weight: 700;
-  margin-bottom: 10px;
-  display: flex; align-items: center; gap: 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-/* ========== INTERACTIVE IPA CHART ========== */
-.ipa-chart-container {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius);
-  padding: 24px;
-  margin: 20px 0;
-  overflow-x: auto;
-}
-.ipa-chart-container h4 { margin-top: 0; }
-.ipa-grid {
-  display: grid;
-  gap: 6px;
-}
-.ipa-cell {
-  display: flex; align-items: center; justify-content: center;
-  padding: 10px 8px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  transition: var(--transition);
-  font-family: var(--font-mono);
-  font-size: 16px;
-  min-height: 44px;
-  position: relative;
-}
-.ipa-cell:hover {
-  background: rgba(99,102,241,0.12);
-  border-color: var(--accent-1);
-  transform: scale(1.05);
-  z-index: 2;
-}
-.ipa-cell.playing {
-  background: rgba(99,102,241,0.25);
-  box-shadow: 0 0 20px rgba(99,102,241,0.3);
-}
-.ipa-cell .cell-label {
-  position: absolute;
-  bottom: 2px;
-  font-size: 8px;
-  color: var(--text-muted);
-  font-family: var(--font-main);
-}
-.ipa-cell-header {
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  padding: 8px;
-  text-align: center;
-}
-
-/* ========== AUDIO FEEDBACK ========== */
-.audio-toast {
-  position: fixed; bottom: 24px; right: 24px;
-  padding: 12px 20px;
-  background: rgba(99,102,241,0.9);
-  backdrop-filter: blur(10px);
-  color: white;
-  border-radius: var(--radius);
-  font-size: 14px; font-weight: 500;
-  display: flex; align-items: center; gap: 8px;
-  transform: translateY(80px);
-  opacity: 0;
-  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
-  z-index: 9999;
-  box-shadow: 0 8px 32px rgba(99,102,241,0.4);
-}
-.audio-toast.show { transform: translateY(0); opacity: 1; }
-
-/* ========== SEARCH RESULTS ========== */
-.search-results {
-  position: fixed;
-  top: var(--header-height);
-  right: 24px;
-  width: 360px;
-  max-height: 400px;
-  overflow-y: auto;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  z-index: 999;
-  display: none;
-  padding: 8px;
-}
-.search-results.visible { display: block; }
-.search-result-item {
-  padding: 10px 14px;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  transition: var(--transition);
-  font-size: 13px;
-  color: var(--text-secondary);
-}
-.search-result-item:hover { background: var(--bg-card-hover); }
-.search-result-item strong { color: var(--accent-1); }
-
-/* ========== BACK TO TOP ========== */
-.back-to-top {
-  position: fixed; bottom: 24px; left: calc(var(--sidebar-width) + 24px);
-  width: 44px; height: 44px;
-  background: var(--accent-gradient);
-  border: none; border-radius: 50%;
-  color: white; font-size: 20px;
-  cursor: pointer;
-  opacity: 0; transform: translateY(20px);
-  transition: var(--transition);
-  z-index: 99;
-  box-shadow: 0 4px 16px rgba(99,102,241,0.4);
-}
-.back-to-top.visible { opacity: 1; transform: translateY(0); }
-.back-to-top:hover { transform: translateY(-3px) scale(1.05); }
-
-/* ========== ANIMATIONS ========== */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-@keyframes pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(99,102,241,0.4); }
-  50% { box-shadow: 0 0 0 8px rgba(99,102,241,0); }
-}
-@keyframes slideIn {
-  from { transform: translateX(-100%); }
-  to { transform: translateX(0); }
-}
-
-/* ========== RESPONSIVE ========== */
-@media (max-width: 1024px) {
-  .sidebar { transform: translateX(-100%); }
-  .sidebar.open { transform: translateX(0); box-shadow: 4px 0 32px rgba(0,0,0,0.6); }
-  .sidebar-header-mobile { display: flex; }
-  .main { margin-left: 0; padding: 32px 24px 80px; }
-  .menu-btn { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: var(--radius-sm); }
-  .menu-btn:hover { background: var(--bg-card-hover); }
-  .search-box { width: 200px; }
-  .back-to-top { left: 24px; }
-  .hero h1 { font-size: 32px; }
-}
-
-@media (max-width: 768px) {
-  table {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    white-space: nowrap;
-    border-radius: var(--radius-sm);
-  }
-  table th, table td {
-    padding: 9px 12px;
-    white-space: normal;
-    min-width: 90px;
-  }
-  .info-box { padding: 16px; margin: 16px 0; }
-  .scholar-card { padding: 18px 16px; }
-  .checklist-item { padding: 12px 0; gap: 12px; }
-  .checklist-cb { width: 22px; height: 22px; min-width: 22px; }
-}
-
-@media (max-width: 640px) {
-  .header {
-    padding: 0 14px;
-    padding-top: env(safe-area-inset-top, 0px);
-    height: calc(var(--header-height) + env(safe-area-inset-top, 0px));
-  }
-  .logo { font-size: 15px; }
-  .logo span { display: none; }
-  
-  .mobile-search-toggle { display: flex; }
-  
-  .search-box {
-    display: none;
-    position: absolute;
-    top: calc(var(--header-height) + env(safe-area-inset-top, 0px));
-    left: 0; right: 0;
-    width: 100%;
-    padding: 10px 14px;
-    background: var(--bg-secondary);
-    border-bottom: 1px solid var(--border-color);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-    z-index: 999;
-  }
-  .search-box.open { display: block; animation: fadeIn 0.2s ease; }
-  .search-box input { width: 100%; height: 42px; font-size: 14px; padding-left: 36px; padding-right: 32px; }
-  
-  .search-results {
-    left: 10px; right: 10px;
-    width: auto;
-    max-height: 55vh;
-    top: calc(var(--header-height) + env(safe-area-inset-top, 0px) + 52px);
-  }
-  
-  .sidebar {
-    width: 85vw;
-    max-width: 320px;
-    padding-bottom: calc(40px + env(safe-area-inset-bottom, 0px));
-  }
-  
-  .main {
-    padding: 20px 14px calc(80px + env(safe-area-inset-bottom, 0px));
-    margin-top: calc(var(--header-height) + env(safe-area-inset-top, 0px));
-  }
-  
-  .hero { padding: 32px 0 24px; }
-  .hero-badge { font-size: 11px; padding: 4px 12px; margin-bottom: 14px; }
-  .hero h1 { font-size: 25px; margin-bottom: 12px; line-height: 1.25; }
-  .hero p { font-size: 14.5px; margin-bottom: 20px; line-height: 1.6; }
-  
-  .hero-stats {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    max-width: 320px;
-    margin: 0 auto;
-  }
-  .hero-stat {
-    padding: 10px 8px;
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-sm);
-  }
-  .hero-stat .num { font-size: 22px; }
-  .hero-stat .label { font-size: 10px; }
-  
-  .section { margin-bottom: 32px; }
-  .section-header { gap: 10px; padding-bottom: 12px; margin-bottom: 16px; }
-  .section-icon { width: 38px; height: 38px; font-size: 18px; border-radius: var(--radius-sm); }
-  .section-header h2 { font-size: 18px; line-height: 1.3; }
-  .section-toggle { font-size: 16px; }
-  
-  h3 { font-size: 17px; margin: 22px 0 10px; }
-  h4 { font-size: 15px; margin: 16px 0 6px; }
-  p, li { font-size: 14px; line-height: 1.65; }
-  
-  .ipa-bracket {
-  font-family: var(--font-mono);
-  background: rgba(255,255,255,0.05);
-  color: var(--text-muted);
-  padding: 1px 5px;
-  border-radius: 4px;
-  font-size: 13px;
-  border: 1px solid var(--border-color);
-  display: inline-block;
-}
-.ipa {
-    padding: 2px 7px;
-    font-size: 13.5px;
-    margin: 1px 0;
-    touch-action: manipulation;
-  }
-  
-  .ipa-chart-container {
-    padding: 14px;
-    margin: 14px 0;
-  }
-  .ipa-cell {
-    min-height: 42px;
-    font-size: 15px;
-    padding: 8px 4px;
-    touch-action: manipulation;
-  }
-  
-  .audio-toast {
-    left: 50%; right: auto;
-    bottom: calc(20px + env(safe-area-inset-bottom, 0px));
-    transform: translateX(-50%) translateY(90px);
-    padding: 10px 18px;
-    font-size: 13px;
-    max-width: 90vw;
-    box-shadow: 0 4px 20px rgba(99,102,241,0.5);
-  }
-  .audio-toast.show { transform: translateX(-50%) translateY(0); }
-  
-  .back-to-top {
-    left: auto;
-    right: 14px;
-    bottom: calc(20px + env(safe-area-inset-bottom, 0px));
-    width: 42px; height: 42px;
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 380px) {
-  .hero-stats { grid-template-columns: 1fr 1fr; gap: 8px; }
-  .hero h1 { font-size: 22px; }
-  .section-header h2 { font-size: 16px; }
-}
-
-/* ========== PRINT ========== */
-@media print {
-  .header, .sidebar, .back-to-top, .audio-toast, .theme-toggle, .search-box, .menu-btn { display: none !important; }
-  .main { margin-left: 0; padding: 0; max-width: 100%; }
-  body { background: white; color: black; }
-  .ipa::after { display: none; }
-  .section.collapsed .section-content { display: block !important; }
-}
-
-/* Overlay for mobile sidebar */
-.sidebar-overlay {
-  position: fixed; inset: 0;
-  background: rgba(0,0,0,0.5);
-  z-index: 899;
-  display: none;
-}
-.sidebar-overlay.show { display: block; }
-
-/* Scholar cards */
-.scholar-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius);
-  padding: 20px 24px;
-  margin: 16px 0;
-  transition: var(--transition);
-}
-.scholar-card:hover { border-color: var(--border-glow); transform: translateY(-2px); box-shadow: var(--shadow); }
-.scholar-name {
-  font-size: 18px; font-weight: 700;
-  margin-bottom: 4px;
-  display: flex; align-items: center; gap: 8px;
-}
-.scholar-meta { font-size: 13px; color: var(--text-muted); margin-bottom: 12px; }
-
-/* Checklist */
-.checklist-item {
-  display: flex; align-items: flex-start; gap: 10px;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--border-color);
-}
-.checklist-item:last-child { border-bottom: none; }
-.checklist-cb {
-  width: 22px; height: 22px; min-width: 22px; min-height: 22px;
-  border: 2px solid var(--border-color);
-  border-radius: 6px;
-  cursor: pointer;
-  transition: var(--transition);
-  display: flex; align-items: center; justify-content: center;
-  margin-top: 2px;
-  background: transparent;
-  color: transparent;
-  font-size: 13px;
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: transparent;
-}
-.checklist-cb.checked {
-  background: var(--accent-4);
-  border-color: var(--accent-4);
-  color: white;
-}
-</style>
+    /* ===== SCROLL TO TOP ===== */
+    .scroll-top {
+      position: fixed; bottom: 24px; right: 24px; z-index: 99;
+      background: var(--accent); color: #0f172a; border: none;
+      width: 44px; height: 44px; border-radius: 50%;
+      font-size: 20px; cursor: pointer; opacity: 0; transition: opacity 0.3s;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    }
+    .scroll-top.visible { opacity: 1; }
+  </style>
 </head>
 <body>
 
-<!-- ========== HEADER ========== -->
-<header class="header">
-  <div class="header-left">
-    <button class="menu-btn" onclick="toggleSidebar()" aria-label="Toggle menu">☰</button>
-    <div class="logo">E 410 <span>Phonetics & Phonology</span></div>
-  </div>
-  <div class="header-right">
-    <button class="mobile-search-toggle" onclick="toggleMobileSearch()" aria-label="Search topics">🔍</button>
-    <div class="search-box" id="searchBox">
-      <span class="search-icon">🔍</span>
-      <input type="text" id="searchInput" placeholder="Search topics..." oninput="handleSearch(this.value)" onfocus="handleSearch(this.value)">
-      <button class="search-clear-btn" id="searchClearBtn" onclick="clearSearch()" aria-label="Clear search">✕</button>
-    </div>
-    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌙</button>
-  </div>
-</header>
+<button class="menu-toggle" id="menuToggle">☰</button>
 
-<!-- Search Results -->
-<div class="search-results" id="searchResults"></div>
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <h2>E410 Study Guide</h2>
+    <span>All Topics Combined • Simple English</span>
+  </div>
+  <nav>
+    <div class="nav-topic">Topic 1</div>
+    <a href="#t1">Phonetics & Phonology</a>
+    <a href="#t1-grapheme">Graphemes vs Phonemes</a>
+    <a href="#t1-ipa">The IPA</a>
+    <a href="#t1-organs">Organs of Speech</a>
+    <a href="#t1-consonants">24 Consonants</a>
+    <a href="#t1-vowels">20 Vowels</a>
 
-<!-- Sidebar Overlay -->
-<div class="sidebar-overlay" id="sidebarOverlay" onclick="closeMobileSidebar()"></div>
+    <div class="nav-topic">Topic 2</div>
+    <a href="#t2">Phonemes, Phones & Allophones</a>
+    <a href="#t2-theories">5 Major Theories</a>
+    <a href="#t2-rules">Phonological Rules</a>
 
-<!-- ========== SIDEBAR ========== -->
-<nav class="sidebar" id="sidebar">
-  <div class="sidebar-header-mobile">
-    <span>E 410 Topics</span>
-    <button class="sidebar-close-btn" onclick="closeMobileSidebar()" aria-label="Close menu">✕</button>
-  </div>
-  <div class="sidebar-search-box">
-    <input type="text" id="sidebarSearchInput" placeholder="🔍 Search topics..." oninput="handleSidebarSearch(this.value)">
-  </div>
-  <div class="nav-section">
-    <div class="nav-section-title">Study Guide Sections</div>
-    <a class="nav-link active" href="#sec-a" onclick="closeMobileSidebar()"><span class="nav-badge">A</span> Phonetics & Phonology</a>
-    <a class="nav-link" href="#sec-b" onclick="closeMobileSidebar()"><span class="nav-badge">B</span> Phonemes & Phones</a>
-    <a class="nav-link" href="#sec-c" onclick="closeMobileSidebar()"><span class="nav-badge">C</span> English Vowels</a>
-    <a class="nav-link" href="#sec-d" onclick="closeMobileSidebar()"><span class="nav-badge">D</span> English Consonants</a>
-    <a class="nav-link" href="#sec-e" onclick="closeMobileSidebar()"><span class="nav-badge">E</span> Syllable</a>
-    <a class="nav-link" href="#sec-f" onclick="closeMobileSidebar()"><span class="nav-badge">F</span> Strong & Weak Forms</a>
-    <a class="nav-link" href="#sec-g" onclick="closeMobileSidebar()"><span class="nav-badge">G</span> Stress</a>
-    <a class="nav-link" href="#sec-h" onclick="closeMobileSidebar()"><span class="nav-badge">H</span> Chunking & Tone</a>
-    <a class="nav-link" href="#sec-i" onclick="closeMobileSidebar()"><span class="nav-badge">I</span> Intonation</a>
-    <a class="nav-link" href="#sec-j" onclick="closeMobileSidebar()"><span class="nav-badge">J</span> IPA Transcription</a>
-  </div>
-  <div class="nav-section">
-    <div class="nav-section-title">Quick Reference</div>
-    <a class="nav-link" href="#sec-rev" onclick="closeMobileSidebar()"><span class="nav-badge" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)">★</span> Viva Revision</a>
-  </div>
-  <div class="nav-progress">
-    <div class="nav-progress-label">Reading Progress</div>
-    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-    <div class="progress-text" id="progressText">0%</div>
-  </div>
-</nav>
+    <div class="nav-topic">Topic 3</div>
+    <a href="#t3">Syllable & Phonotactics</a>
+    <a href="#t3-structure">Syllable Structure</a>
+    <a href="#t3-phonotactics">Phonotactic Rules</a>
 
-<!-- ========== MAIN CONTENT ========== -->
-<main class="main" id="mainContent">
+    <div class="nav-topic">Topic 4</div>
+    <a href="#t4">Connected Speech</a>
+    <a href="#t4-linking">Linking & Intrusion</a>
+    <a href="#t4-assimilation">Assimilation</a>
+    <a href="#t4-elision">Elision & Glottalization</a>
+
+    <div class="nav-topic">Topic 5</div>
+    <a href="#t5">Strong vs Weak Forms</a>
+
+    <div class="nav-topic">Topic 6</div>
+    <a href="#t6">IPA Transcription</a>
+
+    <div class="nav-topic">Viva Prep</div>
+    <a href="#viva">Question Bank (30 Q&A)</a>
+  </nav>
+</aside>
+
+<!-- MAIN -->
+<div class="main">
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-badge">📚 Jahangirnagar University — Department of English</div>
-  <h1>Phonetics & Phonology</h1>
-  <p>Your complete interactive study guide for the E 410 viva. Click any <span class="ipa" data-word="phonetics" style="font-size:13px">IPA symbol</span> to hear it spoken aloud.</p>
-  <div class="hero-stats">
-    <div class="hero-stat"><div class="num">10</div><div class="label">Sections</div></div>
-    <div class="hero-stat"><div class="num">44</div><div class="label">Phonemes</div></div>
-    <div class="hero-stat"><div class="num">5</div><div class="label">Scholars</div></div>
-    <div class="hero-stat"><div class="num">∞</div><div class="label">IPA Audio</div></div>
+  <div class="hero-badge">E410 • Final Year • Jahangirnagar University</div>
+  <h1>Complete Viva Study Guide</h1>
+  <p>All 6 topics unified in simple English. Click any question to reveal its answer. Use the sidebar to navigate or search below.</p>
+</div>
+
+<!-- SEARCH -->
+<div class="search-wrap">
+  <input type="text" id="searchInput" placeholder="🔍 Search any topic, term, or question...">
+</div>
+
+<!-- ============================================ -->
+<!-- TOPIC 1 -->
+<!-- ============================================ -->
+<div class="section" id="t1">
+  <h2 class="section-title"><span class="topic-badge">1</span> Phonetics & Phonology</h2>
+
+  <div class="def-card">
+    <div class="label">Phonetics</div>
+    <p>The scientific study of how humans <strong>physically produce, transmit, and hear</strong> speech sounds. It is universal — it applies to all languages.</p>
+  </div>
+
+  <div class="def-card">
+    <div class="label">Phonology</div>
+    <p>The study of how sounds <strong>function and form meaningful patterns</strong> within a specific language's mental system.</p>
+  </div>
+
+  <h3>Three Branches of Phonetics</h3>
+  <ul>
+    <li><strong>Articulatory</strong> — How we make sounds with our mouth/tongue/lips (most important for ELT teachers)</li>
+    <li><strong>Acoustic</strong> — How sound waves travel through air (studied with spectrograms)</li>
+    <li><strong>Auditory</strong> — How our ears and brain decode sounds</li>
+  </ul>
+
+  <h3>Key Differences</h3>
+  <table>
+    <tr><th>Feature</th><th>Phonetics</th><th>Phonology</th></tr>
+    <tr><td>Nature</td><td>Physical, concrete</td><td>Abstract, mental</td></tr>
+    <tr><td>Core Question</td><td>"How is this sound made?"</td><td>"How does it function in the language?"</td></tr>
+    <tr><td>Scope</td><td>Universal</td><td>Language-specific</td></tr>
+    <tr><td>Unit</td><td>Phone <code>[ ]</code></td><td>Phoneme <code>/ /</code></td></tr>
+  </table>
+
+  <h3>Correlation</h3>
+  <p>Phonetics gives the <strong>raw material</strong>; Phonology gives the <strong>organizing rules</strong>. Neither works without the other. Phonetics without Phonology = meaningless noise data. Phonology without Phonetics = empty abstract formalism.</p>
+</div>
+
+<!-- Graphemes -->
+<div class="section" id="t1-grapheme">
+  <h2 class="section-title"><span class="topic-badge">1b</span> Graphemes vs Phonemes</h2>
+  <p><strong>Grapheme</strong> = written letter (<code>&lt;c&gt;</code>). <strong>Phoneme</strong> = spoken sound (<code>/k/</code>). English has <strong>no one-to-one match</strong>:</p>
+  <ul>
+    <li><code>&lt;c&gt;</code> → /k/ in <em>cut</em>, /s/ in <em>nice</em>, /ʃ/ in <em>ocean</em></li>
+    <li>/iː/ has 7+ spellings: <em>he, believe, Caesar, see, people, seize, seas</em></li>
+    <li><code>-ough</code> has 7 pronunciations: <em>tough</em> /ʌf/, <em>through</em> /uː/, <em>though</em> /əʊ/, etc.</li>
+  </ul>
+  <div class="green-card">
+    <div class="label">Shaw's Joke</div>
+    <p>"GHOTI" = "FISH" — <em>gh</em> from tough = /f/, <em>o</em> from women = /ɪ/, <em>ti</em> from nation = /ʃ/</p>
+  </div>
+  <p><strong>Homophones:</strong> Same sound, different spelling — <em>sea</em> vs <em>see</em>. <strong>Homographs:</strong> Same spelling, different sound — <em>lead</em> /liːd/ vs <em>lead</em> /led/.</p>
+</div>
+
+<!-- IPA -->
+<div class="section" id="t1-ipa">
+  <h2 class="section-title"><span class="topic-badge">1c</span> The IPA & Transcription</h2>
+  <p>Founded <strong>1886</strong> by <strong>Paul Passy</strong>. Golden Rule: <em>"One symbol for one sound."</em></p>
+  <h4>Broad vs Narrow Transcription</h4>
+  <table>
+    <tr><th></th><th>Broad <code>/ /</code></th><th>Narrow <code>[ ]</code></th></tr>
+    <tr><td>Shows</td><td>Only meaning-changing sounds</td><td>Fine articulatory detail</td></tr>
+    <tr><td>Example</td><td><em>cat</em> → <code>/kæt/</code></td><td><em>cat</em> → <code>[kʰæt̚]</code></td></tr>
+  </table>
+  <h4>Key Symbols</h4>
+  <ul>
+    <li><code>ˈ</code> Primary stress • <code>ˌ</code> Secondary stress • <code>ː</code> Long vowel</li>
+    <li><code>n̩</code> <code>l̩</code> Syllabic consonants — <em>button</em> <code>/ˈbʌtn̩/</code></li>
+  </ul>
+</div>
+
+<!-- Organs -->
+<div class="section" id="t1-organs">
+  <h2 class="section-title"><span class="topic-badge">1d</span> Organs of Speech</h2>
+  <p>All English sounds use <strong>pulmonic egressive airstream</strong> (air pushed out from lungs).</p>
+  <ul>
+    <li><strong>Lungs</strong> — air source</li>
+    <li><strong>Larynx + Vocal Cords</strong> — vibrating = voiced; open = voiceless</li>
+    <li><strong>Tongue</strong> (Tip, Blade, Front, Back, Root) — most flexible organ</li>
+    <li><strong>Velum</strong> — raised = oral sounds; lowered = nasal sounds (/m, n, ŋ/)</li>
+    <li><strong>Lips, Teeth, Alveolar Ridge, Hard Palate</strong></li>
+  </ul>
+  <p><strong>Active articulators</strong> (move): tongue, lower lip. <strong>Passive</strong> (stay still): upper teeth, ridge, hard palate.</p>
+</div>
+
+<!-- Consonants -->
+<div class="section" id="t1-consonants">
+  <h2 class="section-title"><span class="topic-badge">1e</span> 24 English Consonants</h2>
+  <p>Every consonant = <strong>Voicing</strong> + <strong>Place</strong> + <strong>Manner</strong></p>
+
+  <h4>8 Places</h4>
+  <table>
+    <tr><th>Place</th><th>What Touches</th><th>Sounds</th></tr>
+    <tr><td>Bilabial</td><td>Both lips</td><td>/p, b, m, w/</td></tr>
+    <tr><td>Labiodental</td><td>Lip + teeth</td><td>/f, v/</td></tr>
+    <tr><td>Dental</td><td>Tongue + teeth</td><td>/θ, ð/</td></tr>
+    <tr><td>Alveolar</td><td>Tongue + ridge</td><td>/t, d, s, z, n, l/</td></tr>
+    <tr><td>Post-alveolar</td><td>Behind ridge</td><td>/ʃ, ʒ, tʃ, dʒ, r/</td></tr>
+    <tr><td>Palatal</td><td>Tongue + hard palate</td><td>/j/</td></tr>
+    <tr><td>Velar</td><td>Tongue + soft palate</td><td>/k, ɡ, ŋ, w/</td></tr>
+    <tr><td>Glottal</td><td>Vocal cords</td><td>/h/</td></tr>
+  </table>
+
+  <h4>6 Manners</h4>
+  <table>
+    <tr><th>Manner</th><th>How</th><th>Sounds</th></tr>
+    <tr><td>Plosive</td><td>Full block → burst</td><td>/p, b, t, d, k, ɡ/</td></tr>
+    <tr><td>Affricate</td><td>Block → slow friction</td><td>/tʃ, dʒ/</td></tr>
+    <tr><td>Fricative</td><td>Narrow gap → hissing</td><td>/f, v, θ, ð, s, z, ʃ, ʒ, h/</td></tr>
+    <tr><td>Nasal</td><td>Mouth blocked, air through nose</td><td>/m, n, ŋ/</td></tr>
+    <tr><td>Lateral</td><td>Center blocked, sides open</td><td>/l/</td></tr>
+    <tr><td>Approximant</td><td>Close but no friction</td><td>/w, r, j/</td></tr>
+  </table>
+</div>
+
+<!-- Vowels -->
+<div class="section" id="t1-vowels">
+  <h2 class="section-title"><span class="topic-badge">1f</span> 20 English Vowels</h2>
+  <p>All vowels = <strong>voiced</strong>, <strong>no blockage</strong>. Described by: Height, Position, Lip shape, Length.</p>
+
+  <h4>12 Monophthongs</h4>
+  <table>
+    <tr><th>IPA</th><th>Type</th><th>Examples</th></tr>
+    <tr><td>/iː/</td><td>Long</td><td>tea, see, sheep</td></tr>
+    <tr><td>/ɪ/</td><td>Short</td><td>ship, bit</td></tr>
+    <tr><td>/e/</td><td>Short (no long pair)</td><td>ten, wet</td></tr>
+    <tr><td>/æ/</td><td>Short (no long pair)</td><td>cat, man</td></tr>
+    <tr><td>/ʌ/</td><td>Short</td><td>sun, cut</td></tr>
+    <tr><td>/ɑː/</td><td>Long</td><td>car, fast</td></tr>
+    <tr><td>/ɒ/</td><td>Short</td><td>hot, dog</td></tr>
+    <tr><td>/ɔː/</td><td>Long</td><td>door, saw</td></tr>
+    <tr><td>/ʊ/</td><td>Short</td><td>put, good</td></tr>
+    <tr><td>/uː/</td><td>Long</td><td>you, blue</td></tr>
+    <tr><td>/ɜː/</td><td>Long</td><td>bird, girl</td></tr>
+    <tr><td>/ə/</td><td>Short (<strong>Schwa</strong>)</td><td>about, paper</td></tr>
+  </table>
+
+  <div class="green-card">
+    <div class="label">The Schwa /ə/ — Most Common English Sound</div>
+    <p>Made with a completely relaxed mouth. Appears in every unstressed syllable and in weak forms of function words (<em>to, of, a, the, and</em>).</p>
+  </div>
+
+  <h4>8 Diphthongs</h4>
+  <table>
+    <tr><th>Type</th><th>IPA</th><th>Example</th></tr>
+    <tr><td>Centring → /ə/</td><td>/ɪə/ /eə/ /ʊə/</td><td>hear, hair, pure</td></tr>
+    <tr><td>Closing → /ɪ/</td><td>/eɪ/ /aɪ/ /ɔɪ/</td><td>day, my, boy</td></tr>
+    <tr><td>Closing → /ʊ/</td><td>/əʊ/ /aʊ/</td><td>home, now</td></tr>
+  </table>
+
+  <h4>5 Triphthongs</h4>
+  <p>/eɪə/ (<em>player</em>), /aɪə/ (<em>fire</em>), /ɔɪə/ (<em>royal</em>), /əʊə/ (<em>slower</em>), /aʊə/ (<em>power</em>)</p>
+</div>
+
+<!-- ============================================ -->
+<!-- TOPIC 2 -->
+<!-- ============================================ -->
+<div class="section" id="t2">
+  <h2 class="section-title"><span class="topic-badge">2</span> Phonemes, Phones & Allophones</h2>
+
+  <div class="def-card">
+    <div class="label">Phone [ ]</div>
+    <p>Any physical speech sound. Measurable with instruments. Example: <code>[pʰ]</code> and <code>[p]</code> are different phones.</p>
+  </div>
+  <div class="def-card">
+    <div class="label">Phoneme / /</div>
+    <p>Smallest abstract sound unit that can change meaning. Example: <code>/p/</code> vs <code>/b/</code> — <em>pat</em> vs <em>bat</em>.</p>
+  </div>
+  <div class="def-card">
+    <div class="label">Allophone [ ]</div>
+    <p>A predictable variant of a phoneme. <strong>Never changes meaning.</strong> Example: <code>[pʰ]</code> in <em>pin</em> and <code>[p]</code> in <em>spin</em>.</p>
+  </div>
+
+  <h3>How to Tell Phonemes from Allophones</h3>
+  <ul>
+    <li><strong>Minimal Pair Test:</strong> Swap one sound → meaning changes = phonemes</li>
+    <li><strong>Commutation Test (Trubetzkoy):</strong> Same thing, more formal</li>
+    <li><strong>Complementary Distribution:</strong> Two sounds never appear in the same environment = allophones</li>
+  </ul>
+</div>
+
+<!-- Theories -->
+<div class="section" id="t2-theories">
+  <h2 class="section-title"><span class="topic-badge">2b</span> 5 Major Theories</h2>
+
+  <h3>1. Daniel Jones — Foundations of Phonetics</h3>
+  <p>British phonetician at UCL. Built the IPA. Created the <strong>Cardinal Vowels</strong> — 8 universal reference points for describing vowels.</p>
+
+  <h3>2. Trubetzkoy (1890–1938) — Birth of Phonology</h3>
+  <p>Prague School founder. <em>Grundzüge der Phonologie</em> (1939). Key ideas:</p>
+  <ul>
+    <li><strong>Neutralization:</strong> Two phonemes lose their contrast in specific positions</li>
+    <li><strong>Archiphoneme:</strong> Capital letter symbol for neutralized pair (e.g., /T/)</li>
+  </ul>
+
+  <h3>3. Jakobson (1896–1982) — Distinctive Features</h3>
+  <p>Sounds = <strong>bundles of binary features</strong>: [+voiced], [-voiced], [+nasal], etc.</p>
+
+  <h3>4. Chomsky — Generative Phonology</h3>
+  <div class="rule-box">Underlying Form (UR) → [Rules] → Surface Form (SR)</div>
+
+  <h3>5. Halle — SPE (1968)</h3>
+  <p>Co-authored with Chomsky. Extended articulatory feature system + strictly ordered rules.</p>
+</div>
+
+<!-- Rules -->
+<div class="section" id="t2-rules">
+  <h2 class="section-title"><span class="topic-badge">2c</span> Phonological Rules</h2>
+  <div class="rule-box">A → B / C __ D<br><span style="font-size:12px;color:var(--text3)">"A becomes B between C and D"</span></div>
+  <h4>Four Processes</h4>
+  <ol>
+    <li><strong>Assimilation:</strong> Sound becomes like neighbor — <code>/ɪn+pʊt/</code> → <code>[ɪmpʊt]</code></li>
+    <li><strong>Dissimilation:</strong> Similar sounds become different</li>
+    <li><strong>Deletion:</strong> Sound disappears — <em>postman</em> → <code>[ˈpəʊsmən]</code></li>
+    <li><strong>Insertion:</strong> Extra sound added — <em>warmth</em> → <code>[wɔːmpθ]</code></li>
+  </ol>
+</div>
+
+<!-- ============================================ -->
+<!-- TOPIC 3 -->
+<!-- ============================================ -->
+<div class="section" id="t3">
+  <h2 class="section-title"><span class="topic-badge">3</span> Syllable</h2>
+  <p>A syllable = one beat in speech, centered on a vowel. Count syllables by counting jaw drops.</p>
+
+  <h3>Phonetic vs Phonological Syllable</h3>
+  <table>
+    <tr><th></th><th>Phonetic</th><th>Phonological</th></tr>
+    <tr><td>Nature</td><td>Physical peaks of loudness</td><td>Abstract mental structure</td></tr>
+    <tr><td>Defined by</td><td>Sonority peaks</td><td>Onset + Nucleus + Coda</td></tr>
+    <tr><td>Language-specific?</td><td>Mostly universal</td><td>Language-specific rules</td></tr>
+  </table>
+</div>
+
+<div class="section" id="t3-structure">
+  <h2 class="section-title"><span class="topic-badge">3b</span> Syllable Structure</h2>
+  <div class="rule-box">σ = Onset (C) + Rhyme [Nucleus (V) + Coda (C)]</div>
+  <ul>
+    <li><strong>Open syllable:</strong> No coda — <em>go, me</em> (vowel tends to be long)</li>
+    <li><strong>Closed syllable:</strong> Has coda — <em>cat, dog</em> (vowel tends to be short)</li>
+    <li><strong>Syllabic consonants:</strong> /l̩/ in <em>bottle</em>, /n̩/ in <em>button</em></li>
+  </ul>
+</div>
+
+<div class="section" id="t3-phonotactics">
+  <h2 class="section-title"><span class="topic-badge">3c</span> Phonotactics</h2>
+  <p><strong>English template:</strong> (C)(C)(C) V (C)(C)(C)(C) — up to 3 onset, 4 coda consonants.</p>
+
+  <h4>3-Consonant Onset Rule</h4>
+  <p>C₁ = /s/, C₂ = voiceless stop (/p,t,k/), C₃ = approximant (/l,r,w,j/). Examples: <em>spring, street, split</em></p>
+
+  <h4>SSP Violation</h4>
+  <p>In <em>stop</em> /stɒp/, sonority drops from /s/ to /t/ — violates the rule. /s/ is treated as an "appendix."</p>
+
+  <h4>Maximal Onset Principle</h4>
+  <p>Assign consonants to the next syllable's onset if the cluster is legal: <em>diploma</em> → /dɪ.ˈpləʊ.mə/</p>
+
+  <h4>Bangla Loanword Adaptation</h4>
+  <ul>
+    <li><strong>Prothesis:</strong> Insert vowel at start — <em>school</em> → <em>is-kul</em></li>
+    <li><strong>Anaptyxis:</strong> Insert vowel in middle — <em>glass</em> → <em>ge-las</em></li>
+  </ul>
+</div>
+
+<!-- ============================================ -->
+<!-- TOPIC 4 -->
+<!-- ============================================ -->
+<div class="section" id="t4">
+  <h2 class="section-title"><span class="topic-badge">4</span> Connected Speech</h2>
+  <div class="def-card">
+    <div class="label">Definition</div>
+    <p>Natural continuous speech where words blend and sounds change. NOT laziness — it's governed by economy of effort, coarticulation, and stress-timing.</p>
   </div>
 </div>
 
-<!-- ========================== SECTION A ========================== -->
-<div class="section sec-a" id="sec-a">
-  <div class="section-header" onclick="toggleSection(this)">
-    <div class="section-icon">🔤</div>
-    <h2>Section A: Phonetics and Phonology</h2>
-    <span class="section-toggle">▼</span>
+<div class="section" id="t4-linking">
+  <h2 class="section-title"><span class="topic-badge">4b</span> Linking & Intrusion</h2>
+
+  <h3>Catenation (C→V Linking)</h3>
+  <p>Final consonant joins the next word's initial vowel:</p>
+  <ul>
+    <li><em>"Turn it on"</em> → [tɜː.nɪ.tɒn]</li>
+    <li><em>"Pick it up"</em> → [pɪ.kɪ.tʌp]</li>
+  </ul>
+
+  <h3>V→V Linking (Glide Insertion)</h3>
+  <table>
+    <tr><th>Type</th><th>After</th><th>Example</th></tr>
+    <tr><td>Linking /r/</td><td>Spelling has 'r'</td><td><em>"far away"</em> → /fɑːr əˈweɪ/</td></tr>
+    <tr><td>Linking /w/</td><td>Rounded V (/uː, əʊ/)</td><td><em>"go on"</em> → /ɡəʊ w ɒn/</td></tr>
+    <tr><td>Linking /j/</td><td>Front V (/iː, eɪ, aɪ/)</td><td><em>"I am"</em> → /aɪ j æm/</td></tr>
+  </table>
+
+  <h3>Intrusion</h3>
+  <p>Same as linking, but <strong>NO letter in spelling</strong>:</p>
+  <ul>
+    <li><strong>Intrusive /r/:</strong> <em>"law and order"</em> → /lɔː <strong>r</strong> ənd ɔːdə/</li>
+    <li><strong>Intrusive /w/:</strong> <em>"do it"</em> → /duː <strong>w</strong> ɪt/</li>
+  </ul>
+</div>
+
+<div class="section" id="t4-assimilation">
+  <h2 class="section-title"><span class="topic-badge">4c</span> Assimilation</h2>
+  <p>A sound changes to become more like its neighbor.</p>
+
+  <h4>Directions</h4>
+  <ol>
+    <li><strong>Regressive:</strong> Following sound changes the preceding one (most common) — <em>"ten boys"</em> → [tem bɔɪz]</li>
+    <li><strong>Progressive:</strong> Preceding changes the following — plural <em>-s</em>: /s/ after voiceless, /z/ after voiced</li>
+    <li><strong>Coalescent:</strong> Two sounds merge into new one — /t/+/j/ → /tʃ/</li>
+  </ol>
+
+  <h4>Place Assimilation</h4>
+  <table>
+    <tr><th>Before Bilabial</th><th>Before Velar</th></tr>
+    <tr><td><em>"good boy"</em> → [ɡʊb bɔɪ]</td><td><em>"good girl"</em> → [ɡʊɡ ɡɜːl]</td></tr>
+    <tr><td><em>"ten pounds"</em> → [tem paʊndz]</td><td><em>"ten cups"</em> → [teŋ kʌps]</td></tr>
+  </table>
+
+  <h4>Coalescent Assimilation (Palatalization)</h4>
+  <table>
+    <tr><th>Combo</th><th>Result</th><th>Example</th></tr>
+    <tr><td>/t/+/j/</td><td>/tʃ/</td><td><em>"don't you"</em> → /ˈdəʊntʃu/</td></tr>
+    <tr><td>/d/+/j/</td><td>/dʒ/</td><td><em>"did you"</em> → /ˈdɪdʒu/</td></tr>
+    <tr><td>/s/+/j/</td><td>/ʃ/</td><td><em>"bless you"</em> → /ˈbleʃu/</td></tr>
+  </table>
+</div>
+
+<div class="section" id="t4-elision">
+  <h2 class="section-title"><span class="topic-badge">4d</span> Elision, Glottalization & Flapping</h2>
+
+  <h3>Elision (/t,d/ Deletion)</h3>
+  <p>When /t/ or /d/ sits between two consonants: <em>"next week"</em> → [neks wiːk], <em>"friendship"</em> → [ˈfrenʃɪp]</p>
+
+  <h3>Schwa Deletion</h3>
+  <p><em>"camera"</em> → /ˈkæmrə/, <em>"interesting"</em> → /ˈɪntrəstɪŋ/</p>
+
+  <h3>Glottalization</h3>
+  <p>/t/ replaced by glottal stop [ʔ]: <em>"bottle"</em> → [ˈbɒʔl]. Three theories: Autosegmental (feature spreading), Articulatory (gesture reduction), Usage-Based (stored variants).</p>
+
+  <h3>Flapping (American English)</h3>
+  <p>/t,d/ between vowels → quick tap [ɾ]: <em>"butter"</em> → [ˈbʌɾər], <em>"water"</em> → [ˈwɑːɾər]</p>
+
+  <h3>Other Features</h3>
+  <ul>
+    <li><strong>Juncture:</strong> "I scream" vs "Ice cream" — aspiration and vowel length differ</li>
+    <li><strong>Stress-Timing:</strong> English = stress-timed (equal intervals between stresses). Bangla = syllable-timed.</li>
+    <li><strong>Intonation:</strong> Rising ↗ = questions/politeness. Falling ↘ = statements/finality.</li>
+    <li><strong>Contractions:</strong> I'm, you'll, gonna, wanna, gotta, whatcha</li>
+  </ul>
+</div>
+
+<!-- ============================================ -->
+<!-- TOPIC 5 -->
+<!-- ============================================ -->
+<div class="section" id="t5">
+  <h2 class="section-title"><span class="topic-badge">5</span> Strong vs Weak Forms</h2>
+
+  <div class="def-card">
+    <div class="label">Weak Forms</div>
+    <p>Reduced unstressed pronunciations of function words. Vowels reduce to schwa /ə/ or get dropped. This maintains English stress-timed rhythm.</p>
   </div>
-  <div class="section-content">
 
-    <h3>1. Definition of Phonetics</h3>
-    <p><b>Phonetics</b> is the branch of linguistics that studies the <b>physical properties of speech sounds</b>. It deals with how speech sounds are produced by the human vocal organs, how they travel through the air as sound waves, and how they are heard and processed by the listener's ear.</p>
-    <p>In simple words, phonetics looks at the <b>actual sounds</b> that humans make when they speak. It does not care whether a sound changes the meaning of a word or not — it simply describes and classifies all the sounds that the human voice can produce.</p>
+  <h4>Master Chart</h4>
+  <table>
+    <tr><th>Word</th><th>Strong</th><th>Weak</th><th>Example</th></tr>
+    <tr><td>to</td><td>/tuː/</td><td>/tə/</td><td>"Go to bed"</td></tr>
+    <tr><td>and</td><td>/ænd/</td><td>/ən/, /n/</td><td>"Rock and roll"</td></tr>
+    <tr><td>of</td><td>/ɒv/</td><td>/əv/, /ə/</td><td>"Cup of tea"</td></tr>
+    <tr><td>can</td><td>/kæn/</td><td>/kən/</td><td>"I can do it"</td></tr>
+    <tr><td>was</td><td>/wɒz/</td><td>/wəz/</td><td>"He was late"</td></tr>
+    <tr><td>for</td><td>/fɔː/</td><td>/fə/</td><td>"Wait for me"</td></tr>
+    <tr><td>have</td><td>/hæv/</td><td>/əv/</td><td>"Should have gone"</td></tr>
+    <tr><td>them</td><td>/ðem/</td><td>/əm/</td><td>"Leave them"</td></tr>
+  </table>
 
-    <h3>2. Definition of Phonology</h3>
-    <p><b>Phonology</b> is the branch of linguistics that studies how speech sounds <b>function and form patterns within a particular language</b>. While phonetics looks at sounds as physical events, phonology looks at sounds as part of a <b>system</b> — how they are organized, which sounds can be combined together, and which sound differences actually matter for meaning.</p>
+  <h4>When to Use Strong Form</h4>
+  <ol>
+    <li>End of sentence: "What are you looking <strong>for</strong>?" → /fɔː/</li>
+    <li>Emphasis: "I said <strong>AND</strong>, not OR!" → /ænd/</li>
+    <li>Coordinated: "to <strong>and</strong> from" → /ænd/</li>
+    <li>Quoting: "The word '<strong>that</strong>'" → /ðæt/</li>
+  </ol>
+</div>
 
-    <h3>3. Differences Between Phonetics and Phonology</h3>
-    <table>
-      <tr><th>Feature</th><th>Phonetics</th><th>Phonology</th></tr>
-      <tr><td><b>Focus</b></td><td>Physical properties of sounds</td><td>How sounds function in a language</td></tr>
-      <tr><td><b>Approach</b></td><td>Describes all possible human sounds</td><td>Analyzes sound patterns in a specific language</td></tr>
-      <tr><td><b>Scope</b></td><td>Universal — applies to all languages</td><td>Language-specific</td></tr>
-      <tr><td><b>Unit</b></td><td>Phone <span class="ipa" data-word="phone">[p]</span></td><td>Phoneme <span class="ipa" data-word="phoneme">/p/</span></td></tr>
-      <tr><td><b>Meaning</b></td><td>Does not consider meaning</td><td>Focuses on meaning-distinguishing sounds</td></tr>
-      <tr><td><b>Nature</b></td><td>Concrete and physical</td><td>Abstract and mental</td></tr>
-      <tr><td><b>Notation</b></td><td>Square brackets <span class="ipa-bracket">[ ]</span></td><td>Slashes <span class="ipa-bracket">/ /</span></td></tr>
-    </table>
+<!-- ============================================ -->
+<!-- TOPIC 6 -->
+<!-- ============================================ -->
+<div class="section" id="t6">
+  <h2 class="section-title"><span class="topic-badge">6</span> IPA Transcription of Connected Speech</h2>
 
-    <h3>4. Classification of Phonetics</h3>
-    <table>
-      <tr><th>Branch</th><th>Studies</th><th>Stage</th><th>Key Method</th></tr>
-      <tr><td><b>Articulatory</b></td><td>How sounds are <b>produced</b></td><td>Speaker's production</td><td>Vocal organ observation, MRI</td></tr>
-      <tr><td><b>Acoustic</b></td><td>How sounds <b>travel</b> as waves</td><td>Transmission</td><td>Spectrogram analysis</td></tr>
-      <tr><td><b>Auditory</b></td><td>How sounds are <b>perceived</b></td><td>Listener's perception</td><td>Hearing/perception tests</td></tr>
-    </table>
+  <h3>Step-by-Step Method</h3>
+  <ol>
+    <li>Identify content words → keep full pronunciation</li>
+    <li>Reduce function words → weak forms</li>
+    <li>Mark stress <code>ˈ</code></li>
+    <li>Apply linking (C→V connections)</li>
+    <li>Apply assimilation (place/voice changes)</li>
+    <li>Apply elision (/t,d/ deletion, h-dropping)</li>
+    <li>Apply contractions</li>
+  </ol>
 
-    <h3>5. Relationship Between Phonetics and Phonology</h3>
-    <ul>
-      <li><b>Phonetics provides the raw material</b> for phonology — you need to know what sounds exist before analyzing how they function.</li>
-      <li><b>Phonology organizes</b> what phonetics describes — from thousands of possible sounds, phonology identifies which ones matter.</li>
-      <li>They share the same subject matter (speech sounds) but ask <b>different questions</b>.</li>
-      <li>A complete understanding of any language's sound system <b>requires both</b>.</li>
-    </ul>
+  <h3>Worked Examples</h3>
 
-    <div class="info-box example-box">
-      <div class="box-title">💡 Example</div>
-      <p>In English, <span class="ipa" data-word="pin">[p]</span> and <span class="ipa" data-word="spin">[pʰ]</span> are phonetically different (one has a puff of air). But phonologically, they are the same phoneme <span class="ipa" data-word="p">/p/</span>. Phonetics describes the difference; phonology explains it doesn't matter for meaning in English.</p>
-    </div>
+  <div class="green-card">
+    <div class="label">Example 1: "Can you give me a cup of tea?"</div>
+    <p>Citation: /kæn juː ɡɪv miː eɪ kʌp ɒv tiː/<br>
+    Connected: <code>/kən jə ˈɡɪv mi ə ˌkʌp əv ˈtiː/</code></p>
+  </div>
 
-    <div class="info-box viva-box">
-      <div class="box-title">🎯 Remember for Viva</div>
-      <ul>
-        <li>Phonetics = physical sounds (production, transmission, perception). Universal.</li>
-        <li>Phonology = sound patterns and functions. Language-specific.</li>
-        <li>Three branches: Articulatory, Acoustic, Auditory.</li>
-        <li>Phonetics uses <span class="ipa-bracket">[ ]</span>, Phonology uses <span class="ipa-bracket">/ /</span>.</li>
-        <li>They are interdependent: phonetics provides data, phonology organizes it.</li>
-      </ul>
-    </div>
+  <div class="green-card">
+    <div class="label">Example 2: "Don't you think he should have told her?"</div>
+    <p>Connected: <code>/ˈdəʊntʃə ˈθɪŋk i ˈʃʊd əv ˈtəʊld ə/</code><br>
+    Processes: /t/+/j/ coalescence, h-dropping, weak forms</p>
+  </div>
+
+  <h3>Key Patterns</h3>
+  <table>
+    <tr><th>Pattern</th><th>Rule</th><th>Example</th></tr>
+    <tr><td>C + V</td><td>Link</td><td><em>"turn it"</em> → [tɜː.nɪt]</td></tr>
+    <tr><td>Alv + Bilab</td><td>/n/→[m]</td><td><em>"ten boys"</em> → [tem bɔɪz]</td></tr>
+    <tr><td>/t,d/ + /j/</td><td>Coalescence</td><td><em>"did you"</em> → /ˈdɪdʒu/</td></tr>
+    <tr><td>C + /t,d/ + C</td><td>Delete</td><td><em>"next day"</em> → [neks deɪ]</td></tr>
+    <tr><td>Function word</td><td>Weak form</td><td><em>"and"</em> → /ən/</td></tr>
+  </table>
+</div>
+
+<!-- ============================================ -->
+<!-- VIVA Q&A -->
+<!-- ============================================ -->
+<div class="section" id="viva">
+  <h2 class="section-title"><span class="topic-badge">Q&A</span> Combined Viva Question Bank</h2>
+  <p style="color:var(--text3);margin-bottom:16px"><em>Click any question to reveal its model answer.</em></p>
+
+  <h3>Phonetics & Phonology</h3>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q1. What is the difference between Phonetics and Phonology? <span class="toggle-hint">(click to reveal)</span></div>
+    <div class="a">Phonetics studies the physical production and acoustic properties of speech sounds across all languages. Phonology studies how sounds function and form meaningful contrasts within a specific language's mental grammar.</div>
+  </div>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q2. Which branch of Phonetics matters most for ELT?</div>
+    <div class="a">Articulatory phonetics — because teachers need to show students where to place their tongue, lips, and teeth to produce English sounds correctly.</div>
+  </div>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q3. How are Phonetics and Phonology related?</div>
+    <div class="a">They are complementary. Phonetics gives the physical raw material; Phonology gives the organizational rules. Neither works without the other.</div>
+  </div>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q4. What is the IPA and its golden rule?</div>
+    <div class="a">The International Phonetic Alphabet, founded in 1886 by Paul Passy. Golden rule: "One symbol for one sound, and one sound for one symbol."</div>
+  </div>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q5. What is the Schwa? Why is it the most common English sound?</div>
+    <div class="a">The schwa /ə/ is a short, mid-central, neutral vowel made with a completely relaxed mouth. It's the most common because English is stress-timed, so all unstressed vowels reduce to schwa.</div>
+  </div>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q6. Name the 3 parameters for describing consonants.</div>
+    <div class="a">1. Voicing (voiced or voiceless), 2. Place of articulation (where the blockage is), 3. Manner of articulation (how air is released).</div>
+  </div>
+
+  <h3>Phonemes & Phones</h3>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q7. What is a Phone vs a Phoneme?</div>
+    <div class="a">A phone is any physical speech sound [ ]. A phoneme is an abstract mental sound that can change meaning / /. Example: /p/ vs /b/ changes "pat" to "bat."</div>
+  </div>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q8. What is an Allophone?</div>
+    <div class="a">A predictable variant of a phoneme that never changes meaning. Aspirated [pʰ] in "pin" and unaspirated [p] in "spin" are allophones of /p/.</div>
+  </div>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q9. What is Trubetzkoy's Commutation Test?</div>
+    <div class="a">Swap one sound for another. If meaning changes → phonemes. If not → allophones. Named after Nikolai Trubetzkoy, Prague School (1939).</div>
+  </div>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q10. What is Jakobson's Distinctive Feature Theory?</div>
+    <div class="a">Sounds are bundles of binary features marked [+] or [-]. Example: /b/ is [+voiced], /p/ is [-voiced].</div>
+  </div>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q11. What is the SPE formula?</div>
+    <div class="a">UR → [Phonological Rules] → SR. Published by Chomsky and Halle in 1968 (The Sound Pattern of English).</div>
+  </div>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q12. What is Neutralization?</div>
+    <div class="a">When two phonemes lose their contrast in a specific position. German example: both "Rad" /d/ and "Rat" /t/ become [t] at the end of a word.</div>
+  </div>
+
+  <h3>Syllable & Phonotactics</h3>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q13. How do phonetic and phonological syllables differ?</div>
+    <div class="a">Phonetic = physical peak of sonority. Phonological = abstract mental unit with onset, nucleus, and coda.</div>
+  </div>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q14. What is the English syllable template?</div>
+    <div class="a">(C)(C)(C) V (C)(C)(C)(C) — up to 3 onset, 4 coda. Examples: "spring" (CCCVC), "texts" (CVCCCC).</div>
+  </div>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q15. Why do Bangla speakers say "is-kul" for "school"?</div>
+    <div class="a">Bangla doesn't allow initial /sk-/ clusters. Prothesis (vowel insertion at the start) creates two legal syllables: is + kul.</div>
+  </div>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q16. What is the Sonority Sequencing Principle?</div>
+    <div class="a">Sonority must rise from onset to nucleus and fall toward coda. Exception: /s/+stop clusters violate this — /s/ is treated as an extrametrical appendix.</div>
+  </div>
+
+  <h3>Connected Speech</h3>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q17. What is connected speech? Is it lazy speech?</div>
+    <div class="a">Natural continuous speech where sounds blend. NOT laziness — it's governed by the Principle of Least Effort and natural coarticulation.</div>
+  </div>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q18. Linking /r/ vs Intrusive /r/?</div>
+    <div class="a">Linking /r/: spelling has 'r' ("far away"). Intrusive /r/: NO 'r' in spelling ("law and order").</div>
+  </div>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q19. Explain Coalescent Assimilation.</div>
+    <div class="a">Two sounds merge into a new one. /t/+/j/ → /tʃ/ ("don't you" → /ˈdəʊntʃu/). /d/+/j/ → /dʒ/ ("did you" → /ˈdɪdʒu/).</div>
+  </div>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q20. What is the /t,d/ elision rule?</div>
+    <div class="a">C + /t,d/ + C → middle /t,d/ is deleted. "next week" → [neks wiːk]. But if a vowel follows, /t,d/ stays.</div>
+  </div>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q21. "I scream" vs "Ice cream" — how do they differ?</div>
+    <div class="a">"I scream": long /aɪ/, unaspirated /k/ (after /s/). "Ice cream": short /aɪ/ (pre-fortis clipping), aspirated [kʰ] (word-initial).</div>
+  </div>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q22. Stress-Timed vs Syllable-Timed?</div>
+    <div class="a">Stress-timed (English): equal intervals between stresses, unstressed syllables compressed. Syllable-timed (Bangla): every syllable gets equal time.</div>
+  </div>
+
+  <h3>Strong vs Weak Forms</h3>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q23. What are Weak Forms?</div>
+    <div class="a">Reduced unstressed pronunciations of function words. Vowels reduce to schwa /ə/. Example: "and" /ænd/ → /ən/.</div>
+  </div>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q24. When must you use the Strong Form?</div>
+    <div class="a">1. End of sentence, 2. Emphasis/contrast, 3. Coordinated prepositions, 4. Quoting the word itself.</div>
+  </div>
+
+  <h3>IPA Transcription</h3>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q25. How do you transcribe connected speech?</div>
+    <div class="a">1. Content words → full form. 2. Function words → weak forms. 3. Mark stress. 4. Apply linking. 5. Apply assimilation. 6. Apply elision. 7. Apply contractions.</div>
+  </div>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q26. Transcribe "He should have told them."</div>
+    <div class="a">/hi ˈʃʊd əv ˈtəʊld əm/ — "have" → /əv/ (h-drop), "them" → /əm/ (weak form).</div>
+  </div>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q27. What is Pre-fortis Clipping?</div>
+    <div class="a">A vowel is shortened before a voiceless consonant in the same syllable. "bead" [biːd] (long) vs "beat" [biˑt] (short).</div>
+  </div>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q28. What is a Syllabic Consonant?</div>
+    <div class="a">A consonant acting as a syllable's nucleus instead of a vowel. English /n/ and /l/ do this: "button" /ˈbʌtn̩/, "little" /ˈlɪtl̩/.</div>
+  </div>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q29. What is a Minimal Pair?</div>
+    <div class="a">Two words differing by one sound in the same position with different meanings. "ship" vs "sheep." Useful in ELT for practicing difficult sound contrasts.</div>
+  </div>
+  <div class="qa-card" onclick="this.classList.toggle('open')">
+    <div class="q">Q30. What is Complementary Distribution?</div>
+    <div class="a">When two allophones never appear in the same environment. [pʰ] only at syllable-initial, [p] only after /s/. They are in complementary distribution.</div>
   </div>
 </div>
 
-<!-- ========================== SECTION B ========================== -->
-<div class="section sec-b" id="sec-b">
-  <div class="section-header" onclick="toggleSection(this)">
-    <div class="section-icon">🧬</div>
-    <h2>Section B: Phonemes and Phones</h2>
-    <span class="section-toggle">▼</span>
-  </div>
-  <div class="section-content">
+<!-- Scroll to top -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0})">↑</button>
 
-    <h3>1. Phoneme vs. Phone</h3>
-    <p>A <b>phoneme</b> is the smallest unit of sound that can <b>distinguish meaning</b>. It is abstract and written in <span class="ipa-bracket">/ /</span>. A <b>phone</b> is any <b>actual speech sound</b> produced — concrete and physical, written in <span class="ipa-bracket">[ ]</span>.</p>
-
-    <table>
-      <tr><th>Feature</th><th>Phoneme</th><th>Phone</th></tr>
-      <tr><td><b>Nature</b></td><td>Abstract, mental unit</td><td>Concrete, physical sound</td></tr>
-      <tr><td><b>Notation</b></td><td><span class="ipa" data-word="pin">/p/</span></td><td><span class="ipa" data-word="spin">[p]</span></td></tr>
-      <tr><td><b>Number</b></td><td>Limited (~44 in English)</td><td>Unlimited variations</td></tr>
-      <tr><td><b>Meaning</b></td><td>Changing one changes word meaning</td><td>Changing one may not</td></tr>
-    </table>
-
-    <h3>2. Key Concepts</h3>
-    <p><b>Allophone:</b> A variant pronunciation of a phoneme. Example: <span class="ipa" data-word="pin">[pʰ]</span> (aspirated, in "pin") and <span class="ipa" data-word="spin">[p]</span> (unaspirated, in "spin") are allophones of <span class="ipa" data-word="pin">/p/</span>.</p>
-    <p><b>Minimal Pair:</b> Two words differing by one phoneme — "pat" <span class="ipa" data-word="pat">/pæt/</span> vs. "bat" <span class="ipa" data-word="bat">/bæt/</span>. Proves <span class="ipa" data-word="pin">/p/</span> and <span class="ipa" data-word="bin">/b/</span> are separate phonemes.</p>
-    <p><b>Complementary Distribution:</b> Two phones never appear in the same environment — strong evidence they are allophones of the same phoneme.</p>
-    <p><b>Free Variation:</b> Two phones can occur in the same position without changing meaning, and the choice is not predictable.</p>
-
-    <h3>3. Important Scholars</h3>
-
-    <div class="scholar-card">
-      <div class="scholar-name">🏛️ Nikolai Trubetzkoy <span style="font-size:13px;color:var(--text-muted)">(1890–1938)</span></div>
-      <div class="scholar-meta">Prague School of Linguistics • <i>Principles of Phonology</i> (1939)</div>
-      <ul>
-        <li><b>Separated phonetics from phonology</b> as distinct disciplines.</li>
-        <li>Defined phonemes by their <b>distinctive function</b> — ability to distinguish words.</li>
-        <li>Developed <b>phonological oppositions</b> — phonemes defined by contrasts (e.g., voiced vs. voiceless).</li>
-        <li>Introduced <b>neutralization</b> — when an opposition is cancelled in certain positions (e.g., German final devoicing).</li>
-        <li>Contributed to <b>markedness theory</b> — one member of a pair is "default" (unmarked), the other is "marked."</li>
-      </ul>
-    </div>
-
-    <div class="scholar-card">
-      <div class="scholar-name">🔬 Roman Jakobson <span style="font-size:13px;color:var(--text-muted)">(1896–1982)</span></div>
-      <div class="scholar-meta">Prague School → Harvard/MIT • Distinctive Feature Theory</div>
-      <ul>
-        <li>Proposed <b>Distinctive Feature Theory</b> — each phoneme is a <b>bundle of smaller features</b>.</li>
-        <li>Features are <b>binary</b>: either present (+) or absent (−). E.g., <span class="ipa" data-word="bin">/b/</span> = [+voiced, +bilabial, +stop].</li>
-        <li>Used <b>acoustic features</b> (based on how sounds sound, not how they're made).</li>
-        <li>Believed features are <b>universal</b> — same set used across all languages.</li>
-        <li>Studied <b>child language acquisition</b> — children learn phonemes in a universal order.</li>
-      </ul>
-    </div>
-
-    <div class="scholar-card">
-      <div class="scholar-name">📖 Daniel Jones <span style="font-size:13px;color:var(--text-muted)">(1881–1967)</span></div>
-      <div class="scholar-meta">British Phonetics Tradition • University College London</div>
-      <ul>
-        <li>Defined the phoneme as a <b>family of related sounds</b> (concrete/physical approach).</li>
-        <li>Created the <b>Cardinal Vowel System</b> — reference points for describing vowels across all languages.</li>
-        <li>Key role in developing the <b>International Phonetic Alphabet (IPA)</b>.</li>
-        <li>Published the <b>English Pronouncing Dictionary (EPD)</b> and described <b>Received Pronunciation (RP)</b>.</li>
-      </ul>
-    </div>
-
-    <div class="scholar-card">
-      <div class="scholar-name">🧠 Noam Chomsky & Morris Halle</div>
-      <div class="scholar-meta">MIT • <i>The Sound Pattern of English</i> (SPE, 1968)</div>
-      <ul>
-        <li>Introduced <b>Generative Phonology</b>: speakers have an <b>underlying representation</b> of words, and <b>phonological rules</b> convert it to the <b>surface pronunciation</b>.</li>
-        <li>Formula: <b>Underlying → Rules → Surface</b>.</li>
-        <li>Expanded Jakobson's features using <b>articulatory-based</b> features ([±voice], [±nasal], [±continuant], etc.).</li>
-        <li>Argued the classical phoneme concept was <b>unnecessary</b> — replaced by underlying segments + rules.</li>
-      </ul>
-    </div>
-
-    <div class="info-box viva-box">
-      <div class="box-title">🎯 Remember for Viva</div>
-      <ul>
-        <li>Phoneme = abstract (<span class="ipa-bracket">/ /</span>). Phone = concrete (<span class="ipa-bracket">[ ]</span>). Allophone = variant of a phoneme.</li>
-        <li>Minimal pairs prove phoneme status. Complementary distribution proves allophone status.</li>
-        <li>Trubetzkoy: oppositions, neutralization. Jakobson: distinctive features (binary, acoustic).</li>
-        <li>Jones: concrete phoneme, Cardinal Vowels, IPA. Chomsky & Halle: SPE, generative phonology.</li>
-      </ul>
-    </div>
-  </div>
 </div>
 
-<!-- ========================== SECTION C ========================== -->
-<div class="section sec-c" id="sec-c">
-  <div class="section-header" onclick="toggleSection(this)">
-    <div class="section-icon">🗣️</div>
-    <h2>Section C: English Vowels</h2>
-    <span class="section-toggle">▼</span>
-  </div>
-  <div class="section-content">
-
-    <p>A <b>vowel</b> is a sound made when air flows freely through the mouth <b>without obstruction</b>. Vowels are classified by: <b>tongue height</b> (close/mid/open), <b>tongue position</b> (front/central/back), and <b>lip rounding</b> (rounded/unrounded). English RP has <b>12 monophthongs + 8 diphthongs + 5 triphthongs = 25 vowel phonemes</b>.</p>
-
-    <h3>Monophthongs (12 Pure Vowels) — Click to Hear</h3>
-    <div class="ipa-chart-container">
-      <table>
-        <tr><th>IPA</th><th>Height</th><th>Position</th><th>Lips</th><th>Length</th><th>Example</th></tr>
-        <tr><td><span class="ipa" data-word="see">iː</span></td><td>Close</td><td>Front</td><td>Spread</td><td>Long</td><td><span class="ipa" data-word="see">see</span>, <span class="ipa" data-word="beat">beat</span></td></tr>
-        <tr><td><span class="ipa" data-word="sit">ɪ</span></td><td>Near-close</td><td>Near-front</td><td>Spread</td><td>Short</td><td><span class="ipa" data-word="sit">sit</span>, <span class="ipa" data-word="big">big</span></td></tr>
-        <tr><td><span class="ipa" data-word="bed">e</span></td><td>Close-mid</td><td>Front</td><td>Spread</td><td>Short</td><td><span class="ipa" data-word="bed">bed</span>, <span class="ipa" data-word="ten">ten</span></td></tr>
-        <tr><td><span class="ipa" data-word="cat">æ</span></td><td>Near-open</td><td>Front</td><td>Spread</td><td>Short</td><td><span class="ipa" data-word="cat">cat</span>, <span class="ipa" data-word="hat">hat</span></td></tr>
-        <tr><td><span class="ipa" data-word="car">ɑː</span></td><td>Open</td><td>Back</td><td>Unrounded</td><td>Long</td><td><span class="ipa" data-word="car">car</span>, <span class="ipa" data-word="father">father</span></td></tr>
-        <tr><td><span class="ipa" data-word="hot">ɒ</span></td><td>Open</td><td>Back</td><td>Rounded</td><td>Short</td><td><span class="ipa" data-word="hot">hot</span>, <span class="ipa" data-word="lot">lot</span></td></tr>
-        <tr><td><span class="ipa" data-word="saw">ɔː</span></td><td>Open-mid</td><td>Back</td><td>Rounded</td><td>Long</td><td><span class="ipa" data-word="saw">saw</span>, <span class="ipa" data-word="caught">caught</span></td></tr>
-        <tr><td><span class="ipa" data-word="put">ʊ</span></td><td>Near-close</td><td>Near-back</td><td>Rounded</td><td>Short</td><td><span class="ipa" data-word="put">put</span>, <span class="ipa" data-word="book">book</span></td></tr>
-        <tr><td><span class="ipa" data-word="food">uː</span></td><td>Close</td><td>Back</td><td>Rounded</td><td>Long</td><td><span class="ipa" data-word="food">food</span>, <span class="ipa" data-word="blue">blue</span></td></tr>
-        <tr><td><span class="ipa" data-word="cup">ʌ</span></td><td>Open-mid</td><td>Central</td><td>Unrounded</td><td>Short</td><td><span class="ipa" data-word="cup">cup</span>, <span class="ipa" data-word="but">but</span></td></tr>
-        <tr><td><span class="ipa" data-word="bird">ɜː</span></td><td>Open-mid</td><td>Central</td><td>Unrounded</td><td>Long</td><td><span class="ipa" data-word="bird">bird</span>, <span class="ipa" data-word="nurse">nurse</span></td></tr>
-        <tr><td><span class="ipa" data-word="about">ə</span></td><td>Mid</td><td>Central</td><td>Neutral</td><td>Short</td><td><span class="ipa" data-word="about">about</span>, <span class="ipa" data-word="teacher">teacher</span></td></tr>
-      </table>
-    </div>
-    <p><b>Schwa</b> <span class="ipa" data-word="about">ə</span> is the most common English vowel — only in unstressed syllables.</p>
-
-    <h3>Diphthongs (8 Gliding Vowels) — Click to Hear</h3>
-    <h4>Closing Diphthongs</h4>
-    <table>
-      <tr><th>IPA</th><th>Glide</th><th>Examples</th></tr>
-      <tr><td><span class="ipa" data-word="say">eɪ</span></td><td>Mid → Close front</td><td><span class="ipa" data-word="say">say</span>, <span class="ipa" data-word="make">make</span>, <span class="ipa" data-word="day">day</span></td></tr>
-      <tr><td><span class="ipa" data-word="my">aɪ</span></td><td>Open → Close front</td><td><span class="ipa" data-word="my">my</span>, <span class="ipa" data-word="like">like</span>, <span class="ipa" data-word="time">time</span></td></tr>
-      <tr><td><span class="ipa" data-word="boy">ɔɪ</span></td><td>Back → Close front</td><td><span class="ipa" data-word="boy">boy</span>, <span class="ipa" data-word="coin">coin</span>, <span class="ipa" data-word="toy">toy</span></td></tr>
-      <tr><td><span class="ipa" data-word="go">əʊ</span></td><td>Central → Close back</td><td><span class="ipa" data-word="go">go</span>, <span class="ipa" data-word="show">show</span>, <span class="ipa" data-word="home">home</span></td></tr>
-      <tr><td><span class="ipa" data-word="how">aʊ</span></td><td>Open → Close back</td><td><span class="ipa" data-word="how">how</span>, <span class="ipa" data-word="now">now</span>, <span class="ipa" data-word="out">out</span></td></tr>
-    </table>
-    <h4>Centring Diphthongs</h4>
-    <table>
-      <tr><th>IPA</th><th>Glide</th><th>Examples</th></tr>
-      <tr><td><span class="ipa" data-word="ear">ɪə</span></td><td>Front close → Central</td><td><span class="ipa" data-word="ear">ear</span>, <span class="ipa" data-word="here">here</span>, <span class="ipa" data-word="near">near</span></td></tr>
-      <tr><td><span class="ipa" data-word="air">eə</span></td><td>Front mid → Central</td><td><span class="ipa" data-word="air">air</span>, <span class="ipa" data-word="care">care</span>, <span class="ipa" data-word="where">where</span></td></tr>
-      <tr><td><span class="ipa" data-word="tour">ʊə</span></td><td>Back close → Central</td><td><span class="ipa" data-word="tour">tour</span>, <span class="ipa" data-word="pure">pure</span></td></tr>
-    </table>
-
-    <h3>Triphthongs (5)</h3>
-    <table>
-      <tr><th>IPA</th><th>Formed From</th><th>Examples</th></tr>
-      <tr><td><span class="ipa" data-word="player">eɪə</span></td><td>eɪ + ə</td><td><span class="ipa" data-word="player">player</span>, <span class="ipa" data-word="layer">layer</span></td></tr>
-      <tr><td><span class="ipa" data-word="fire">aɪə</span></td><td>aɪ + ə</td><td><span class="ipa" data-word="fire">fire</span>, <span class="ipa" data-word="higher">higher</span></td></tr>
-      <tr><td><span class="ipa" data-word="loyal">ɔɪə</span></td><td>ɔɪ + ə</td><td><span class="ipa" data-word="loyal">loyal</span>, <span class="ipa" data-word="royal">royal</span></td></tr>
-      <tr><td><span class="ipa" data-word="lower">əʊə</span></td><td>əʊ + ə</td><td><span class="ipa" data-word="lower">lower</span>, <span class="ipa" data-word="mower">mower</span></td></tr>
-      <tr><td><span class="ipa" data-word="power">aʊə</span></td><td>aʊ + ə</td><td><span class="ipa" data-word="power">power</span>, <span class="ipa" data-word="hour">hour</span></td></tr>
-    </table>
-
-    <div class="info-box viva-box">
-      <div class="box-title">🎯 Remember for Viva</div>
-      <ul>
-        <li>12 monophthongs + 8 diphthongs + 5 triphthongs = <b>25 vowels</b>.</li>
-        <li>Closing diphthongs: <span class="ipa" data-word="say">eɪ</span>, <span class="ipa" data-word="my">aɪ</span>, <span class="ipa" data-word="boy">ɔɪ</span>, <span class="ipa" data-word="go">əʊ</span>, <span class="ipa" data-word="how">aʊ</span>. Centring: <span class="ipa" data-word="hear">ɪə</span>, <span class="ipa" data-word="hair">eə</span>, <span class="ipa" data-word="tour">ʊə</span>.</li>
-        <li>Triphthongs = closing diphthong + <span class="ipa" data-word="about">ə</span>.</li>
-        <li>Schwa <span class="ipa" data-word="about">ə</span> = most common vowel, only in unstressed syllables.</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- ========================== SECTION D ========================== -->
-<div class="section sec-d" id="sec-d">
-  <div class="section-header" onclick="toggleSection(this)">
-    <div class="section-icon">👅</div>
-    <h2>Section D: English Consonants</h2>
-    <span class="section-toggle">▼</span>
-  </div>
-  <div class="section-content">
-
-    <p>A <b>consonant</b> is produced when airflow is <b>partially or completely obstructed</b>. Each consonant is described by: <b>voicing</b> (voiced/voiceless), <b>place</b> (where), and <b>manner</b> (how). English has <b>24 consonant phonemes</b>.</p>
-
-    <h3>Interactive Consonant Chart — Click Any Sound</h3>
-    <div class="ipa-chart-container" style="overflow-x:auto">
-      <table>
-        <tr>
-          <th>Manner ↓ Place →</th><th>Bilabial</th><th>Labio-dental</th><th>Dental</th><th>Alveolar</th><th>Post-alveolar</th><th>Palatal</th><th>Velar</th><th>Glottal</th>
-        </tr>
-        <tr>
-          <td><b>Plosive</b></td>
-          <td><span class="ipa" data-word="pin">p</span> <span class="ipa" data-word="bin">b</span></td><td></td><td></td>
-          <td><span class="ipa" data-word="ten">t</span> <span class="ipa" data-word="den">d</span></td><td></td><td></td>
-          <td><span class="ipa" data-word="cat">k</span> <span class="ipa" data-word="go">ɡ</span></td><td></td>
-        </tr>
-        <tr>
-          <td><b>Fricative</b></td><td></td>
-          <td><span class="ipa" data-word="fan">f</span> <span class="ipa" data-word="van">v</span></td>
-          <td><span class="ipa" data-word="thin">θ</span> <span class="ipa" data-word="this">ð</span></td>
-          <td><span class="ipa" data-word="sun">s</span> <span class="ipa" data-word="zoo">z</span></td>
-          <td><span class="ipa" data-word="ship">ʃ</span> <span class="ipa" data-word="measure">ʒ</span></td>
-          <td></td><td></td>
-          <td><span class="ipa" data-word="hat">h</span></td>
-        </tr>
-        <tr>
-          <td><b>Affricate</b></td><td></td><td></td><td></td><td></td>
-          <td><span class="ipa" data-word="church">tʃ</span> <span class="ipa" data-word="judge">dʒ</span></td>
-          <td></td><td></td><td></td>
-        </tr>
-        <tr>
-          <td><b>Nasal</b></td>
-          <td><span class="ipa" data-word="man">m</span></td><td></td><td></td>
-          <td><span class="ipa" data-word="no">n</span></td><td></td><td></td>
-          <td><span class="ipa" data-word="sing">ŋ</span></td><td></td>
-        </tr>
-        <tr>
-          <td><b>Lateral</b></td><td></td><td></td><td></td>
-          <td><span class="ipa" data-word="let">l</span></td><td></td><td></td><td></td><td></td>
-        </tr>
-        <tr>
-          <td><b>Approximant</b></td><td></td><td></td><td></td>
-          <td><span class="ipa" data-word="red">r</span></td><td></td>
-          <td><span class="ipa" data-word="yes">j</span></td>
-          <td><span class="ipa" data-word="wet">w</span></td><td></td>
-        </tr>
-      </table>
-    </div>
-
-    <h3>Places of Articulation</h3>
-    <table>
-      <tr><th>Place</th><th>Where</th><th>Examples</th></tr>
-      <tr><td><b>Bilabial</b></td><td>Both lips together</td><td><span class="ipa" data-word="pin">p</span>, <span class="ipa" data-word="bin">b</span>, <span class="ipa" data-word="man">m</span></td></tr>
-      <tr><td><b>Labiodental</b></td><td>Lower lip + upper teeth</td><td><span class="ipa" data-word="fan">f</span>, <span class="ipa" data-word="van">v</span></td></tr>
-      <tr><td><b>Dental</b></td><td>Tongue tip + teeth</td><td><span class="ipa" data-word="thin">θ</span>, <span class="ipa" data-word="this">ð</span></td></tr>
-      <tr><td><b>Alveolar</b></td><td>Tongue + ridge behind teeth</td><td><span class="ipa" data-word="ten">t</span>, <span class="ipa" data-word="den">d</span>, <span class="ipa" data-word="no">n</span>, <span class="ipa" data-word="sun">s</span>, <span class="ipa" data-word="zoo">z</span>, <span class="ipa" data-word="let">l</span></td></tr>
-      <tr><td><b>Post-alveolar</b></td><td>Behind alveolar ridge</td><td><span class="ipa" data-word="ship">ʃ</span>, <span class="ipa" data-word="measure">ʒ</span>, <span class="ipa" data-word="church">tʃ</span>, <span class="ipa" data-word="judge">dʒ</span></td></tr>
-      <tr><td><b>Palatal</b></td><td>Tongue + hard palate</td><td><span class="ipa" data-word="yes">j</span></td></tr>
-      <tr><td><b>Velar</b></td><td>Back of tongue + soft palate</td><td><span class="ipa" data-word="cat">k</span>, <span class="ipa" data-word="go">ɡ</span>, <span class="ipa" data-word="sing">ŋ</span></td></tr>
-      <tr><td><b>Glottal</b></td><td>Vocal cords</td><td><span class="ipa" data-word="hat">h</span></td></tr>
-    </table>
-
-    <h3>Manners of Articulation</h3>
-    <table>
-      <tr><th>Manner</th><th>How</th><th>Examples</th></tr>
-      <tr><td><b>Plosive</b></td><td>Complete blockage, then burst</td><td><span class="ipa" data-word="pin">p</span>, <span class="ipa" data-word="bin">b</span>, <span class="ipa" data-word="ten">t</span>, <span class="ipa" data-word="den">d</span>, <span class="ipa" data-word="cat">k</span>, <span class="ipa" data-word="go">ɡ</span></td></tr>
-      <tr><td><b>Fricative</b></td><td>Narrowing creates friction</td><td><span class="ipa" data-word="fan">f</span>, <span class="ipa" data-word="van">v</span>, <span class="ipa" data-word="thin">θ</span>, <span class="ipa" data-word="this">ð</span>, <span class="ipa" data-word="sun">s</span>, <span class="ipa" data-word="zoo">z</span>, <span class="ipa" data-word="ship">ʃ</span>, <span class="ipa" data-word="measure">ʒ</span>, <span class="ipa" data-word="hat">h</span></td></tr>
-      <tr><td><b>Affricate</b></td><td>Plosive → Fricative combined</td><td><span class="ipa" data-word="church">tʃ</span>, <span class="ipa" data-word="judge">dʒ</span></td></tr>
-      <tr><td><b>Nasal</b></td><td>Air through nose</td><td><span class="ipa" data-word="man">m</span>, <span class="ipa" data-word="no">n</span>, <span class="ipa" data-word="sing">ŋ</span></td></tr>
-      <tr><td><b>Lateral</b></td><td>Air around tongue sides</td><td><span class="ipa" data-word="let">l</span></td></tr>
-      <tr><td><b>Approximant</b></td><td>Close but no friction</td><td><span class="ipa" data-word="red">r</span>, <span class="ipa" data-word="yes">j</span>, <span class="ipa" data-word="wet">w</span></td></tr>
-    </table>
-
-    <div class="info-box viva-box">
-      <div class="box-title">🎯 Remember for Viva</div>
-      <ul>
-        <li>24 consonants. Describe each by: <b>voicing + place + manner</b>.</li>
-        <li>Example: <span class="ipa" data-word="bin">/b/</span> = voiced bilabial plosive.</li>
-        <li>8 places, 6 manners. Know the voiced/voiceless pairs.</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- ========================== SECTION E ========================== -->
-<div class="section sec-e" id="sec-e">
-  <div class="section-header" onclick="toggleSection(this)">
-    <div class="section-icon">🔠</div>
-    <h2>Section E: Syllable</h2>
-    <span class="section-toggle">▼</span>
-  </div>
-  <div class="section-content">
-    <p>A <b>syllable</b> is a unit of pronunciation with <b>one sonority peak</b> (usually a vowel). <b>Phonetic definition:</b> a peak of sonority surrounded by less sonorous sounds. <b>Phonological definition:</b> a structural unit with positions (onset, nucleus, coda).</p>
-
-    <h3>Syllable Structure</h3>
-    <div class="info-box example-box">
-      <div class="box-title">🏗️ Structure</div>
-      <p><b>Onset</b> (consonants before vowel) + <b>Nucleus</b> (vowel — required) + <b>Coda</b> (consonants after vowel)</p>
-      <p><b>Rhyme</b> = Nucleus + Coda. <b>Open syllable</b> = no coda ("go"). <b>Closed syllable</b> = has coda ("cat").</p>
-      <p>Example: "cat" <span class="ipa" data-word="cat">/kæt/</span> → Onset: /k/, Nucleus: /æ/, Coda: /t/</p>
-    </div>
-
-    <h3>Phonotactic Rules</h3>
-    <ul>
-      <li><b>Onset max = 3 consonants:</b> /s/ + voiceless plosive + approximant (e.g., "string" <span class="ipa" data-word="string">/strɪŋ/</span>)</li>
-      <li><b>Coda max = 4 consonants:</b> (e.g., "texts" /teksts/)</li>
-      <li>Some combinations forbidden: English words can't start with <span class="ipa" data-word="sing">/ŋ/</span></li>
-    </ul>
-
-    <table>
-      <tr><th>Pattern</th><th>Example</th></tr>
-      <tr><td>V</td><td>"a" <span class="ipa" data-word="about">/ə/</span></td></tr>
-      <tr><td>CV</td><td>"go" <span class="ipa" data-word="go">/ɡəʊ/</span></td></tr>
-      <tr><td>CVC</td><td>"cat" <span class="ipa" data-word="cat">/kæt/</span></td></tr>
-      <tr><td>CCVC</td><td>"stop" <span class="ipa" data-word="stop">/stɒp/</span></td></tr>
-      <tr><td>CCCVC</td><td>"string" <span class="ipa" data-word="string">/strɪŋ/</span></td></tr>
-    </table>
-
-    <div class="info-box viva-box">
-      <div class="box-title">🎯 Remember for Viva</div>
-      <ul>
-        <li>Syllable = one sonority peak. Structure: Onset + Nucleus + Coda.</li>
-        <li>Nucleus is required; onset and coda are optional.</li>
-        <li>English onset max 3C, coda max 4C. Sonority Sequencing Principle governs clusters.</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- ========================== SECTION F ========================== -->
-<div class="section sec-f" id="sec-f">
-  <div class="section-header" onclick="toggleSection(this)">
-    <div class="section-icon">🔗</div>
-    <h2>Section F: Strong & Weak Forms, Contractions, Elision, Assimilation</h2>
-    <span class="section-toggle">▼</span>
-  </div>
-  <div class="section-content">
-
-    <h3>Strong and Weak Forms</h3>
-    <p>Many function words have <b>two pronunciations</b>: a <b>strong form</b> (full, stressed) and a <b>weak form</b> (reduced, unstressed). Weak forms are the <b>normal</b> way of speaking.</p>
-
-    <table>
-      <tr><th>Word</th><th>Strong</th><th>Weak</th><th>Example</th></tr>
-      <tr><td><b>the</b></td><td><span class="ipa" data-word="the">/ðiː/</span></td><td><span class="ipa" data-word="the">/ðə/</span></td><td>"Give me the book" /ðə bʊk/</td></tr>
-      <tr><td><b>to</b></td><td><span class="ipa" data-word="to">/tuː/</span></td><td><span class="ipa" data-word="to">/tə/</span></td><td>"I want to go" /tə ɡəʊ/</td></tr>
-      <tr><td><b>and</b></td><td><span class="ipa" data-word="and">/ænd/</span></td><td><span class="ipa" data-word="and">/ən/</span></td><td>"bread and butter" /ən/</td></tr>
-      <tr><td><b>can</b></td><td><span class="ipa" data-word="can">/kæn/</span></td><td><span class="ipa" data-word="can">/kən/</span></td><td>"I can see" /kən siː/</td></tr>
-      <tr><td><b>of</b></td><td><span class="ipa" data-word="of">/ɒv/</span></td><td><span class="ipa" data-word="of">/əv/</span></td><td>"cup of tea" /kʌpə tiː/</td></tr>
-      <tr><td><b>for</b></td><td><span class="ipa" data-word="for">/fɔː/</span></td><td><span class="ipa" data-word="for">/fə/</span></td><td>"This is for you" /fə juː/</td></tr>
-      <tr><td><b>have</b></td><td><span class="ipa" data-word="have">/hæv/</span></td><td><span class="ipa" data-word="have">/əv/</span></td><td>"I have done it" /aɪv dʌn ɪt/</td></tr>
-      <tr><td><b>are</b></td><td><span class="ipa" data-word="are">/ɑː/</span></td><td><span class="ipa" data-word="are">/ə/</span></td><td>"We are going" /wi ə ɡəʊɪŋ/</td></tr>
-    </table>
-
-    <h3>Elision</h3>
-    <p><b>Elision</b> = <b>dropping</b> a sound in connected speech. Most common: /t/ and /d/ in consonant clusters.</p>
-    <ul>
-      <li>"nex<b>t</b> day" → <span class="ipa" data-word="next day">/neks deɪ/</span> (/t/ dropped)</li>
-      <li>"han<b>d</b> bag" → <span class="ipa" data-word="handbag">/hæn bæɡ/</span> (/d/ dropped)</li>
-      <li>"fam<b>i</b>ly" → <span class="ipa" data-word="family">/fæmli/</span> (vowel dropped)</li>
-      <li>"Tell <b>h</b>im" → <span class="ipa" data-word="tell him">/tel ɪm/</span> (/h/ dropped)</li>
-    </ul>
-
-    <h3>Assimilation</h3>
-    <p><b>Assimilation</b> = a sound <b>changes</b> to match a neighbour.</p>
-    <table>
-      <tr><th>Type</th><th>Direction</th><th>Example</th></tr>
-      <tr><td><b>Regressive</b></td><td>Changes because of <b>following</b> sound</td><td>"ten boys" → <span class="ipa" data-word="ten boys">/tem bɔɪz/</span> (n→m before bilabial)</td></tr>
-      <tr><td><b>Progressive</b></td><td>Changes because of <b>preceding</b> sound</td><td>"cats" <span class="ipa" data-word="cats">/kæts/</span> (-s voiceless after /t/)</td></tr>
-      <tr><td><b>Coalescent</b></td><td>Two sounds <b>merge</b> into one</td><td>"don't you" → <span class="ipa" data-word="don't you">/dəʊntʃuː/</span> (t+j→tʃ)</td></tr>
-    </table>
-
-    <h3>Elision vs. Assimilation</h3>
-    <table>
-      <tr><th>Feature</th><th>Elision</th><th>Assimilation</th></tr>
-      <tr><td><b>What happens</b></td><td>Sound is <b>deleted</b></td><td>Sound is <b>changed</b></td></tr>
-      <tr><td><b>Result</b></td><td>Fewer sounds</td><td>Same number, different sound</td></tr>
-      <tr><td><b>Example</b></td><td>"last night" /lɑːs naɪt/</td><td>"ten boys" /tem bɔɪz/</td></tr>
-    </table>
-
-    <div class="info-box viva-box">
-      <div class="box-title">🎯 Remember for Viva</div>
-      <ul>
-        <li>Weak forms = normal speech. Strong forms = emphasis/sentence-final/contrast.</li>
-        <li>Elision = deletion. Assimilation = change. Know the difference!</li>
-        <li>Three assimilation types: regressive (most common), progressive, coalescent.</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- ========================== SECTION G ========================== -->
-<div class="section sec-g" id="sec-g">
-  <div class="section-header" onclick="toggleSection(this)">
-    <div class="section-icon">💪</div>
-    <h2>Section G: Stress</h2>
-    <span class="section-toggle">▼</span>
-  </div>
-  <div class="section-content">
-    <p><b>Stress</b> = making a syllable more <b>prominent</b>. Four factors: <b>loudness</b>, <b>length</b>, <b>pitch change</b> (most important), <b>vowel quality</b>.</p>
-
-    <h3>Levels of Stress</h3>
-    <table>
-      <tr><th>Level</th><th>Symbol</th><th>Example</th></tr>
-      <tr><td><b>Primary</b></td><td><span class="ipa-bracket">ˈ</span></td><td><span class="ipa" data-word="water">/ˈwɔːtə/</span> "water"</td></tr>
-      <tr><td><b>Secondary</b></td><td><span class="ipa-bracket">ˌ</span></td><td><span class="ipa" data-word="evaluation">/ˌiːvæljuˈeɪʃn̩/</span> "evaluation"</td></tr>
-      <tr><td><b>Unstressed</b></td><td>(none)</td><td>The "-ter" in "water"</td></tr>
-    </table>
-
-    <h3>Word Stress Rules</h3>
-    <table>
-      <tr><th>Pattern</th><th>Rule</th><th>Examples</th></tr>
-      <tr><td><b>2-syllable nouns</b></td><td>Stress on <b>1st</b> syllable</td><td>ˈwater, ˈtable, ˈmoney</td></tr>
-      <tr><td><b>2-syllable verbs</b></td><td>Stress on <b>2nd</b> syllable</td><td>beˈgin, aˈllow, deˈcide</td></tr>
-      <tr><td><b>Noun/verb pairs</b></td><td>Noun=1st, Verb=2nd</td><td>ˈrecord / reˈcord, ˈpresent / preˈsent</td></tr>
-      <tr><td><b>-tion, -ic, -ity</b></td><td>Stress on preceding syllable</td><td>eduˈcation, eˈlectric, uˈniversity</td></tr>
-      <tr><td><b>-ee, -eer, -ese</b></td><td>Stress on suffix</td><td>employˈee, volunˈteer, Japaˈnese</td></tr>
-      <tr><td><b>Compound nouns</b></td><td>Stress on <b>1st</b> element</td><td>ˈblackbird, ˈfootball</td></tr>
-    </table>
-
-    <h3>Sentence Stress</h3>
-    <p><b>Content words</b> (nouns, verbs, adjectives, adverbs) are stressed. <b>Function words</b> (articles, prepositions, pronouns) are unstressed. English is <b>stress-timed</b> — stressed syllables come at regular intervals.</p>
-    <p><b>Contrastive stress:</b> "I didn't say <b>HE</b> stole it." "I didn't say he <b>STOLE</b> it."</p>
-    <p><b>Stress shift:</b> thirˈteen → ˈthirteen ˈpeople (avoids stress clash).</p>
-
-    <div class="info-box viva-box">
-      <div class="box-title">🎯 Remember for Viva</div>
-      <ul>
-        <li>4 factors: loudness, length, pitch change (most important), vowel quality.</li>
-        <li>Nouns = 1st syllable. Verbs = 2nd syllable (general rule).</li>
-        <li>Content words stressed, function words unstressed in sentences.</li>
-        <li>English is stress-timed. Contrastive stress overrides normal patterns.</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- ========================== SECTION H ========================== -->
-<div class="section sec-h" id="sec-h">
-  <div class="section-header" onclick="toggleSection(this)">
-    <div class="section-icon">🎵</div>
-    <h2>Section H: Chunking and Tone</h2>
-    <span class="section-toggle">▼</span>
-  </div>
-  <div class="section-content">
-    <h3>Chunking</h3>
-    <p><b>Chunking</b> = dividing speech into <b>tone units</b> (meaningful groups). Chunks follow grammatical and sense boundaries, separated by brief pauses.</p>
-    <div class="info-box example-box">
-      <div class="box-title">💡 Example</div>
-      <p>"My brother | who lives in London | is a doctor." — Three tone units.</p>
-    </div>
-
-    <h3>Types of Tone</h3>
-    <table>
-      <tr><th>Tone</th><th>Movement</th><th>Functions</th><th>Example</th></tr>
-      <tr><td><b>Falling ↘</b></td><td>Pitch goes down</td><td>Statements, wh-questions, commands, finality</td><td>"She's a ↘teacher."</td></tr>
-      <tr><td><b>Rising ↗</b></td><td>Pitch goes up</td><td>Yes/no questions, uncertainty, politeness</td><td>"Are you ↗coming?"</td></tr>
-      <tr><td><b>Fall-rise ↘↗</b></td><td>Falls then rises</td><td>Reservation, "but...", partial agreement</td><td>"It's ↘↗possible."</td></tr>
-      <tr><td><b>Rise-fall ↗↘</b></td><td>Rises then falls</td><td>Strong feelings, surprise, sarcasm</td><td>"That's ↗↘wonderful!"</td></tr>
-      <tr><td><b>Level →</b></td><td>Stays flat</td><td>Boredom, routine listing</td><td>"Monday → Tuesday →..."</td></tr>
-    </table>
-
-    <h3>Tone Unit Structure</h3>
-    <table>
-      <tr><th>Part</th><th>Description</th><th>Required?</th></tr>
-      <tr><td><b>Pre-head</b></td><td>Unstressed syllables before first stress</td><td>Optional</td></tr>
-      <tr><td><b>Head</b></td><td>First stressed syllable → before tonic</td><td>Optional</td></tr>
-      <tr><td><b>Tonic syllable</b></td><td>Most prominent; carries the tone</td><td><b>Required</b></td></tr>
-      <tr><td><b>Tail</b></td><td>Syllables after the tonic</td><td>Optional</td></tr>
-    </table>
-
-    <div class="info-box viva-box">
-      <div class="box-title">🎯 Remember for Viva</div>
-      <ul>
-        <li>Chunking = dividing into tone units at grammatical/sense boundaries.</li>
-        <li>5 tones: falling, rising, fall-rise, rise-fall, level.</li>
-        <li>Tone unit: (Pre-head) + (Head) + <b>Tonic syllable</b> + (Tail). Only tonic is required.</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- ========================== SECTION I ========================== -->
-<div class="section sec-i" id="sec-i">
-  <div class="section-header" onclick="toggleSection(this)">
-    <div class="section-icon">🎶</div>
-    <h2>Section I: Intonation</h2>
-    <span class="section-toggle">▼</span>
-  </div>
-  <div class="section-content">
-    <p><b>Intonation</b> = the pattern of <b>pitch changes</b> across a whole utterance — the "melody" of speech. It's not <i>what</i> you say, but <i>how</i> you say it.</p>
-
-    <h3>Functions of Intonation</h3>
-    <table>
-      <tr><th>Function</th><th>What it Does</th><th>Example</th></tr>
-      <tr><td><b>Grammatical</b></td><td>Distinguishes statements/questions</td><td>"She's coming." ↘ vs. "She's coming?" ↗</td></tr>
-      <tr><td><b>Attitudinal</b></td><td>Expresses attitude/emotion</td><td>"Thank you" ↘ (grateful) vs. → (bored)</td></tr>
-      <tr><td><b>Discourse</b></td><td>Manages conversation flow</td><td>Falling = finished speaking. Rising = your turn.</td></tr>
-      <tr><td><b>Accentual</b></td><td>Highlights focus/new info</td><td>"I bought a ↘CAR" (focus on car)</td></tr>
-    </table>
-
-    <h3>Tag Questions and Intonation</h3>
-    <table>
-      <tr><th>Tag</th><th>Intonation</th><th>Meaning</th></tr>
-      <tr><td>"It's cold, isn't it?"</td><td>↘ Falling</td><td>I expect you to agree.</td></tr>
-      <tr><td>"It's cold, isn't it?"</td><td>↗ Rising</td><td>Genuine question — I'm not sure.</td></tr>
-    </table>
-
-    <div class="info-box viva-box">
-      <div class="box-title">🎯 Remember for Viva</div>
-      <ul>
-        <li>Intonation = pitch pattern across an utterance (melody of speech).</li>
-        <li>4 functions: grammatical, attitudinal, discourse, accentual.</li>
-        <li>Same sentence changes meaning with different intonation.</li>
-        <li>Falling tag = expecting agreement. Rising tag = genuine question.</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- ========================== SECTION J ========================== -->
-<div class="section sec-j" id="sec-j">
-  <div class="section-header" onclick="toggleSection(this)">
-    <div class="section-icon">✍️</div>
-    <h2>Section J: IPA Transcription of Connected Speech</h2>
-    <span class="section-toggle">▼</span>
-  </div>
-  <div class="section-content">
-    <p><b>Connected speech</b> = natural flowing speech where words are not pronounced in isolation. Key processes: weak forms, elision, assimilation, <b>linking</b>, contractions.</p>
-
-    <h3>Types of Linking</h3>
-    <table>
-      <tr><th>Type</th><th>When</th><th>Example</th></tr>
-      <tr><td><b>Linking /r/</b></td><td>Word-final "r" + vowel</td><td>"far away" → /fɑː<b>r</b>əweɪ/</td></tr>
-      <tr><td><b>Intrusive /r/</b></td><td>No "r" in spelling + vowel</td><td>"law and order" → /lɔː<b>r</b>ənd ɔːdə/</td></tr>
-      <tr><td><b>Linking /j/</b></td><td>Front vowel + vowel</td><td>"he asked" → /hiː<b>j</b>ɑːskt/</td></tr>
-      <tr><td><b>Linking /w/</b></td><td>Back rounded vowel + vowel</td><td>"do it" → /duː<b>w</b>ɪt/</td></tr>
-    </table>
-
-    <h3>Transcription Examples — Click Words to Hear</h3>
-
-    <div class="info-box example-box">
-      <div class="box-title">📝 Example 1: "I want to go to the shop."</div>
-      <p><b>Careful:</b> <span class="ipa" data-word="I want to go to the shop">/aɪ wɒnt tuː ɡəʊ tuː ðiː ʃɒp/</span></p>
-      <p><b>Connected:</b> <span class="ipa" data-word="I want to go to the shop">/aɪ wɒnə ɡəʊ tə ðə ʃɒp/</span></p>
-      <p><b>Changes:</b> "want to" → /wɒnə/ (elision of /t/, weak "to"). "the" → /ðə/ (weak form).</p>
-    </div>
-
-    <div class="info-box example-box">
-      <div class="box-title">📝 Example 2: "Can you give me a cup of tea?"</div>
-      <p><b>Careful:</b> <span class="ipa" data-word="Can you give me a cup of tea">/kæn juː ɡɪv miː eɪ kʌp ɒv tiː/</span></p>
-      <p><b>Connected:</b> <span class="ipa" data-word="Can you give me a cup of tea">/kən jə ɡɪv mi ə kʌpə tiː/</span></p>
-      <p><b>Changes:</b> "can" → /kən/, "you" → /jə/, "a" → /ə/, "cup of" → /kʌpə/ (/v/ elided).</p>
-    </div>
-
-    <div class="info-box example-box">
-      <div class="box-title">📝 Example 3: "What do you want for breakfast?"</div>
-      <p><b>Careful:</b> <span class="ipa" data-word="What do you want for breakfast">/wɒt duː juː wɒnt fɔː brekfəst/</span></p>
-      <p><b>Connected:</b> <span class="ipa" data-word="What do you want for breakfast">/wɒt dʒə wɒnt fə brekfəst/</span></p>
-      <p><b>Changes:</b> "do you" → /dʒə/ (coalescent: d+j→dʒ), "for" → /fə/ (weak form).</p>
-    </div>
-
-    <div class="info-box example-box">
-      <div class="box-title">📝 Example 4: "I told him that I would be there at ten."</div>
-      <p><b>Careful:</b> <span class="ipa" data-word="I told him that I would be there at ten">/aɪ təʊld hɪm ðæt aɪ wʊd biː ðeə æt ten/</span></p>
-      <p><b>Connected:</b> <span class="ipa" data-word="I told him that I would be there at ten">/aɪ təʊld ɪm ðət aɪd bi ðeər ət ten/</span></p>
-      <p><b>Changes:</b> "him" → /ɪm/ (h-dropped), "that" → /ðət/, "I would" → /aɪd/ (contraction), "there at" → /ðeər ət/ (linking r), "at" → /ət/ (weak).</p>
-    </div>
-
-    <div class="info-box viva-box">
-      <div class="box-title">🎯 Remember for Viva</div>
-      <ul>
-        <li>Connected speech = natural flowing speech with modifications.</li>
-        <li>Key processes: weak forms, elision, assimilation, linking, contractions.</li>
-        <li>4 linking types: linking /r/, intrusive /r/, linking /j/, linking /w/.</li>
-        <li>Be able to transcribe sentences and identify which processes occurred.</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- ========================== VIVA REVISION ========================== -->
-<div class="section sec-rev" id="sec-rev">
-  <div class="section-header" onclick="toggleSection(this)">
-    <div class="section-icon">⭐</div>
-    <h2>Viva Revision Section</h2>
-    <span class="section-toggle">▼</span>
-  </div>
-  <div class="section-content">
-
-    <h3>Quick IPA Reference — Click Any Symbol</h3>
-    <div class="ipa-chart-container">
-      <h4>Vowels</h4>
-      <table>
-        <tr><th>Short</th><th>Long</th><th>Diphthongs</th><th>Triphthongs</th></tr>
-        <tr>
-          <td><span class="ipa" data-word="sit">ɪ</span> <span class="ipa" data-word="bed">e</span> <span class="ipa" data-word="cat">æ</span> <span class="ipa" data-word="hot">ɒ</span> <span class="ipa" data-word="put">ʊ</span> <span class="ipa" data-word="cup">ʌ</span> <span class="ipa" data-word="about">ə</span></td>
-          <td><span class="ipa" data-word="see">iː</span> <span class="ipa" data-word="car">ɑː</span> <span class="ipa" data-word="saw">ɔː</span> <span class="ipa" data-word="food">uː</span> <span class="ipa" data-word="bird">ɜː</span></td>
-          <td><span class="ipa" data-word="say">eɪ</span> <span class="ipa" data-word="my">aɪ</span> <span class="ipa" data-word="boy">ɔɪ</span> <span class="ipa" data-word="go">əʊ</span> <span class="ipa" data-word="how">aʊ</span> <span class="ipa" data-word="ear">ɪə</span> <span class="ipa" data-word="air">eə</span> <span class="ipa" data-word="tour">ʊə</span></td>
-          <td><span class="ipa" data-word="player">eɪə</span> <span class="ipa" data-word="fire">aɪə</span> <span class="ipa" data-word="loyal">ɔɪə</span> <span class="ipa" data-word="lower">əʊə</span> <span class="ipa" data-word="power">aʊə</span></td>
-        </tr>
-      </table>
-      <h4>Consonants</h4>
-      <p style="line-height:2.5">
-        <span class="ipa" data-word="pin">p</span> <span class="ipa" data-word="bin">b</span> <span class="ipa" data-word="ten">t</span> <span class="ipa" data-word="den">d</span> <span class="ipa" data-word="cat">k</span> <span class="ipa" data-word="go">ɡ</span> <span class="ipa" data-word="fan">f</span> <span class="ipa" data-word="van">v</span> <span class="ipa" data-word="thin">θ</span> <span class="ipa" data-word="this">ð</span> <span class="ipa" data-word="sun">s</span> <span class="ipa" data-word="zoo">z</span> <span class="ipa" data-word="ship">ʃ</span> <span class="ipa" data-word="measure">ʒ</span> <span class="ipa" data-word="hat">h</span> <span class="ipa" data-word="church">tʃ</span> <span class="ipa" data-word="judge">dʒ</span> <span class="ipa" data-word="man">m</span> <span class="ipa" data-word="no">n</span> <span class="ipa" data-word="sing">ŋ</span> <span class="ipa" data-word="let">l</span> <span class="ipa" data-word="red">r</span> <span class="ipa" data-word="yes">j</span> <span class="ipa" data-word="wet">w</span>
-      </p>
-    </div>
-
-    <h3>Key Scholars — Quick Reference</h3>
-    <table>
-      <tr><th>Scholar</th><th>Key Contribution</th><th>Remember</th></tr>
-      <tr><td><b>Trubetzkoy</b></td><td>Separated phonetics/phonology; oppositions; neutralization</td><td>Prague School. Distinctive function.</td></tr>
-      <tr><td><b>Jakobson</b></td><td>Distinctive Feature Theory; binary features</td><td>Acoustic-based, universal features.</td></tr>
-      <tr><td><b>Jones</b></td><td>Concrete phoneme; Cardinal Vowels; IPA</td><td>British tradition. Practical.</td></tr>
-      <tr><td><b>Chomsky & Halle</b></td><td>SPE (1968); Generative Phonology; underlying→rules→surface</td><td>MIT. Articulatory features.</td></tr>
-    </table>
-
-    <h3>✅ Final Checklist</h3>
-    <div id="checklist">
-      <div class="checklist-item"><div class="checklist-cb" onclick="toggleCheck(this)"></div><div>Define phonetics and phonology, and explain the difference.</div></div>
-      <div class="checklist-item"><div class="checklist-cb" onclick="toggleCheck(this)"></div><div>Name the three branches of phonetics.</div></div>
-      <div class="checklist-item"><div class="checklist-cb" onclick="toggleCheck(this)"></div><div>Define phoneme, phone, and allophone with examples.</div></div>
-      <div class="checklist-item"><div class="checklist-cb" onclick="toggleCheck(this)"></div><div>Explain contributions of Trubetzkoy, Jakobson, Jones, Chomsky & Halle.</div></div>
-      <div class="checklist-item"><div class="checklist-cb" onclick="toggleCheck(this)"></div><div>List all 12 monophthongs with IPA and examples.</div></div>
-      <div class="checklist-item"><div class="checklist-cb" onclick="toggleCheck(this)"></div><div>List all 8 diphthongs (closing vs. centring).</div></div>
-      <div class="checklist-item"><div class="checklist-cb" onclick="toggleCheck(this)"></div><div>List the 5 triphthongs and how they are formed.</div></div>
-      <div class="checklist-item"><div class="checklist-cb" onclick="toggleCheck(this)"></div><div>Describe any consonant by voicing + place + manner.</div></div>
-      <div class="checklist-item"><div class="checklist-cb" onclick="toggleCheck(this)"></div><div>Explain syllable structure (onset, nucleus, coda, rhyme).</div></div>
-      <div class="checklist-item"><div class="checklist-cb" onclick="toggleCheck(this)"></div><div>Explain phonotactic rules for English.</div></div>
-      <div class="checklist-item"><div class="checklist-cb" onclick="toggleCheck(this)"></div><div>Give 5+ weak-form examples.</div></div>
-      <div class="checklist-item"><div class="checklist-cb" onclick="toggleCheck(this)"></div><div>Explain elision with 3+ examples.</div></div>
-      <div class="checklist-item"><div class="checklist-cb" onclick="toggleCheck(this)"></div><div>Explain 3 types of assimilation with examples.</div></div>
-      <div class="checklist-item"><div class="checklist-cb" onclick="toggleCheck(this)"></div><div>Explain word stress rules and sentence stress.</div></div>
-      <div class="checklist-item"><div class="checklist-cb" onclick="toggleCheck(this)"></div><div>Explain chunking and tone unit structure.</div></div>
-      <div class="checklist-item"><div class="checklist-cb" onclick="toggleCheck(this)"></div><div>Name and describe 4+ tone types.</div></div>
-      <div class="checklist-item"><div class="checklist-cb" onclick="toggleCheck(this)"></div><div>Define intonation and its 4 functions.</div></div>
-      <div class="checklist-item"><div class="checklist-cb" onclick="toggleCheck(this)"></div><div>Transcribe 3+ sentences in IPA with connected speech features.</div></div>
-      <div class="checklist-item"><div class="checklist-cb" onclick="toggleCheck(this)"></div><div>Explain linking (linking /r/, intrusive /r/, /j/, /w/).</div></div>
-    </div>
-  </div>
-</div>
-
-<!-- Footer -->
-<div style="text-align:center; padding:48px 0 24px; border-top:1px solid var(--border-color); margin-top:48px;">
-  <p style="font-size:14px; color:var(--text-muted);">E 410: Phonetics & Phonology — Interactive Study Guide</p>
-  <p style="font-size:12px; color:var(--text-muted);">Department of English • Jahangirnagar University, Dhaka</p>
-  <p style="font-size:11px; color:var(--text-muted); margin-top:8px;">Click any <span class="ipa" data-word="phonetics" style="font-size:11px">IPA symbol</span> to hear it • Built for viva preparation</p>
-</div>
-
-</main>
-
-<!-- Back to Top -->
-<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-
-<!-- Audio Toast -->
-<div class="audio-toast" id="audioToast">
-  <span>🔊</span>
-  <span id="audioToastText">Playing...</span>
-</div>
-
-<!-- ========== JAVASCRIPT ========== -->
 <script>
-// ===== THEME TOGGLE =====
-function toggleTheme() {
-  const html = document.documentElement;
-  const current = html.getAttribute('data-theme');
-  const next = current === 'dark' ? 'light' : 'dark';
-  html.setAttribute('data-theme', next);
-  document.querySelector('.theme-toggle').textContent = next === 'dark' ? '🌙' : '☀️';
-  localStorage.setItem('theme', next);
-}
-// Load saved theme
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
-  document.documentElement.setAttribute('data-theme', savedTheme);
-  if (savedTheme === 'light') document.querySelector('.theme-toggle').textContent = '☀️';
-}
-
-// ===== SIDEBAR TOGGLE (Mobile) =====
-function toggleSidebar() {
-  document.getElementById('sidebar').classList.toggle('open');
-  document.getElementById('sidebarOverlay').classList.toggle('show');
-}
-function closeMobileSidebar() {
-  if (window.innerWidth <= 1024) {
-    document.getElementById('sidebar').classList.remove('open');
-    document.getElementById('sidebarOverlay').classList.remove('show');
-  }
-}
-
-// ===== SECTION COLLAPSE =====
-function toggleSection(header) {
-  header.parentElement.classList.toggle('collapsed');
-}
-
-// ===== SCROLL SPY =====
-const sections = document.querySelectorAll('.section');
-const navLinks = document.querySelectorAll('.nav-link');
-const backToTop = document.getElementById('backToTop');
-const progressFill = document.getElementById('progressFill');
-const progressText = document.getElementById('progressText');
-
-window.addEventListener('scroll', () => {
-  const scrollTop = window.scrollY;
-  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const progress = Math.min(Math.round((scrollTop / docHeight) * 100), 100);
-  progressFill.style.width = progress + '%';
-  progressText.textContent = progress + '%';
-
-  // Back to top button
-  backToTop.classList.toggle('visible', scrollTop > 400);
-
-  // Active section
-  let current = '';
-  sections.forEach(section => {
-    const rect = section.getBoundingClientRect();
-    if (rect.top <= 120) current = section.id;
+  // Mobile menu toggle
+  document.getElementById('menuToggle').addEventListener('click', () => {
+    document.getElementById('sidebar').classList.toggle('open');
   });
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === '#' + current) link.classList.add('active');
-  });
-});
 
-// ===== BULLETPROOF DUAL-TIER IPA AUDIO ENGINE =====
-let currentAudio = null;
-const synth = window.speechSynthesis;
-let audioToastTimer;
-let audioUnlocked = false;
-
-// Pre-unlock audio & speech synthesis on first touch/click
-function primeAudio() {
-  if (audioUnlocked) return;
-  audioUnlocked = true;
-  if (synth) {
-    try {
-      const u = new SpeechSynthesisUtterance('');
-      u.volume = 0;
-      synth.speak(u);
-      if (synth.paused) synth.resume();
-    } catch(e) {}
-  }
-}
-document.addEventListener('touchstart', primeAudio, { once: true, passive: true });
-document.addEventListener('click', primeAudio, { once: true, passive: true });
-
-function speakWord(word, displaySymbol) {
-  const cleanWord = (word || '').trim();
-  if (!cleanWord) return;
-
-  // Show visual feedback toast immediately
-  showAudioToast(cleanWord, displaySymbol);
-
-  // Stop previous audio playback
-  if (currentAudio) {
-    try {
-      currentAudio.pause();
-      currentAudio.currentTime = 0;
-    } catch(e) {}
-    currentAudio = null;
-  }
-
-  // Tier 1: Real Native British Pronunciation MP3
-  const encoded = encodeURIComponent(cleanWord.toLowerCase());
-  const sources = [
-    `https://dict.youdao.com/dictvoice?audio=${encoded}&type=1`,
-    `https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en-GB&q=${encoded}`
-  ];
-
-  let srcIndex = 0;
-  function trySource() {
-    if (srcIndex < sources.length) {
-      const audio = new Audio();
-      currentAudio = audio;
-      audio.crossOrigin = "anonymous";
-      audio.src = sources[srcIndex++];
-      audio.playbackRate = 0.95;
-
-      let played = false;
-      const playPromise = audio.play();
-      if (playPromise !== undefined) {
-        playPromise.then(() => {
-          played = true;
-        }).catch(() => {
-          if (!played) trySource();
-        });
-      }
-    } else {
-      // Tier 2 Fallback: Web Speech API
-      speakWithWebSpeech(cleanWord);
-    }
-  }
-
-  trySource();
-}
-
-function speakWithWebSpeech(word) {
-  if (!synth) return;
-  try {
-    if (synth.paused) synth.resume();
-    synth.cancel();
-
-    setTimeout(() => {
-      const utterance = new SpeechSynthesisUtterance(word);
-      utterance.lang = 'en-GB';
-      utterance.rate = 0.85;
-      utterance.pitch = 1;
-
-      const voices = synth.getVoices() || [];
-      const britishVoice = voices.find(v => v.lang === 'en-GB') || 
-                           voices.find(v => v.lang.startsWith('en')) ||
-                           voices[0];
-      if (britishVoice) utterance.voice = britishVoice;
-
-      synth.speak(utterance);
-    }, 40);
-  } catch(e) {
-    console.warn("SpeechSynthesis fallback:", e);
-  }
-}
-
-function showAudioToast(word, symbol) {
-  const toast = document.getElementById('audioToast');
-  const toastText = document.getElementById('audioToastText');
-  if (toast && toastText) {
-    const symbolHint = symbol ? ` <span style="opacity:0.8;font-family:var(--font-mono)">${symbol}</span>` : '';
-    toastText.innerHTML = `🔊 "${word}"${symbolHint}`;
-    toast.classList.add('show');
-    clearTimeout(audioToastTimer);
-    audioToastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
-  }
-}
-
-// Load voices when available
-if (synth) {
-  synth.onvoiceschanged = () => synth.getVoices();
-  synth.getVoices();
-}
-
-// Attach click handlers to all IPA elements
-document.addEventListener('click', (e) => {
-  const ipa = e.target.closest('.ipa');
-  if (ipa) {
-    const word = ipa.getAttribute('data-word');
-    const symbolText = ipa.textContent.replace(/[🔊]/g, '').trim();
-    if (word) {
-      ipa.classList.add('playing');
-      speakWord(word, symbolText);
-      setTimeout(() => ipa.classList.remove('playing'), 600);
-    }
-  }
-});
-
-// ===== SEARCH =====
-const searchData = [];
-document.querySelectorAll('.section').forEach(sec => {
-  const id = sec.id;
-  const title = sec.querySelector('h2')?.textContent || '';
-  const text = sec.textContent.replace(/\s+/g, ' ').trim();
-  searchData.push({ id, title, text });
-});
-
-function toggleMobileSearch() {
-  const sb = document.getElementById('searchBox');
-  sb.classList.toggle('open');
-  if (sb.classList.contains('open')) {
-    const inp = document.getElementById('searchInput');
-    if (inp) inp.focus();
-  } else {
-    document.getElementById('searchResults').classList.remove('visible');
-  }
-}
-
-function clearSearch() {
-  const inp = document.getElementById('searchInput');
-  if (inp) inp.value = '';
-  const clearBtn = document.getElementById('searchClearBtn');
-  if (clearBtn) clearBtn.classList.remove('visible');
-  document.getElementById('searchResults').classList.remove('visible');
-}
-
-function handleSidebarSearch(query) {
-  closeMobileSidebar();
-  const searchInput = document.getElementById('searchInput');
-  if (searchInput) {
-    searchInput.value = query;
-    if (window.innerWidth <= 640) {
-      document.getElementById('searchBox').classList.add('open');
-    }
-  }
-  handleSearch(query);
-}
-
-function jumpToSection(id) {
-  const sec = document.getElementById(id);
-  if (sec) {
-    sec.classList.remove('collapsed');
-    sec.scrollIntoView({ behavior: 'smooth' });
-  }
-  document.getElementById('searchResults').classList.remove('visible');
-  if (window.innerWidth <= 640) {
-    const sb = document.getElementById('searchBox');
-    if (sb) sb.classList.remove('open');
-  }
-}
-
-function handleSearch(query) {
-  const clearBtn = document.getElementById('searchClearBtn');
-  if (clearBtn) clearBtn.classList.toggle('visible', !!query);
-
-  const results = document.getElementById('searchResults');
-  if (!query || query.length < 2) { results.classList.remove('visible'); return; }
-  const q = query.toLowerCase();
-  const matches = searchData.filter(s => s.title.toLowerCase().includes(q) || s.text.toLowerCase().includes(q));
-  if (matches.length === 0) {
-    results.innerHTML = '<div class="search-result-item" style="color:var(--text-muted)">No matching topics found</div>';
-  } else {
-    results.innerHTML = matches.map(m => {
-      const idx = m.text.toLowerCase().indexOf(q);
-      const snippet = idx >= 0 ? '...' + m.text.substring(Math.max(0, idx - 30), idx + 60) + '...' : '';
-      return `<div class="search-result-item" onclick="jumpToSection('${m.id}')"><strong>${m.title}</strong><br><span style="font-size:12px;color:var(--text-muted)">${snippet}</span></div>`;
-    }).join('');
-  }
-  results.classList.add('visible');
-}
-
-// ===== CHECKLIST =====
-function toggleCheck(el) {
-  el.classList.toggle('checked');
-  el.textContent = el.classList.contains('checked') ? '✓' : '';
-  updateChecklistProgress();
-}
-
-// Click anywhere on checklist row to toggle
-document.addEventListener('click', (e) => {
-  const item = e.target.closest('.checklist-item');
-  if (item && !e.target.classList.contains('checklist-cb')) {
-    const cb = item.querySelector('.checklist-cb');
-    if (cb) toggleCheck(cb);
-  }
-});
-
-function updateChecklistProgress() {
-  const total = document.querySelectorAll('.checklist-cb').length;
-  const checked = document.querySelectorAll('.checklist-cb.checked').length;
-  // Save to localStorage
-  localStorage.setItem('checklist_progress', JSON.stringify(
-    Array.from(document.querySelectorAll('.checklist-cb')).map(cb => cb.classList.contains('checked'))
-  ));
-}
-
-// Load checklist state
-try {
-  const saved = JSON.parse(localStorage.getItem('checklist_progress'));
-  if (saved) {
-    document.querySelectorAll('.checklist-cb').forEach((cb, i) => {
-      if (saved[i]) { cb.classList.add('checked'); cb.textContent = '✓'; }
+  // Close sidebar on link click (mobile)
+  document.querySelectorAll('.sidebar nav a').forEach(a => {
+    a.addEventListener('click', () => {
+      document.getElementById('sidebar').classList.remove('open');
     });
-  }
-} catch(e) {}
-
-// ===== INTERSECTION OBSERVER FOR ANIMATIONS =====
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.animationDelay = '0.1s';
-      entry.target.style.animationPlayState = 'running';
-    }
   });
-}, { threshold: 0.1 });
 
-sections.forEach(sec => observer.observe(sec));
+  // Scroll to top button
+  window.addEventListener('scroll', () => {
+    document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 400);
+  });
+
+  // Active nav highlight
+  const sections = document.querySelectorAll('.section');
+  const navLinks = document.querySelectorAll('.sidebar nav a');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const link = document.querySelector(`.sidebar nav a[href="#${entry.target.id}"]`);
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => observer.observe(s));
+
+  // Search
+  document.getElementById('searchInput').addEventListener('input', function() {
+    const q = this.value.toLowerCase().trim();
+    document.querySelectorAll('.section').forEach(sec => {
+      if (!q) { sec.style.display = ''; return; }
+      sec.style.display = sec.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+  });
 </script>
 
 </body>
