@@ -377,6 +377,16 @@ li { margin-bottom: 6px; line-height: 1.7; }
 strong, b { color: var(--text-primary); font-weight: 600; }
 
 /* IPA styling */
+.ipa-bracket {
+  font-family: var(--font-mono);
+  background: rgba(255,255,255,0.05);
+  color: var(--text-muted);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 13px;
+  border: 1px solid var(--border-color);
+  display: inline-block;
+}
 .ipa {
   font-family: var(--font-mono);
   background: rgba(99,102,241,0.1);
@@ -725,7 +735,17 @@ tr:hover td { background: var(--bg-card-hover); }
   h4 { font-size: 15px; margin: 16px 0 6px; }
   p, li { font-size: 14px; line-height: 1.65; }
   
-  .ipa {
+  .ipa-bracket {
+  font-family: var(--font-mono);
+  background: rgba(255,255,255,0.05);
+  color: var(--text-muted);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 13px;
+  border: 1px solid var(--border-color);
+  display: inline-block;
+}
+.ipa {
     padding: 2px 7px;
     font-size: 13.5px;
     margin: 1px 0;
@@ -931,7 +951,7 @@ tr:hover td { background: var(--bg-card-hover); }
       <tr><td><b>Unit</b></td><td>Phone <span class="ipa" data-word="phone">[p]</span></td><td>Phoneme <span class="ipa" data-word="phoneme">/p/</span></td></tr>
       <tr><td><b>Meaning</b></td><td>Does not consider meaning</td><td>Focuses on meaning-distinguishing sounds</td></tr>
       <tr><td><b>Nature</b></td><td>Concrete and physical</td><td>Abstract and mental</td></tr>
-      <tr><td><b>Notation</b></td><td>Square brackets <span class="ipa">[ ]</span></td><td>Slashes <span class="ipa">/ /</span></td></tr>
+      <tr><td><b>Notation</b></td><td>Square brackets <span class="ipa-bracket">[ ]</span></td><td>Slashes <span class="ipa-bracket">/ /</span></td></tr>
     </table>
 
     <h3>4. Classification of Phonetics</h3>
@@ -961,7 +981,7 @@ tr:hover td { background: var(--bg-card-hover); }
         <li>Phonetics = physical sounds (production, transmission, perception). Universal.</li>
         <li>Phonology = sound patterns and functions. Language-specific.</li>
         <li>Three branches: Articulatory, Acoustic, Auditory.</li>
-        <li>Phonetics uses <span class="ipa">[ ]</span>, Phonology uses <span class="ipa">/ /</span>.</li>
+        <li>Phonetics uses <span class="ipa-bracket">[ ]</span>, Phonology uses <span class="ipa-bracket">/ /</span>.</li>
         <li>They are interdependent: phonetics provides data, phonology organizes it.</li>
       </ul>
     </div>
@@ -978,19 +998,19 @@ tr:hover td { background: var(--bg-card-hover); }
   <div class="section-content">
 
     <h3>1. Phoneme vs. Phone</h3>
-    <p>A <b>phoneme</b> is the smallest unit of sound that can <b>distinguish meaning</b>. It is abstract and written in <span class="ipa">/ /</span>. A <b>phone</b> is any <b>actual speech sound</b> produced — concrete and physical, written in <span class="ipa">[ ]</span>.</p>
+    <p>A <b>phoneme</b> is the smallest unit of sound that can <b>distinguish meaning</b>. It is abstract and written in <span class="ipa-bracket">/ /</span>. A <b>phone</b> is any <b>actual speech sound</b> produced — concrete and physical, written in <span class="ipa-bracket">[ ]</span>.</p>
 
     <table>
       <tr><th>Feature</th><th>Phoneme</th><th>Phone</th></tr>
       <tr><td><b>Nature</b></td><td>Abstract, mental unit</td><td>Concrete, physical sound</td></tr>
-      <tr><td><b>Notation</b></td><td><span class="ipa">/p/</span></td><td><span class="ipa">[p]</span></td></tr>
+      <tr><td><b>Notation</b></td><td><span class="ipa" data-word="pin">/p/</span></td><td><span class="ipa" data-word="spin">[p]</span></td></tr>
       <tr><td><b>Number</b></td><td>Limited (~44 in English)</td><td>Unlimited variations</td></tr>
       <tr><td><b>Meaning</b></td><td>Changing one changes word meaning</td><td>Changing one may not</td></tr>
     </table>
 
     <h3>2. Key Concepts</h3>
-    <p><b>Allophone:</b> A variant pronunciation of a phoneme. Example: <span class="ipa" data-word="pin">[pʰ]</span> (aspirated, in "pin") and <span class="ipa" data-word="spin">[p]</span> (unaspirated, in "spin") are allophones of <span class="ipa">/p/</span>.</p>
-    <p><b>Minimal Pair:</b> Two words differing by one phoneme — "pat" <span class="ipa" data-word="pat">/pæt/</span> vs. "bat" <span class="ipa" data-word="bat">/bæt/</span>. Proves <span class="ipa">/p/</span> and <span class="ipa">/b/</span> are separate phonemes.</p>
+    <p><b>Allophone:</b> A variant pronunciation of a phoneme. Example: <span class="ipa" data-word="pin">[pʰ]</span> (aspirated, in "pin") and <span class="ipa" data-word="spin">[p]</span> (unaspirated, in "spin") are allophones of <span class="ipa" data-word="pin">/p/</span>.</p>
+    <p><b>Minimal Pair:</b> Two words differing by one phoneme — "pat" <span class="ipa" data-word="pat">/pæt/</span> vs. "bat" <span class="ipa" data-word="bat">/bæt/</span>. Proves <span class="ipa" data-word="pin">/p/</span> and <span class="ipa" data-word="bin">/b/</span> are separate phonemes.</p>
     <p><b>Complementary Distribution:</b> Two phones never appear in the same environment — strong evidence they are allophones of the same phoneme.</p>
     <p><b>Free Variation:</b> Two phones can occur in the same position without changing meaning, and the choice is not predictable.</p>
 
@@ -1013,7 +1033,7 @@ tr:hover td { background: var(--bg-card-hover); }
       <div class="scholar-meta">Prague School → Harvard/MIT • Distinctive Feature Theory</div>
       <ul>
         <li>Proposed <b>Distinctive Feature Theory</b> — each phoneme is a <b>bundle of smaller features</b>.</li>
-        <li>Features are <b>binary</b>: either present (+) or absent (−). E.g., <span class="ipa">/b/</span> = [+voiced, +bilabial, +stop].</li>
+        <li>Features are <b>binary</b>: either present (+) or absent (−). E.g., <span class="ipa" data-word="bin">/b/</span> = [+voiced, +bilabial, +stop].</li>
         <li>Used <b>acoustic features</b> (based on how sounds sound, not how they're made).</li>
         <li>Believed features are <b>universal</b> — same set used across all languages.</li>
         <li>Studied <b>child language acquisition</b> — children learn phonemes in a universal order.</li>
@@ -1045,7 +1065,7 @@ tr:hover td { background: var(--bg-card-hover); }
     <div class="info-box viva-box">
       <div class="box-title">🎯 Remember for Viva</div>
       <ul>
-        <li>Phoneme = abstract (<span class="ipa">/ /</span>). Phone = concrete (<span class="ipa">[ ]</span>). Allophone = variant of a phoneme.</li>
+        <li>Phoneme = abstract (<span class="ipa-bracket">/ /</span>). Phone = concrete (<span class="ipa-bracket">[ ]</span>). Allophone = variant of a phoneme.</li>
         <li>Minimal pairs prove phoneme status. Complementary distribution proves allophone status.</li>
         <li>Trubetzkoy: oppositions, neutralization. Jakobson: distinctive features (binary, acoustic).</li>
         <li>Jones: concrete phoneme, Cardinal Vowels, IPA. Chomsky & Halle: SPE, generative phonology.</li>
@@ -1117,9 +1137,9 @@ tr:hover td { background: var(--bg-card-hover); }
       <div class="box-title">🎯 Remember for Viva</div>
       <ul>
         <li>12 monophthongs + 8 diphthongs + 5 triphthongs = <b>25 vowels</b>.</li>
-        <li>Closing diphthongs: <span class="ipa">eɪ, aɪ, ɔɪ, əʊ, aʊ</span>. Centring: <span class="ipa">ɪə, eə, ʊə</span>.</li>
-        <li>Triphthongs = closing diphthong + <span class="ipa">ə</span>.</li>
-        <li>Schwa <span class="ipa">ə</span> = most common vowel, only in unstressed syllables.</li>
+        <li>Closing diphthongs: <span class="ipa" data-word="say">eɪ</span>, <span class="ipa" data-word="my">aɪ</span>, <span class="ipa" data-word="boy">ɔɪ</span>, <span class="ipa" data-word="go">əʊ</span>, <span class="ipa" data-word="how">aʊ</span>. Centring: <span class="ipa" data-word="hear">ɪə</span>, <span class="ipa" data-word="hair">eə</span>, <span class="ipa" data-word="tour">ʊə</span>.</li>
+        <li>Triphthongs = closing diphthong + <span class="ipa" data-word="about">ə</span>.</li>
+        <li>Schwa <span class="ipa" data-word="about">ə</span> = most common vowel, only in unstressed syllables.</li>
       </ul>
     </div>
   </div>
@@ -1197,12 +1217,12 @@ tr:hover td { background: var(--bg-card-hover); }
     <h3>Manners of Articulation</h3>
     <table>
       <tr><th>Manner</th><th>How</th><th>Examples</th></tr>
-      <tr><td><b>Plosive</b></td><td>Complete blockage, then burst</td><td><span class="ipa">p, b, t, d, k, ɡ</span></td></tr>
-      <tr><td><b>Fricative</b></td><td>Narrowing creates friction</td><td><span class="ipa">f, v, θ, ð, s, z, ʃ, ʒ, h</span></td></tr>
-      <tr><td><b>Affricate</b></td><td>Plosive → Fricative combined</td><td><span class="ipa">tʃ, dʒ</span></td></tr>
-      <tr><td><b>Nasal</b></td><td>Air through nose</td><td><span class="ipa">m, n, ŋ</span></td></tr>
-      <tr><td><b>Lateral</b></td><td>Air around tongue sides</td><td><span class="ipa">l</span></td></tr>
-      <tr><td><b>Approximant</b></td><td>Close but no friction</td><td><span class="ipa">r, j, w</span></td></tr>
+      <tr><td><b>Plosive</b></td><td>Complete blockage, then burst</td><td><span class="ipa" data-word="pin">p</span>, <span class="ipa" data-word="bin">b</span>, <span class="ipa" data-word="ten">t</span>, <span class="ipa" data-word="den">d</span>, <span class="ipa" data-word="cat">k</span>, <span class="ipa" data-word="go">ɡ</span></td></tr>
+      <tr><td><b>Fricative</b></td><td>Narrowing creates friction</td><td><span class="ipa" data-word="fan">f</span>, <span class="ipa" data-word="van">v</span>, <span class="ipa" data-word="thin">θ</span>, <span class="ipa" data-word="this">ð</span>, <span class="ipa" data-word="sun">s</span>, <span class="ipa" data-word="zoo">z</span>, <span class="ipa" data-word="ship">ʃ</span>, <span class="ipa" data-word="measure">ʒ</span>, <span class="ipa" data-word="hat">h</span></td></tr>
+      <tr><td><b>Affricate</b></td><td>Plosive → Fricative combined</td><td><span class="ipa" data-word="church">tʃ</span>, <span class="ipa" data-word="judge">dʒ</span></td></tr>
+      <tr><td><b>Nasal</b></td><td>Air through nose</td><td><span class="ipa" data-word="man">m</span>, <span class="ipa" data-word="no">n</span>, <span class="ipa" data-word="sing">ŋ</span></td></tr>
+      <tr><td><b>Lateral</b></td><td>Air around tongue sides</td><td><span class="ipa" data-word="let">l</span></td></tr>
+      <tr><td><b>Approximant</b></td><td>Close but no friction</td><td><span class="ipa" data-word="red">r</span>, <span class="ipa" data-word="yes">j</span>, <span class="ipa" data-word="wet">w</span></td></tr>
     </table>
 
     <div class="info-box viva-box">
@@ -1238,12 +1258,12 @@ tr:hover td { background: var(--bg-card-hover); }
     <ul>
       <li><b>Onset max = 3 consonants:</b> /s/ + voiceless plosive + approximant (e.g., "string" <span class="ipa" data-word="string">/strɪŋ/</span>)</li>
       <li><b>Coda max = 4 consonants:</b> (e.g., "texts" /teksts/)</li>
-      <li>Some combinations forbidden: English words can't start with <span class="ipa">/ŋ/</span></li>
+      <li>Some combinations forbidden: English words can't start with <span class="ipa" data-word="sing">/ŋ/</span></li>
     </ul>
 
     <table>
       <tr><th>Pattern</th><th>Example</th></tr>
-      <tr><td>V</td><td>"a" <span class="ipa">/ə/</span></td></tr>
+      <tr><td>V</td><td>"a" <span class="ipa" data-word="about">/ə/</span></td></tr>
       <tr><td>CV</td><td>"go" <span class="ipa" data-word="go">/ɡəʊ/</span></td></tr>
       <tr><td>CVC</td><td>"cat" <span class="ipa" data-word="cat">/kæt/</span></td></tr>
       <tr><td>CCVC</td><td>"stop" <span class="ipa" data-word="stop">/stɒp/</span></td></tr>
@@ -1275,32 +1295,32 @@ tr:hover td { background: var(--bg-card-hover); }
 
     <table>
       <tr><th>Word</th><th>Strong</th><th>Weak</th><th>Example</th></tr>
-      <tr><td><b>the</b></td><td><span class="ipa" data-word="the">/ðiː/</span></td><td><span class="ipa">/ðə/</span></td><td>"Give me the book" /ðə bʊk/</td></tr>
-      <tr><td><b>to</b></td><td><span class="ipa" data-word="to">/tuː/</span></td><td><span class="ipa">/tə/</span></td><td>"I want to go" /tə ɡəʊ/</td></tr>
-      <tr><td><b>and</b></td><td><span class="ipa">/ænd/</span></td><td><span class="ipa">/ən/</span></td><td>"bread and butter" /ən/</td></tr>
-      <tr><td><b>can</b></td><td><span class="ipa" data-word="can">/kæn/</span></td><td><span class="ipa">/kən/</span></td><td>"I can see" /kən siː/</td></tr>
-      <tr><td><b>of</b></td><td><span class="ipa">/ɒv/</span></td><td><span class="ipa">/əv/</span></td><td>"cup of tea" /kʌpə tiː/</td></tr>
-      <tr><td><b>for</b></td><td><span class="ipa" data-word="for">/fɔː/</span></td><td><span class="ipa">/fə/</span></td><td>"This is for you" /fə juː/</td></tr>
-      <tr><td><b>have</b></td><td><span class="ipa" data-word="have">/hæv/</span></td><td><span class="ipa">/əv/</span></td><td>"I have done it" /aɪv dʌn ɪt/</td></tr>
-      <tr><td><b>are</b></td><td><span class="ipa" data-word="are">/ɑː/</span></td><td><span class="ipa">/ə/</span></td><td>"We are going" /wi ə ɡəʊɪŋ/</td></tr>
+      <tr><td><b>the</b></td><td><span class="ipa" data-word="the">/ðiː/</span></td><td><span class="ipa" data-word="the">/ðə/</span></td><td>"Give me the book" /ðə bʊk/</td></tr>
+      <tr><td><b>to</b></td><td><span class="ipa" data-word="to">/tuː/</span></td><td><span class="ipa" data-word="to">/tə/</span></td><td>"I want to go" /tə ɡəʊ/</td></tr>
+      <tr><td><b>and</b></td><td><span class="ipa" data-word="and">/ænd/</span></td><td><span class="ipa" data-word="and">/ən/</span></td><td>"bread and butter" /ən/</td></tr>
+      <tr><td><b>can</b></td><td><span class="ipa" data-word="can">/kæn/</span></td><td><span class="ipa" data-word="can">/kən/</span></td><td>"I can see" /kən siː/</td></tr>
+      <tr><td><b>of</b></td><td><span class="ipa" data-word="of">/ɒv/</span></td><td><span class="ipa" data-word="of">/əv/</span></td><td>"cup of tea" /kʌpə tiː/</td></tr>
+      <tr><td><b>for</b></td><td><span class="ipa" data-word="for">/fɔː/</span></td><td><span class="ipa" data-word="for">/fə/</span></td><td>"This is for you" /fə juː/</td></tr>
+      <tr><td><b>have</b></td><td><span class="ipa" data-word="have">/hæv/</span></td><td><span class="ipa" data-word="have">/əv/</span></td><td>"I have done it" /aɪv dʌn ɪt/</td></tr>
+      <tr><td><b>are</b></td><td><span class="ipa" data-word="are">/ɑː/</span></td><td><span class="ipa" data-word="are">/ə/</span></td><td>"We are going" /wi ə ɡəʊɪŋ/</td></tr>
     </table>
 
     <h3>Elision</h3>
     <p><b>Elision</b> = <b>dropping</b> a sound in connected speech. Most common: /t/ and /d/ in consonant clusters.</p>
     <ul>
-      <li>"nex<b>t</b> day" → <span class="ipa">/neks deɪ/</span> (/t/ dropped)</li>
-      <li>"han<b>d</b> bag" → <span class="ipa">/hæn bæɡ/</span> (/d/ dropped)</li>
-      <li>"fam<b>i</b>ly" → <span class="ipa">/fæmli/</span> (vowel dropped)</li>
-      <li>"Tell <b>h</b>im" → <span class="ipa">/tel ɪm/</span> (/h/ dropped)</li>
+      <li>"nex<b>t</b> day" → <span class="ipa" data-word="next day">/neks deɪ/</span> (/t/ dropped)</li>
+      <li>"han<b>d</b> bag" → <span class="ipa" data-word="handbag">/hæn bæɡ/</span> (/d/ dropped)</li>
+      <li>"fam<b>i</b>ly" → <span class="ipa" data-word="family">/fæmli/</span> (vowel dropped)</li>
+      <li>"Tell <b>h</b>im" → <span class="ipa" data-word="tell him">/tel ɪm/</span> (/h/ dropped)</li>
     </ul>
 
     <h3>Assimilation</h3>
     <p><b>Assimilation</b> = a sound <b>changes</b> to match a neighbour.</p>
     <table>
       <tr><th>Type</th><th>Direction</th><th>Example</th></tr>
-      <tr><td><b>Regressive</b></td><td>Changes because of <b>following</b> sound</td><td>"ten boys" → <span class="ipa">/tem bɔɪz/</span> (n→m before bilabial)</td></tr>
-      <tr><td><b>Progressive</b></td><td>Changes because of <b>preceding</b> sound</td><td>"cats" <span class="ipa">/kæts/</span> (-s voiceless after /t/)</td></tr>
-      <tr><td><b>Coalescent</b></td><td>Two sounds <b>merge</b> into one</td><td>"don't you" → <span class="ipa">/dəʊntʃuː/</span> (t+j→tʃ)</td></tr>
+      <tr><td><b>Regressive</b></td><td>Changes because of <b>following</b> sound</td><td>"ten boys" → <span class="ipa" data-word="ten boys">/tem bɔɪz/</span> (n→m before bilabial)</td></tr>
+      <tr><td><b>Progressive</b></td><td>Changes because of <b>preceding</b> sound</td><td>"cats" <span class="ipa" data-word="cats">/kæts/</span> (-s voiceless after /t/)</td></tr>
+      <tr><td><b>Coalescent</b></td><td>Two sounds <b>merge</b> into one</td><td>"don't you" → <span class="ipa" data-word="don't you">/dəʊntʃuː/</span> (t+j→tʃ)</td></tr>
     </table>
 
     <h3>Elision vs. Assimilation</h3>
@@ -1335,8 +1355,8 @@ tr:hover td { background: var(--bg-card-hover); }
     <h3>Levels of Stress</h3>
     <table>
       <tr><th>Level</th><th>Symbol</th><th>Example</th></tr>
-      <tr><td><b>Primary</b></td><td><span class="ipa">ˈ</span></td><td><span class="ipa" data-word="water">/ˈwɔːtə/</span> "water"</td></tr>
-      <tr><td><b>Secondary</b></td><td><span class="ipa">ˌ</span></td><td><span class="ipa">/ˌiːvæljuˈeɪʃn̩/</span> "evaluation"</td></tr>
+      <tr><td><b>Primary</b></td><td><span class="ipa-bracket">ˈ</span></td><td><span class="ipa" data-word="water">/ˈwɔːtə/</span> "water"</td></tr>
+      <tr><td><b>Secondary</b></td><td><span class="ipa-bracket">ˌ</span></td><td><span class="ipa" data-word="evaluation">/ˌiːvæljuˈeɪʃn̩/</span> "evaluation"</td></tr>
       <tr><td><b>Unstressed</b></td><td>(none)</td><td>The "-ter" in "water"</td></tr>
     </table>
 
@@ -1474,29 +1494,29 @@ tr:hover td { background: var(--bg-card-hover); }
 
     <div class="info-box example-box">
       <div class="box-title">📝 Example 1: "I want to go to the shop."</div>
-      <p><b>Careful:</b> <span class="ipa">/aɪ wɒnt tuː ɡəʊ tuː ðiː ʃɒp/</span></p>
-      <p><b>Connected:</b> <span class="ipa">/aɪ wɒnə ɡəʊ tə ðə ʃɒp/</span></p>
+      <p><b>Careful:</b> <span class="ipa" data-word="I want to go to the shop">/aɪ wɒnt tuː ɡəʊ tuː ðiː ʃɒp/</span></p>
+      <p><b>Connected:</b> <span class="ipa" data-word="I want to go to the shop">/aɪ wɒnə ɡəʊ tə ðə ʃɒp/</span></p>
       <p><b>Changes:</b> "want to" → /wɒnə/ (elision of /t/, weak "to"). "the" → /ðə/ (weak form).</p>
     </div>
 
     <div class="info-box example-box">
       <div class="box-title">📝 Example 2: "Can you give me a cup of tea?"</div>
-      <p><b>Careful:</b> <span class="ipa">/kæn juː ɡɪv miː eɪ kʌp ɒv tiː/</span></p>
-      <p><b>Connected:</b> <span class="ipa">/kən jə ɡɪv mi ə kʌpə tiː/</span></p>
+      <p><b>Careful:</b> <span class="ipa" data-word="Can you give me a cup of tea">/kæn juː ɡɪv miː eɪ kʌp ɒv tiː/</span></p>
+      <p><b>Connected:</b> <span class="ipa" data-word="Can you give me a cup of tea">/kən jə ɡɪv mi ə kʌpə tiː/</span></p>
       <p><b>Changes:</b> "can" → /kən/, "you" → /jə/, "a" → /ə/, "cup of" → /kʌpə/ (/v/ elided).</p>
     </div>
 
     <div class="info-box example-box">
       <div class="box-title">📝 Example 3: "What do you want for breakfast?"</div>
-      <p><b>Careful:</b> <span class="ipa">/wɒt duː juː wɒnt fɔː brekfəst/</span></p>
-      <p><b>Connected:</b> <span class="ipa">/wɒt dʒə wɒnt fə brekfəst/</span></p>
+      <p><b>Careful:</b> <span class="ipa" data-word="What do you want for breakfast">/wɒt duː juː wɒnt fɔː brekfəst/</span></p>
+      <p><b>Connected:</b> <span class="ipa" data-word="What do you want for breakfast">/wɒt dʒə wɒnt fə brekfəst/</span></p>
       <p><b>Changes:</b> "do you" → /dʒə/ (coalescent: d+j→dʒ), "for" → /fə/ (weak form).</p>
     </div>
 
     <div class="info-box example-box">
       <div class="box-title">📝 Example 4: "I told him that I would be there at ten."</div>
-      <p><b>Careful:</b> <span class="ipa">/aɪ təʊld hɪm ðæt aɪ wʊd biː ðeə æt ten/</span></p>
-      <p><b>Connected:</b> <span class="ipa">/aɪ təʊld ɪm ðət aɪd bi ðeər ət ten/</span></p>
+      <p><b>Careful:</b> <span class="ipa" data-word="I told him that I would be there at ten">/aɪ təʊld hɪm ðæt aɪ wʊd biː ðeə æt ten/</span></p>
+      <p><b>Connected:</b> <span class="ipa" data-word="I told him that I would be there at ten">/aɪ təʊld ɪm ðət aɪd bi ðeər ət ten/</span></p>
       <p><b>Changes:</b> "him" → /ɪm/ (h-dropped), "that" → /ðət/, "I would" → /aɪd/ (contraction), "there at" → /ðeər ət/ (linking r), "at" → /ət/ (weak).</p>
     </div>
 
@@ -1655,36 +1675,116 @@ window.addEventListener('scroll', () => {
   });
 });
 
-// ===== IPA AUDIO (Web Speech API) =====
+// ===== BULLETPROOF DUAL-TIER IPA AUDIO ENGINE =====
+let currentAudio = null;
 const synth = window.speechSynthesis;
 let audioToastTimer;
+let audioUnlocked = false;
 
-function speakWord(word) {
+// Pre-unlock audio & speech synthesis on first touch/click
+function primeAudio() {
+  if (audioUnlocked) return;
+  audioUnlocked = true;
+  if (synth) {
+    try {
+      const u = new SpeechSynthesisUtterance('');
+      u.volume = 0;
+      synth.speak(u);
+      if (synth.paused) synth.resume();
+    } catch(e) {}
+  }
+}
+document.addEventListener('touchstart', primeAudio, { once: true, passive: true });
+document.addEventListener('click', primeAudio, { once: true, passive: true });
+
+function speakWord(word, displaySymbol) {
+  const cleanWord = (word || '').trim();
+  if (!cleanWord) return;
+
+  // Show visual feedback toast immediately
+  showAudioToast(cleanWord, displaySymbol);
+
+  // Stop previous audio playback
+  if (currentAudio) {
+    try {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    } catch(e) {}
+    currentAudio = null;
+  }
+
+  // Tier 1: Real Native British Pronunciation MP3
+  const encoded = encodeURIComponent(cleanWord.toLowerCase());
+  const sources = [
+    `https://dict.youdao.com/dictvoice?audio=${encoded}&type=1`,
+    `https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en-GB&q=${encoded}`
+  ];
+
+  let srcIndex = 0;
+  function trySource() {
+    if (srcIndex < sources.length) {
+      const audio = new Audio();
+      currentAudio = audio;
+      audio.crossOrigin = "anonymous";
+      audio.src = sources[srcIndex++];
+      audio.playbackRate = 0.95;
+
+      let played = false;
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          played = true;
+        }).catch(() => {
+          if (!played) trySource();
+        });
+      }
+    } else {
+      // Tier 2 Fallback: Web Speech API
+      speakWithWebSpeech(cleanWord);
+    }
+  }
+
+  trySource();
+}
+
+function speakWithWebSpeech(word) {
   if (!synth) return;
-  synth.cancel();
-  const utterance = new SpeechSynthesisUtterance(word);
-  utterance.lang = 'en-GB';
-  utterance.rate = 0.85;
-  utterance.pitch = 1;
+  try {
+    if (synth.paused) synth.resume();
+    synth.cancel();
 
-  // Try to use a British English voice
-  const voices = synth.getVoices();
-  const britishVoice = voices.find(v => v.lang === 'en-GB') || voices.find(v => v.lang.startsWith('en'));
-  if (britishVoice) utterance.voice = britishVoice;
+    setTimeout(() => {
+      const utterance = new SpeechSynthesisUtterance(word);
+      utterance.lang = 'en-GB';
+      utterance.rate = 0.85;
+      utterance.pitch = 1;
 
-  synth.speak(utterance);
-  showAudioToast(word);
+      const voices = synth.getVoices() || [];
+      const britishVoice = voices.find(v => v.lang === 'en-GB') || 
+                           voices.find(v => v.lang.startsWith('en')) ||
+                           voices[0];
+      if (britishVoice) utterance.voice = britishVoice;
+
+      synth.speak(utterance);
+    }, 40);
+  } catch(e) {
+    console.warn("SpeechSynthesis fallback:", e);
+  }
 }
 
-function showAudioToast(word) {
+function showAudioToast(word, symbol) {
   const toast = document.getElementById('audioToast');
-  document.getElementById('audioToastText').textContent = '🔊 "' + word + '"';
-  toast.classList.add('show');
-  clearTimeout(audioToastTimer);
-  audioToastTimer = setTimeout(() => toast.classList.remove('show'), 2000);
+  const toastText = document.getElementById('audioToastText');
+  if (toast && toastText) {
+    const symbolHint = symbol ? ` <span style="opacity:0.8;font-family:var(--font-mono)">${symbol}</span>` : '';
+    toastText.innerHTML = `🔊 "${word}"${symbolHint}`;
+    toast.classList.add('show');
+    clearTimeout(audioToastTimer);
+    audioToastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
+  }
 }
 
-// Load voices
+// Load voices when available
 if (synth) {
   synth.onvoiceschanged = () => synth.getVoices();
   synth.getVoices();
@@ -1694,10 +1794,11 @@ if (synth) {
 document.addEventListener('click', (e) => {
   const ipa = e.target.closest('.ipa');
   if (ipa) {
-    const word = ipa.getAttribute('data-word') || ipa.textContent.replace(/[\/\[\]🔊]/g, '').trim();
+    const word = ipa.getAttribute('data-word');
+    const symbolText = ipa.textContent.replace(/[🔊]/g, '').trim();
     if (word) {
       ipa.classList.add('playing');
-      speakWord(word);
+      speakWord(word, symbolText);
       setTimeout(() => ipa.classList.remove('playing'), 600);
     }
   }
@@ -1708,7 +1809,7 @@ const searchData = [];
 document.querySelectorAll('.section').forEach(sec => {
   const id = sec.id;
   const title = sec.querySelector('h2')?.textContent || '';
-  const text = sec.textContent.substring(0, 500);
+  const text = sec.textContent.replace(/\s+/g, ' ').trim();
   searchData.push({ id, title, text });
 });
 
@@ -1743,6 +1844,19 @@ function handleSidebarSearch(query) {
   handleSearch(query);
 }
 
+function jumpToSection(id) {
+  const sec = document.getElementById(id);
+  if (sec) {
+    sec.classList.remove('collapsed');
+    sec.scrollIntoView({ behavior: 'smooth' });
+  }
+  document.getElementById('searchResults').classList.remove('visible');
+  if (window.innerWidth <= 640) {
+    const sb = document.getElementById('searchBox');
+    if (sb) sb.classList.remove('open');
+  }
+}
+
 function handleSearch(query) {
   const clearBtn = document.getElementById('searchClearBtn');
   if (clearBtn) clearBtn.classList.toggle('visible', !!query);
@@ -1751,12 +1865,13 @@ function handleSearch(query) {
   if (!query || query.length < 2) { results.classList.remove('visible'); return; }
   const q = query.toLowerCase();
   const matches = searchData.filter(s => s.title.toLowerCase().includes(q) || s.text.toLowerCase().includes(q));
-  if (matches.length === 0) { results.innerHTML = '<div class="search-result-item" style="color:var(--text-muted)">No results found</div>'; }
-  else {
+  if (matches.length === 0) {
+    results.innerHTML = '<div class="search-result-item" style="color:var(--text-muted)">No matching topics found</div>';
+  } else {
     results.innerHTML = matches.map(m => {
       const idx = m.text.toLowerCase().indexOf(q);
       const snippet = idx >= 0 ? '...' + m.text.substring(Math.max(0, idx - 30), idx + 60) + '...' : '';
-      return `<div class="search-result-item" onclick="document.getElementById('${m.id}').scrollIntoView({behavior:'smooth'});document.getElementById('searchResults').classList.remove('visible');if(window.innerWidth<=640){document.getElementById('searchBox').classList.remove('open');}"><strong>${m.title}</strong><br><span style="font-size:12px;color:var(--text-muted)">${snippet}</span></div>`;
+      return `<div class="search-result-item" onclick="jumpToSection('${m.id}')"><strong>${m.title}</strong><br><span style="font-size:12px;color:var(--text-muted)">${snippet}</span></div>`;
     }).join('');
   }
   results.classList.add('visible');
@@ -1768,6 +1883,15 @@ function toggleCheck(el) {
   el.textContent = el.classList.contains('checked') ? '✓' : '';
   updateChecklistProgress();
 }
+
+// Click anywhere on checklist row to toggle
+document.addEventListener('click', (e) => {
+  const item = e.target.closest('.checklist-item');
+  if (item && !e.target.classList.contains('checklist-cb')) {
+    const cb = item.querySelector('.checklist-cb');
+    if (cb) toggleCheck(cb);
+  }
+});
 
 function updateChecklistProgress() {
   const total = document.querySelectorAll('.checklist-cb').length;
